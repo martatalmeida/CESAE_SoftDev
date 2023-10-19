@@ -10,6 +10,18 @@ public class Ex06 {
 
         int valor1, valor2;
 
+        System.out.print("Escreva um valor: ");
+        valor1= input.nextInt();
+
+        System.out.print("Escreva um valor: ");
+        valor2= input.nextInt();
+
+        
+
+
+
+
+
 
 
     }
