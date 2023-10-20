@@ -8,24 +8,22 @@ public class Ex07 {
 
         Scanner input = new Scanner (System.in);
 
-        double prod1, prod2, prod3, soma, desconto, valor;
+        double prod1, prod2, prod3, soma, valor;
 
-        System.out.print("Preço do produto: ");
+        System.out.print("Preço do produto 1: ");
         prod1= input.nextDouble();
 
-        System.out.print("Preço do produto: ");
+        System.out.print("Preço do produto 2: ");
         prod2= input.nextDouble();
 
-        System.out.print("Preço do produto: ");
+        System.out.print("Preço do produto 3: ");
         prod3= input.nextDouble();
 
         soma= prod1 + prod2 + prod3;
 
-        desconto= soma * 0.1;
+        valor = soma * 0.9;
 
-        valor = soma - desconto;
-
-        System.out.print(valor);
+        System.out.print("Preço com desconto: " + valor);
 
     }
 

@@ -45,10 +45,7 @@ public class Ex08 {
         minutos = (somamin % 60) + (somaseg / 60);
         segundos = somaseg%60;
 
-
-
-        System.out.print(horas + ":" + minutos + ":" + segundos);
-
+        System.out.print(horas + "h" + minutos + "m" + segundos + "s");
 
     }
 
