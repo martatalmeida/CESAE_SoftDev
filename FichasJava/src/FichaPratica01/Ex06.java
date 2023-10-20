@@ -16,7 +16,12 @@ public class Ex06 {
         System.out.print("Escreva um valor: ");
         valor2= input.nextInt();
 
-        
+        valor1 = valor1 + valor2;
+        valor2 = valor1 - valor2;
+        valor1 = valor1 - valor2;
+
+        System.out.println("Valor 1: " + valor1);
+        System.out.println("Valor 2: " + valor2);
 
 
 
