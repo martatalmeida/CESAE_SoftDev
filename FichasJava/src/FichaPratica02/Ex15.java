@@ -23,7 +23,7 @@ public class Ex15 {
         System.out.println("Ordem: ");
         ordem = input.next();
 
-        if ((ordem.equals("Crescente") || (ordem.equals("crescente")))) {
+        if (ordem.equals("crescente")) {
             if (num1 < num2 && num1 < num3) {
                 if (num2 < num3) {
                     System.out.println(num1 + " " + num2 + " " + num3);
