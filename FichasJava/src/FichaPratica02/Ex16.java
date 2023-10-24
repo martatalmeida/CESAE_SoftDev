@@ -15,11 +15,11 @@ public class Ex16 {
 
 
         notas200 = valor / 200;
-        notas100 = (valor %= 200) / 100;
-        notas50 = (valor %= 100) / 50;
-        notas20 = (valor %= 50) / 20;
-        notas10 = (valor %= 20) / 10;
-        notas5 = (valor %= 10) / 5;
+        notas100 = (valor = valor % 200) / 100;
+        notas50 = (valor = valor % 100) / 50;
+        notas20 = (valor = valor % 50) / 20;
+        notas10 = (valor = valor % 20) / 10;
+        notas5 = (valor = valor % 10) / 5;
 
 
         if (valor % 5 == 0) {
