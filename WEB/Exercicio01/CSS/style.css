@@ -1,0 +1,33 @@
+/* p {
+    font-size: 150%;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 15%;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    padding: 40px;
+} */
+
+header, footer {
+    text-align: center;
+}
+
+header img {
+    width: 70%;
+    max-width: 600px;
+    min-width: 400px;
+}
+
+footer {
+    color: blue;
+}
+
+footer img {
+    max-width: 30px;
+    min-width: 30px;
+    width: 30px;
+}
+
+/* 
+id -> # 
+class -> . */
