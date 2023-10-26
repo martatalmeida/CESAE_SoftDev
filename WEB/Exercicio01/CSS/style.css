@@ -28,6 +28,23 @@ footer img {
     width: 30px;
 }
 
+table, th, td {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+}
+
+th {
+    background-color: bisque;
+}
+
+td:hover {
+    background-color: blue;
+}
+
 /* 
 id -> # 
 class -> . */

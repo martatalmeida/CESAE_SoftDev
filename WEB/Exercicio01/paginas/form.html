@@ -14,12 +14,92 @@
         <br>
         <nav>
             <a href="https://www.cesae.pt" target="_blank">Ir Página Cesae</a>
-            <a href="index.html">Home</a>
+            <a href="/index.html">Home</a>
             <a href="/paginas/about.html">Sobre Nós</a>
             <a href="/paginas/form.html">Contacto</a>
         </nav>
 
     </header>
+
+    <h2>Formulário</h2>
+
+    <form action="">
+        <fieldset>
+            <div>
+                <label for="form-nome">Nome:</label>
+                <input type="text" name="form-nome" id="form-nome" placeholder="Insira o seu nome" required>
+            </div>
+            <br>
+            <div>
+                <label for="form-email">Email</label>
+                <input type="email" name="form-email" id="form-email" value="nome@email.com">
+            </div>
+            <br>
+            <div>
+                <label for="form-tel">Telemóvel</label>
+                <input type="tel" name="form-tel" id="form-tel" value="+351">
+            </div>
+            <br>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <br>
+            <div>
+                <label for="form-dn">Data de Nascimento</label>
+                <input type="date" name="form-dn" id="form-dn">
+            </div>
+            <br>
+            <div>
+                <label for="form-operadora">Qual a sua operadora?</label>
+                <br>
+                <input type="radio" name="form-operadora" id="form-operadora-meo">
+                <label for="form-operadora-meo">Meo</label>
+                <br>
+                <input type="radio" name="form-operadora" id="form-operadora-vodafone">
+                <label for="form-operadora-vodafone">Vodafone</label>
+                <br>
+                <input type="radio" name="form-operadora" id="form-operadora-nos">
+                <label for="form-operadora-nos">Nos</label>
+            </div>
+            <br>
+            <div>
+                <label for="form-equipamentos">Selecione os seus equipamentos</label>
+                <br>
+                <input type="checkbox" name="equip1" id="equip1" value="TV">
+                <label for="equip1">SmartTV</label>
+                <input type="checkbox" name="equip2" id="equip2" value="PC">
+                <label for="equip2">PC</label>
+                <input type="checkbox" name="equip3" id="equip3" value="DVD">
+                <label for="equip3">DVD</label>
+                <input type="checkbox" name="equip4" id="equip4" value="Consola Jogos">
+                <label for="equip4">Consola Jogos</label>
+            </div>
+            <br>
+            <div>
+                <label for="form-curso">Selecione o seu curso</label>
+                <br>
+                <select name="form-curso" id="form-curso">
+                    <option value="" disabled selected>Escolha um curso</option>
+                    <option value="form-curso-wdm">Softdev</option>
+                    <option value="culinaria">Culinaria</option>
+                    <option value="Barman">Barman</option>
+                    <option value="pastelaria">Pastelaria</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="form-mensagem">Insira o seu comentário</label>
+                <br>
+                <textarea name="form-mensagem" id="form-mensagem" cols="100" rows="5"></textarea>
+            </div>
+            <br>
+            <div>
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+            </div>
+        </fieldset>
+    </form>
 
     <footer>
         <hr>
