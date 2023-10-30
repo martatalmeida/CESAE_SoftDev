@@ -18,7 +18,7 @@ public class Ex14 {
 
         while (aux < num && aux > 0) {
             res = res * aux;
-            aux = aux - 1;
+            aux--;
         }
 
         System.out.println(res);
