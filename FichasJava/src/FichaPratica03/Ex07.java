@@ -18,14 +18,14 @@ public class Ex07 {
 
         while(antes < num1) {
             System.out.println(antes);
-            antes = antes + 1;
+            antes++;
         }
 
         num1 = num1 + 1;
 
         while (depois >= num1) {
             System.out.println(num1);
-            num1 = num1 + 1;
+            num1++;
         }
 
 
