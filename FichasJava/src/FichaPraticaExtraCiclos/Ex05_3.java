@@ -4,22 +4,20 @@ public class Ex05_3 {
 
     public static void main(String[] args) {
 
-        int num1, num2;
+        int num1;
         num1 = 1;
-        num2 = 1;
 
-        for (int i = 1; i <= 5; i++) {
-            for (int esp = 0; esp < 5 - i; esp++) {
+        for (int linhas = 1; linhas <= 5; linhas++) {
+            for (int esp = 0; esp < 5 - linhas; esp++) {
                 System.out.print(" ");
             }
-            for (int col = 1; col < i + 1; col++) {
+            for (int col = 1; col < linhas + 1; col++) {
                 System.out.print(num1);
             }
-            for (int col = 2; col < i + 1; col++) {
-                System.out.print(num2);
+            for (int col = 2; col < linhas + 1; col++) {
+                System.out.print(num1);
             }
-            num1++;
-            num2++;
+             num1++;
             System.out.println(" ");
 
         }
