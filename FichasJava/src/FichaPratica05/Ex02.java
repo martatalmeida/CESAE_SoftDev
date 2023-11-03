@@ -9,16 +9,13 @@ public class Ex02 {
         Scanner input = new Scanner(System.in);
 
         double[] comissoes = new double[12];
-        int n = 0;
-        int i = 0;
         double total = 0;
 
-        while (i < 12) {
+
+        for (int i=0; i<12; i++) {
             System.out.println("Insira uma comissão: ");
-            comissoes[n] = input.nextDouble();
-            i++;
-            total = total + comissoes[n];
-            n++;
+            comissoes[i] = input.nextDouble();
+            total = total + comissoes[i];
         }
 
         System.out.println(total);

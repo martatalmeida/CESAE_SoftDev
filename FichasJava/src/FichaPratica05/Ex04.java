@@ -2,7 +2,7 @@ package FichaPratica05;
 
 import java.util.Scanner;
 
-public class Ex03 {
+public class Ex04 {
 
     public static void main(String[] args) {
 
@@ -13,17 +13,17 @@ public class Ex03 {
         System.out.println("Insira um número: ");
         array[0] = input.nextInt();
 
-        int maior = array[0];
+        int menor = array[0];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i=1; i<10; i++) {
             System.out.println("Insira um número: ");
             array[i] = input.nextInt();
-            if (array[i] > maior) {
-                maior = array[i];
+            if (array[i] < menor) {
+                menor = array[i];
             }
         }
 
-        System.out.println("Maior: " + maior);
+        System.out.println("Menor: " + menor);
 
     }
 
