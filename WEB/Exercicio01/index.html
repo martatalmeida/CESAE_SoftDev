@@ -7,6 +7,9 @@
     <title>Home</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,22 +18,26 @@
 
         <img src="imagens/logo.png" alt="logotipo Cesae">
         <br>
-        <nav>
-            <a href="https://www.cesae.pt" target="_blank">Ir Página Cesae</a>
-            <a href="index.html">Home</a>
-            <a href="paginas/softdev.html">Software Dev</a>
-            <a href="paginas/about.html">Sobre Nós</a>
-            <a href="paginas/form.html">Contacto</a>
-        </nav>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="/paginas/softdev.html">Software Dev</a>
+            <a href="/paginas/about.html">Sobre Nós</a>
+            <a href="/paginas/form.html">Formulário</a>
+          </div>
 
     </header>
 
-    <h1>Minha primeira página HTML</h1>
+    <br>
+
+    <h2>Home</h2>
     
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus numquam sequi sapiente recusandae quia vitae, pariatur enim fuga blanditiis atque, soluta perferendis architecto a, iste veritatis eum earum corrupti eligendi.</p>
 
-    <div>
-        <img src="imagens/man-wooden-cubes-table-management-concept.jpg" alt="" style="width: 20%;">
+    <div class="imagem-mao">
+        <img src="imagens/man-wooden-cubes-table-management-concept.jpg" alt="" class="imagem-passar" style="width: 20%;">
+        <img src="imagens/man-wooden-cubes-table-management-concept.jpg" alt="" class="imagem-passar"style="width: 20%;">
+        <img src="imagens/man-wooden-cubes-table-management-concept.jpg" alt="" class="imagem-virar"style="width: 20%;">
     </div>
 
     <br>
@@ -38,16 +45,31 @@
     <br>
 
     <div class="areaiframe">
-        <iframe class="iframe-grelha" width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="iframe-grelha"width="560" height="315" src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+        <iframe class="iframe-grelha" width="560" height="315" 
+        src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+        <iframe class="iframe-grelha" width="560" height="315" 
+        src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+        <iframe class="iframe-grelha" width="560" height="315" 
+        src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+        <iframe class="iframe-grelha" width="560" height="315" 
+        src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+        <iframe class="iframe-grelha" width="560" height="315" 
+        src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+        <iframe class="iframe-grelha" width="560" height="315" 
+        src="https://www.youtube.com/embed/qz0yd7XfhfM?si=TkSGFB94lgxji-fy" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+       
     </div>
 
     <footer>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -12,42 +15,51 @@
 
         <img src="/imagens/logo.png" alt="logotipo Cesae">
         <br>
-        <nav>
-            <a href="https://www.cesae.pt" target="_blank">Ir Página Cesae</a>
+        <div class="topnav" id="myTopnav">
             <a href="/index.html">Home</a>
             <a href="/paginas/softdev.html">Software Dev</a>
             <a href="/paginas/about.html">Sobre Nós</a>
-            <a href="/paginas/form.html">Contacto</a>
-        </nav>
+            <a href="/paginas/form.html" class="active">Formulário</a>
+          </div>
 
     </header>
 
+    <br>
+    <br>
+
     <h2>Formulário</h2>
 
+    
+    <div class="formulario">
     <form action="">
         <fieldset>
             <div>
                 <label for="form-nome">Nome:</label>
+                <br>
                 <input type="text" name="form-nome" id="form-nome" placeholder="Insira o seu nome" required>
             </div>
             <br>
             <div>
-                <label for="form-email">Email</label>
+                <label for="form-email">Email:</label>
+                <br>
                 <input type="email" name="form-email" id="form-email" value="nome@email.com">
             </div>
             <br>
             <div>
-                <label for="form-tel">Telemóvel</label>
+                <label for="form-tel">Telemóvel:</label>
+                <br>
                 <input type="tel" name="form-tel" id="form-tel" value="+351">
             </div>
             <br>
             <div>
-                <label for="password">Password</label>
+                <label for="password">Password:</label>
+                <br>
                 <input type="password" name="password" id="password">
             </div>
             <br>
             <div>
-                <label for="form-dn">Data de Nascimento</label>
+                <label for="form-dn">Data de Nascimento:</label>
+                <br>
                 <input type="date" name="form-dn" id="form-dn">
             </div>
             <br>
@@ -69,10 +81,13 @@
                 <br>
                 <input type="checkbox" name="equip1" id="equip1" value="TV">
                 <label for="equip1">SmartTV</label>
+                <br>
                 <input type="checkbox" name="equip2" id="equip2" value="PC">
                 <label for="equip2">PC</label>
+                <br>
                 <input type="checkbox" name="equip3" id="equip3" value="DVD">
                 <label for="equip3">DVD</label>
+                <br>
                 <input type="checkbox" name="equip4" id="equip4" value="Consola Jogos">
                 <label for="equip4">Consola Jogos</label>
             </div>
@@ -96,8 +111,8 @@
             </div>
             <br>
             <div>
-                <input type="reset" value="Limpar">
-                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar" class="botao">
+                <input type="submit" value="Enviar" class="botao">
             </div>
         </fieldset>
     </form>
@@ -112,6 +127,6 @@
             <h6>&copy;2021 Cesae Digital | Todos os direitos reservados | Desenvolvido por ....</h6>
     
         </footer>
-
+    </div>
 </body>
 </html>
