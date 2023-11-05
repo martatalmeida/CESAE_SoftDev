@@ -11,12 +11,17 @@ public class Ex08 {
         int[][] matriz = new int[3][3];
 
         for (int i = 0; i < 3; i++) {
-            System.out.println("Insira um número: ");
-            matriz[i][i] = input.nextInt();
-            for (int col = 0; col < ; col++) {
+            for (int col = 0; col < 3; col++) {
                 System.out.println("Insira um número: ");
-
+                matriz[i][col] = input.nextInt();
             }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int col = 0; col < 3; col++) {
+                System.out.print(matriz[i][col] + " ");
+            }
+            System.out.println(" ");
         }
 
     }
