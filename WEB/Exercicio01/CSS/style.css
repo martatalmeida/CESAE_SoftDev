@@ -15,16 +15,6 @@ header img {
     min-width: 400px;
 }
 
-footer {
-    color: blue;
-}
-
-footer img {
-    max-width: 30px;
-    min-width: 30px;
-    width: 30px;
-}
-
 .topnav {
     overflow: hidden;
     background-color:cadetblue;
@@ -76,9 +66,19 @@ footer img {
     }
   }
 
-  h2 {
-    color: #008b8b;
-  }
+h2 {
+  color: #008b8b;
+}
+
+footer {
+  color: blue;
+}
+
+footer img {
+  max-width: 30px;
+  min-width: 30px;
+  width: 30px;
+}
 
 /* HOME */
 
@@ -94,6 +94,32 @@ footer img {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
    
+}
+
+.tabela-home {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.th-home, .td-home {
+  text-align: center;
+  padding: 5px;
+  font-size: 17px;
+}
+
+.th-home {
+  border: solid 1px black;
+  background-color: #5ea2a2;
+  color: white;
+}
+
+.td-home {
+  border: dotted 1.5px black;
+}
+
+.td-home:hover {
+  background-color: #aab6b6;
+  color: white;
 }
 
 .areaiframe {
@@ -123,7 +149,7 @@ footer img {
 
 /* SOFTDEV */
 
-table, th, td {
+.tabela-softdev, .th-softdev, .td-softdev {
     margin-left: auto;
     margin-right: auto;
     border: solid 1px;
@@ -132,11 +158,11 @@ table, th, td {
     font-size: 15px;
 }
 
-th {
+.th-softdev {
     background-color:lightgray;
 }
 
-td:hover {
+.td-softdev:hover {
     background-color:lightgray;
 }
 
