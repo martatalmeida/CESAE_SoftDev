@@ -8,9 +8,9 @@ public class Ex05 {
 
         Scanner input = new Scanner(System.in);
 
-        double[] array = new double[10];
+        int[] array = new int[10];
 
-        double soma = 0;
+        int soma = 0;
 
         for (int i = 0; i<10; i++) {
             System.out.println("Insira um numero: ");

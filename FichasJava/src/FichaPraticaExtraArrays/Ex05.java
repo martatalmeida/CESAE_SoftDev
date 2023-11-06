@@ -16,8 +16,8 @@ public class Ex05 {
         }
 
         for (int i = 0; i < 12; i++) {
-            for (int j = i+1; j < 12; j++) {
-                if (array[i] == array[j]) {
+            for (int dup = i+1; dup < 12; dup++) {
+                if (array[i] == array[dup]) {
                     System.out.println("O número " + array[i] + " está duplicado");
                     break;
                 }

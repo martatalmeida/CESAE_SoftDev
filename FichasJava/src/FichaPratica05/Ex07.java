@@ -9,20 +9,29 @@ public class Ex07 {
         Scanner input = new Scanner(System.in);
 
         int[] array = new int[10];
-        int maior = 0;
+        int maiorPar = -1;
 
         for (int i = 0; i < 10; i++) {
             System.out.println("Insira um número: ");
             array[i] = input.nextInt();
+        }
+
+
+        for (int i = 0; i < 10; i++) {
             if (array[i] % 2 == 0) {
-                if (array[i] > maior) {
-                    maior = array[i];
+                maiorPar = array[i];
                 }
+            }
+
+        for (int i = 0; i < 10; i++) {
+            if ((array[i] > maiorPar || maiorPar == -1) && array[i] % 2 == 0) {
+                maiorPar = array[i];
             }
         }
 
-        if (maior != 0) {
-            System.out.println("Maior Nº Par: " + maior);
+
+        if (maiorPar % 2 == 0) {
+            System.out.println("Maior Nº Par: " + maiorPar);
         } else {
             System.out.println("Não foram inseridos números pares");
         }

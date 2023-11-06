@@ -15,7 +15,7 @@ public class Ex03 {
 
         int maior = array[0];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i < 10; i++) {
             System.out.println("Insira um número: ");
             array[i] = input.nextInt();
             if (array[i] > maior) {
