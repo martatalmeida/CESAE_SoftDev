@@ -30,21 +30,20 @@ public class Ex08 {
         int[] array2 = new int[tamanho + 1];
         int newIndex = 0;
 
-
         for (int antes = 0; antes < posiçao; antes++) {
             array2[newIndex] = array1[antes];
             newIndex++;
         }
 
-        array2[newIndex + 1] = valor;
-        newIndex = posiçao + 1;
+        array2[posiçao] = valor;
+        newIndex = posiçao+1;
 
-        for (int depois = posiçao + 1; depois < array1.length; depois++) {
+        for (int depois = posiçao; depois < array1.length; depois++) {
             array2[newIndex] = array1[depois];
             newIndex++;
         }
 
-        for (int i = 0; i < array2.length; i++) {
+        for (int i = 0; i < tamanho+1; i++) {
             System.out.println(array2[i]);
         }
     }
