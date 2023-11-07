@@ -20,7 +20,7 @@ public class Ex15 {
 
         for (int i = 0; i < linhas; i++) {
             for (int col = 0; col < colunas; col++) {
-                System.out.println("Insira os numeros da matriz: ");
+                System.out.println("Insira os números da matriz: ");
                 matriz[i][col] = input.nextInt();
             }
         }
@@ -32,8 +32,9 @@ public class Ex15 {
             System.out.println();
         }
 
+        }
 
 
     }
 
-}
+
