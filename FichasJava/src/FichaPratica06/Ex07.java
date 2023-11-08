@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Ex07 {
 
+
     public static void desenharQuadrado(String carater, int linhas, int colunas) {
 
         int[][] quadrado = new int[linhas][colunas];
