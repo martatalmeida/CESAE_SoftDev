@@ -66,6 +66,11 @@ public class Ex03 {
         }
     }
 
+    /**
+     * Método que avalia se um numero é triangular
+     * @param num Numero a ser avaliado
+     * @return True se triangular, False se não triangular
+     */
     public static boolean triangular(int num) {
 
         int soma = 0;

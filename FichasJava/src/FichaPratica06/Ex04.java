@@ -65,6 +65,7 @@ public class Ex04 {
                 case 6:
                     System.out.println("Insira um número: ");
                     numInteiro = input.nextInt();
+                    break;
             }
         } while (opçao != 7);
     }
