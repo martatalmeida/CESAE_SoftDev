@@ -16,13 +16,14 @@ public class Ex04 {
         numInteiro = input.nextInt();
 
         do {
+            System.out.println("\n Análise do número");
             System.out.println("1. Par ou Impar");
             System.out.println("2. Positivo ou Negativo");
             System.out.println("3. Primo ou Não Primo");
             System.out.println("4. Perfeito ou Não Perfeito");
             System.out.println("5. Triangular ou Não Triangular");
             System.out.println("6. Trocar de número");
-            System.out.println("Escolha uma opção: ");
+            System.out.println("\n Escolha uma opção: ");
             opçao = input.nextInt();
 
 
@@ -65,6 +66,9 @@ public class Ex04 {
                 case 6:
                     System.out.println("Insira um número: ");
                     numInteiro = input.nextInt();
+                    break;
+                default:
+                    System.out.println("Opção Inválida");
                     break;
             }
         } while (opçao != 7);
