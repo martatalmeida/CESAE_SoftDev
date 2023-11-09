@@ -14,7 +14,7 @@ public class Ex06 {
         String nome;
         int idade;
 
-        
+
 
     }
 
