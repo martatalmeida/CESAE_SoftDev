@@ -1,0 +1,32 @@
+.navbar {
+    background-color:#0F1B40;
+}
+
+.navbar-brand {
+    color:#fbfbff;
+    font-size: 30px;
+}
+
+.navbar-brand:hover {
+    color:#fbfbff;
+}
+
+.nav-link {
+    color: #fbfbff;
+}
+
+.nav-link:hover {
+    color: #fdff03;
+}
+
+.nav-link.active {
+    color:#fdff03;
+}
+
+.bg {
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
