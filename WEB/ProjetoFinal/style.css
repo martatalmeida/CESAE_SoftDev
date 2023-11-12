@@ -16,11 +16,11 @@
 }
 
 .nav-link:hover {
-    color: #fdff03;
+    color: #F2D022;
 }
 
 .nav-link.active {
-    color:#fdff03;
+    color:#F2D022;
 }
 
 .bg {
@@ -30,3 +30,19 @@
     background-size: cover;
     background-attachment: fixed;
   }
+
+ .card-footer {
+    background-color: #0F1B40;
+    color: #fbfbff;
+    padding: 25px;
+ }
+
+ .btn {
+    background-color: #5061BF;
+    color:#F2D022;
+ }
+
+ .btn:hover {
+    background-color: #F2D022;
+    color: #fbfbff;
+ }
