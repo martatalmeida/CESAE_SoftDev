@@ -26,7 +26,6 @@ public class Ex08 {
         return soma;
     }
 
-
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);

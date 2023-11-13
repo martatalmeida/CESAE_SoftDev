@@ -3,7 +3,6 @@ package FichaPratica07;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Formatter;
 import java.util.Scanner;
 
 public class Ex03 {
@@ -21,7 +20,7 @@ public class Ex03 {
 
         scanner.close();
 
-        File fileNovo = new File("FichaPratica_07/exercicio_03");
+        File fileNovo = new File("FichaPratica_07/exercicio_03novo.txt");
         PrintWriter printWriter = new PrintWriter(fileNovo);
 
         printWriter.println(conteudo + "\n");
