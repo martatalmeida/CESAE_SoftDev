@@ -14,8 +14,10 @@ public class Ex08 {
         File file = new File("FichaPratica_07/exercicio_08.txt");
         Scanner scanner = new Scanner(file);
 
+        File fileNovo = new File("FichaPratica_07/exercicio_08novo.txt");
+        PrintWriter printWriter = new PrintWriter(fileNovo);
+
         String linha, palavra;
-        String conteudo = "";
 
         System.out.println("Palavra especifica: ");
         palavra = input.next();
@@ -26,17 +28,13 @@ public class Ex08 {
 
             for (int i = 0; i < palavras.length; i++) {
                 if (palavras[i].equals(palavra)){
-                    conteudo += linha + "\n";
+                     printWriter.println(linha);
                 }
             }
         }
 
         scanner.close();
 
-        File fileNovo = new File("FichaPratica_07/exercicio_08novo.txt");
-        PrintWriter printWriter = new PrintWriter(fileNovo);
-
-        printWriter.println(conteudo);
 
         printWriter.close();
     }

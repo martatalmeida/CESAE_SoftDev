@@ -12,18 +12,18 @@ public class Ex03 {
         File file = new File ("FichaPratica_07/exercicio_03.txt");
         Scanner scanner = new Scanner(file);
 
-        String conteudo = "";
+        File fileNovo = new File("FichaPratica_07/exercicio_03novo.txt");
+        PrintWriter printWriter = new PrintWriter(fileNovo);
+
+        String linha;
 
         while (scanner.hasNextLine()) {
-            conteudo += scanner.nextLine() + "\n";
+            linha = scanner.nextLine();
+            printWriter.println(linha);
         }
 
         scanner.close();
 
-        File fileNovo = new File("FichaPratica_07/exercicio_03novo.txt");
-        PrintWriter printWriter = new PrintWriter(fileNovo);
-
-        printWriter.println(conteudo + "\n");
 
         printWriter.close();
 
