@@ -13,15 +13,22 @@ public class Ex10 {
 
         String linha = scanner.nextLine();
         String tipo, produto;
-        double total =0;
+        double quantidade, valor, valorTotal, total =0;
 
         while (scanner.hasNextLine()) {
             linha = scanner.nextLine();
             String[] informacoes = linha.split(",");
-
+            tipo = informacoes[0];
+            produto = informacoes[1];
+            quantidade = Double.parseDouble(informacoes[2]);
+            valor = Double.parseDouble(informacoes[3]);
+            valorTotal = quantidade * valor;
+            total += valorTotal;
         }
 
         System.out.println("O valor total das vendas é " + total);
+
+        scanner.close();
 
     }
 
