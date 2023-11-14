@@ -24,19 +24,19 @@ public class Ex08 {
 
         while (scanner.hasNextLine()) {
             linha = scanner.nextLine();
+            System.out.println(linha);
             String[] palavras = linha.split(" ");
 
             for (int i = 0; i < palavras.length; i++) {
-                if (palavras[i].equals(palavra)){
-                     printWriter.println(linha);
+                if (palavras[i].equals(palavra)) {
+                    printWriter.println(linha);
                 }
             }
         }
-
         scanner.close();
 
 
         printWriter.close();
     }
-
 }
+
