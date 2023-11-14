@@ -6,43 +6,68 @@ import java.util.Scanner;
 
 public class Ex11 {
 
-    public static void procurarPorGenero(String genero) throws FileNotFoundException {
+    public static void procurarPorGenero(String[][] matriz, String genero) throws FileNotFoundException {
 
-        String linha;
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][2].equals(genero)) {
+                System.out.println(matriz[i][0]);
+            }
+        }
+    }
 
-        File file = new File("FichaPratica_07/exercicio_11.csv");
-        Scanner scanner = new Scanner(file);
+    public static void procurarPorArtista(String[][] matriz, String artista) throws FileNotFoundException {
 
-        while (scanner.hasNextLine()) {
-            linha = scanner.nextLine();
-            String[] itensLinha = linha.split(",");
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][1].equals(artista)) {
+                System.out.println(matriz[i][0]);
+            }
+        }
+    }
 
-            if (genero.equals(itensLinha[2])) {
-                System.out.println(linha);
+    public static String maiorDuracao(String[][] matriz) {
+
+        String maiorMusica = "";
+        int minutos = 0, segundos = 0, duracao = 0, maiorDuracao = 0;
+
+
+        String[][] tempo = new String[matriz.length][2];
+
+        for (int i = 0; i < matriz.length; i++) {
+            tempo[i] = matriz[i][3].split(":");
+            minutos = Integer.parseInt(tempo[i][0]);
+            segundos = Integer.parseInt(tempo[i][1]);
+            duracao = minutos + segundos;
+            if (duracao > maiorDuracao) {
+                maiorDuracao = duracao;
+                maiorMusica = matriz[i][0];
+            }
+        }
+        return maiorMusica;
+    }
+
+
+    public static void duracaoAcimaValor(String[][] matriz, int minutos, int segundos) {
+
+        int minMusica, segMusica;
+
+        String[][] tempo = new String[matriz.length][2];
+
+        for (int i = 0; i < matriz.length; i++) {
+            tempo[i] = matriz[i][3].split(":");
+            minMusica = Integer.parseInt(tempo[i][0]);
+            segMusica = Integer.parseInt(tempo[i][1]);
+            if (minMusica > minutos) {
+                System.out.println(matriz[i][0]);
+            }
+            if (minMusica == minutos) {
+                if (segMusica > segundos) {
+                    System.out.println(matriz[i][0]);
+                }
             }
 
         }
-        scanner.close();
-
     }
 
-    public static void procurarPorArtista(String artista) throws FileNotFoundException {
-
-        File file = new File("FichaPratica_07/exercicio_11.csv");
-        Scanner scanner = new Scanner(file);
-
-        String linha;
-
-        while (scanner.hasNextLine()) {
-            linha = scanner.nextLine();
-            String[] itensLinha = linha.split(",");
-
-            if (artista.equals(itensLinha[1])) {
-                System.out.println(linha);
-            }
-        }
-        scanner.close();
-    }
 
     public static void main(String[] args) throws FileNotFoundException {
 
@@ -50,25 +75,24 @@ public class Ex11 {
 
         File file = new File("FichaPratica_07/exercicio_11.csv");
         Scanner scanner = new Scanner(file);
-        Scanner scanner2 = new Scanner(file);
-        Scanner scanner3 = new Scanner(file);
 
-        String linha, linha3, genero, artista;
-        int numLinhas = 0, contador = 0, opcao;
+        File file2 = new File("FichaPratica_07/exercicio_11.csv");
+        Scanner scanner2 = new Scanner(file2);
+
+        String linha, linha2, genero, artista, maiorMusica;
+        int numLinhas = 0, opcao, minutos, segundos, numMusicas;
+
+        linha = scanner.nextLine();
 
         while (scanner.hasNextLine()) {
             linha = scanner.nextLine();
             numLinhas++;
         }
 
-
-
-
-
         String[][] matriz = new String[numLinhas][4];
 
+        linha2 = scanner2.nextLine();
 
-        String linha2 = scanner2.nextLine();
         while (scanner2.hasNextLine()) {
             for (int i = 0; i < numLinhas; i++) {
                 linha2 = scanner2.nextLine();
@@ -77,16 +101,17 @@ public class Ex11 {
                     matriz[i][col] = itensLinha[col];
                     System.out.print(matriz[i][col] + " ");
                 }
-                System.out.println("");
+                System.out.println(" ");
             }
+        }
 
-            }
+        scanner.close();
+        scanner2.close();
 
-
-        do{
+        do {
             System.out.println("\n***Menu***");
             System.out.println("1. Pesquisar por músicas de um determinado género");
-            System.out.println("2. Pesquisae músicas de  um determinado artista");
+            System.out.println("2. Pesquisar músicas de  um determinado artista");
             System.out.println("3. Pesquisar música com maior duração");
             System.out.println("4. Pesquisar músicas com duração acima de um valor especificado");
             System.out.println("5. Número de músicas no ficheiro");
@@ -97,17 +122,34 @@ public class Ex11 {
             switch (opcao) {
                 case 1:
                     System.out.println("Diga um genero: ");
-                    genero = input.next();
-                    procurarPorGenero( genero);
+                    input.nextLine();
+                    genero = input.nextLine();
+                    procurarPorGenero(matriz, genero);
                     break;
                 case 2:
                     System.out.println("Diga o artista:");
-                    artista = input.next();
-                    procurarPorArtista( artista);
+                    input.nextLine();
+                    artista = input.nextLine();
+                    procurarPorArtista(matriz, artista);
+                    break;
+                case 3:
+                    maiorMusica = maiorDuracao(matriz);
+                    System.out.println("Maior música: " + maiorMusica);
+                    break;
+                case 4:
+                    System.out.println("Diga os minutos minimos: ");
+                    minutos = input.nextInt();
+                    System.out.println("Diga os segundos minimos: ");
+                    segundos = input.nextInt();
+                    duracaoAcimaValor(matriz, minutos, segundos);
+                    break;
+                case 5:
+                    numMusicas = numLinhas;
+                    System.out.println(numMusicas);
                     break;
             }
 
-        }while(opcao != 6);
+        } while (opcao != 6);
 
     }
 
