@@ -6,6 +6,45 @@ import java.util.Scanner;
 
 public class MartaAlmeida {
 
+
+    public static int contarLinhas(String caminhoFicheiro) throws FileNotFoundException {
+
+        File file = new File(caminhoFicheiro);
+        Scanner scanner = new Scanner(file);
+
+        int numLinhas = 0;
+
+        while (scanner.hasNextLine()) {
+            scanner.nextLine();
+            numLinhas++;
+        }
+        return numLinhas;
+    }
+
+    public static String[][] ficheiroParaMatriz(String caminhoFicheiro) throws FileNotFoundException {
+
+        File file = new File(caminhoFicheiro);
+        Scanner scanner = new Scanner(file);
+
+        int numLinhas = contarLinhas(caminhoFicheiro) - 1;
+
+        String[][] matriz = new String[numLinhas][9];
+
+        String linha = scanner.nextLine();
+        int linhaAtual = 0;
+
+        while (scanner.hasNextLine()) {
+            linha = scanner.nextLine();
+            String[] itensLinha = linha.split(";");
+
+            for (int i = 0; i < itensLinha.length; i++) {
+                matriz[linhaAtual][i] = itensLinha[i];
+            }
+            linhaAtual++;
+        }
+        return matriz;
+    }
+
     public static void imprimirConteudo(String[][] matriz) {
 
         for (int i = 0; i < matriz.length; i++) {
@@ -28,47 +67,68 @@ public class MartaAlmeida {
         return total;
     }
 
+    public static void informacoesCliente(String[][] matriz, String cliente) {
+
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][1].equals(cliente)) {
+                System.out.println(matriz[i][2] + "\n" + matriz[i][3] + "\n" + matriz[i][4]);
+                break;
+            }
+        }
+    }
+
+    public static String jogoMaisCaro(String[][] matriz) {
+
+        double valor, maisCaro = 0;
+        String jogo = "";
+
+        for (int i = 0; i < matriz.length; i++) {
+            valor = Double.parseDouble(matriz[i][8]);
+            if (valor > maisCaro) {
+                maisCaro = valor;
+                jogo = matriz[i][7];
+            }
+        }
+        return jogo;
+    }
+
+    public static void clientesQueCompraramJogo(String[][] matriz, String jogo) {
+
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][7].equals(jogo)) {
+                System.out.println(matriz[i][2]);
+            }
+        }
+    }
+
+    public static void procurarEstacionamento() {
+
+        int soma = 0;
+
+        for (int i = 1; i < 121; i++) {
+            if (i % 5 == 0) {
+                for (int consec = 0; consec < i; consec++) {
+                    soma += consec;
+                    if (soma == i) {
+                        System.out.println(soma);
+                    }
+                }
+                soma = 0;
+            }
 
 
+        }
+
+    }
 
     public static void main(String[] args) throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
-        File file = new File("src/TrabalhoPraticoPE/GameStart_V2.csv");
-        Scanner scanner1 = new Scanner(file);
 
-        File file2 = new File("src/TrabalhoPraticoPE/GameStart_V2.csv");
-        Scanner scanner2 = new Scanner(file2);
+        String[][] matriz = ficheiroParaMatriz("src/TrabalhoPraticoPE/GameStart_V2.csv");
 
-        String linha1 = scanner1.nextLine();
-        String linha2;
-        int numLinhas = 0;
-
-        //Descobrir o número de linhas do ficheiro
-        while (scanner1.hasNextLine()) {
-            linha1 = scanner1.nextLine();
-            numLinhas++;
-        }
-
-        //Colocar os dados do ficheiro numa matriz
-        String[][] matriz = new String[numLinhas][9];
-
-        linha2 = scanner2.nextLine();
-
-        while (scanner2.hasNextLine()) {
-            for (int i = 0; i < matriz.length; i++) {
-                linha2 = scanner2.nextLine();
-                String [] itensLinha = linha2.split(";");
-                for (int col = 0; col < itensLinha.length; col++) {
-                    matriz[i][col] = itensLinha[col];
-                }
-            }
-        }
-
-
-        // Inicio do código do menu de login
-        String utilizador, password;
+        String utilizador, password, idCliente, jogoCaro, nomeCliente, contactoCliente, emailCliente;
         int opcao1, opcao2, numVendas;
         double valorTotal, lucroTotal;
 
@@ -106,7 +166,7 @@ public class MartaAlmeida {
                                 imprimirConteudo(matriz);
                                 break;
                             case 2:
-                                numVendas = numLinhas;
+                                numVendas = contarLinhas("src/TrabalhoPraticoPE/GameStart_V2.csv") - 1;
                                 valorTotal = valorTotalVendas(matriz);
                                 System.out.println("Número de Vendas Total: " + numVendas);
                                 System.out.println("Valor total de Vendas: " + valorTotal);
@@ -116,6 +176,17 @@ public class MartaAlmeida {
                                 lucroTotal = valorTotal * 0.2;
                                 System.out.println("Lucro total da GameStart: " + lucroTotal);
                                 break;
+                            case 4:
+                                System.out.println("Insira um idCliente: ");
+                                idCliente = input.next();
+                                informacoesCliente(matriz, idCliente);
+                                break;
+                            case 5:
+                                jogoCaro = jogoMaisCaro(matriz);
+                                System.out.println("O jogo mais caro: " + jogoCaro);
+                                System.out.println("Clientes que compraram o jogo:");
+                                clientesQueCompraramJogo(matriz, jogoCaro);
+                                break;
                         }
 
                     } while(opcao1 != 6);
@@ -124,7 +195,7 @@ public class MartaAlmeida {
 
             case "CLIENTE":
                 do {
-                    System.out.println("*** Menu ***");
+                    System.out.println("\n*** Menu ***");
                     System.out.println("1. Registar Cliente");
                     System.out.println("2. Procurar Estacionamento");
                     System.out.println("3. Todos os títulos de jogos");
@@ -132,6 +203,22 @@ public class MartaAlmeida {
 
                     System.out.println("\n Escolha uma opção: ");
                     opcao2 = input.nextInt();
+
+                    switch (opcao2) {
+                        case 1:
+                            System.out.println("\nRegistar Cliente");
+                            System.out.println("Insira Nome: ");
+                            nomeCliente = input.next();
+                            System.out.println("Insira Contacto: ");
+                            contactoCliente = input.next();
+                            System.out.println("Insira Email: ");
+                            emailCliente = input.next();
+                            System.out.println("Cliente Inserido com Sucesso: " + nomeCliente + "|" + contactoCliente + "|" + emailCliente + "|");
+                            break;
+                        case 2:
+                            System.out.println("Lugares vagos: ");
+                            procurarEstacionamento();
+                    }
 
                 } while (opcao2 != 5);
         }
