@@ -120,13 +120,7 @@ public class MartaAlmeida {
 
     public static void imprimirTodosOsJogos(String[][] matriz) {
 
-        String[] jogos = new String[matriz.length];
-        String[] jogosNDup = new String[matriz.length];
         int contador = 0;
-
-        for (int i = 0; i < matriz.length; i++) {
-            jogos[i] = matriz[i][7];
-        }
 
         for (int i = 0; i < matriz.length; i++) {
             for (int c = i; c < matriz.length; c++) {
@@ -140,8 +134,55 @@ public class MartaAlmeida {
 
             contador = 0;
         }
-
     }
+
+    public static void todasAsCategoriasEJogos(String[][] matriz, String editora) {
+
+        String[] categori = new String[matriz.length];
+        String[] jogos = new String[matriz.length];
+        int contador = 0;
+        String categoria="";
+
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][5].equals(editora)) {
+                for (int k = i; k < matriz.length; k++) {
+                    if (matriz[i][5].equals(matriz[k][5])) {
+                        if (matriz[i][6].equals(matriz[k][6])) {
+                            contador++;
+                        }
+                    }
+                }
+                    if (contador == 1) {
+                        System.out.println(matriz[i][6]);
+                    }
+
+                contador =0;
+                for (int c = i; c < matriz.length; c++) {
+                    if (matriz[i][6].equals(matriz[c][6])) {
+                        if (matriz[i][7].equals(matriz[c][7])) {
+                            contador++;
+                        }
+                    }
+                }
+                if (contador == 1) {
+                    System.out.println(matriz[i][7]);
+                }
+                contador = 0;
+            }
+        }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static void main(String[] args) throws FileNotFoundException {
 
@@ -150,7 +191,7 @@ public class MartaAlmeida {
 
         String[][] matriz = ficheiroParaMatriz("src/TrabalhoPraticoPE/GameStart_V2.csv");
 
-        String utilizador, password, idCliente, jogoCaro, nomeCliente, contactoCliente, emailCliente;
+        String utilizador, password, idCliente, jogoCaro, nomeCliente, contactoCliente, emailCliente, editora;
         int opcao1, opcao2, numVendas;
         double valorTotal, lucroTotal;
 
@@ -244,6 +285,11 @@ public class MartaAlmeida {
                         case 3:
                             System.out.println("Todos os jogos: ");
                             imprimirTodosOsJogos(matriz);
+                            break;
+                        case 4:
+                            System.out.println("Diga uma Editora: ");
+                            editora = input.next();
+                            todasAsCategoriasEJogos(matriz, editora);
                     }
 
                 } while (opcao2 != 5);
