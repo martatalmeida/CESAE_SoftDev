@@ -115,8 +115,30 @@ public class MartaAlmeida {
                 }
                 soma = 0;
             }
+        }
+    }
 
+    public static void imprimirTodosOsJogos(String[][] matriz) {
 
+        String[] jogos = new String[matriz.length];
+        String[] jogosNDup = new String[matriz.length];
+        int contador = 0;
+
+        for (int i = 0; i < matriz.length; i++) {
+            jogos[i] = matriz[i][7];
+        }
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int c = i; c < matriz.length; c++) {
+                if (matriz[i][7].equals(matriz[c][7])) {
+                    contador++;
+                }
+            }
+                if (contador == 1) {
+                    System.out.println(matriz[i][7]);
+                }
+
+            contador = 0;
         }
 
     }
@@ -218,6 +240,10 @@ public class MartaAlmeida {
                         case 2:
                             System.out.println("Lugares vagos: ");
                             procurarEstacionamento();
+                            break;
+                        case 3:
+                            System.out.println("Todos os jogos: ");
+                            imprimirTodosOsJogos(matriz);
                     }
 
                 } while (opcao2 != 5);

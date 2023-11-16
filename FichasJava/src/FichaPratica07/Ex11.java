@@ -64,7 +64,6 @@ public class Ex11 {
                     System.out.println(matriz[i][0]);
                 }
             }
-
         }
     }
 
