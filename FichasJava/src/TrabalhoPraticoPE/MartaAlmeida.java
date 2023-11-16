@@ -128,9 +128,9 @@ public class MartaAlmeida {
                     contador++;
                 }
             }
-                if (contador == 1) {
-                    System.out.println(matriz[i][7]);
-                }
+            if (contador == 1) {
+                System.out.println(matriz[i][7]);
+            }
 
             contador = 0;
         }
@@ -138,44 +138,67 @@ public class MartaAlmeida {
 
     public static void todasAsCategoriasEJogos(String[][] matriz, String editora) {
 
-        String[] categori = new String[matriz.length];
-        String[] jogos = new String[matriz.length];
-        int contador = 0;
-        String categoria="";
+        int num =0;
 
         for (int i = 0; i < matriz.length; i++) {
             if (matriz[i][5].equals(editora)) {
+                num++;
+            }
+        }
+
+        String[] categorias = new String[matriz.length];
+        String[] jogos = new String[matriz.length];
+        int contador1 = 0, contador2 = 0, cat = 0, jog = 0;
+        boolean repetido = false;
+
+
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][5].equals(editora)) {
+
                 for (int k = i; k < matriz.length; k++) {
                     if (matriz[i][5].equals(matriz[k][5])) {
                         if (matriz[i][6].equals(matriz[k][6])) {
-                            contador++;
+                            contador1++;
                         }
                     }
                 }
-                    if (contador == 1) {
-                        System.out.println(matriz[i][6]);
-                    }
+                if (contador1 == 1) {
+                    categorias[i] = matriz[i][6];
+                    System.out.println(categorias[i]);
+                }
 
-                contador =0;
-                for (int c = i; c < matriz.length; c++) {
-                    if (matriz[i][6].equals(matriz[c][6])) {
-                        if (matriz[i][7].equals(matriz[c][7])) {
-                            contador++;
-                        }
-                    }
-                }
-                if (contador == 1) {
-                    System.out.println(matriz[i][7]);
-                }
-                contador = 0;
+                contador1 = 0;
             }
         }
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][5].equals(editora)) {
+
+                for (int k = i; k < matriz.length; k++) {
+                    if (matriz[i][5].equals(matriz[k][5])) {
+                        if (matriz[i][6].equals(matriz[k][6])) {
+                            if (matriz[i][7].equals(matriz[k][7]))
+                                contador2++;
+                        }
+                    }
+                }
+                if (contador2 == 1) {
+                    jogos[i] = matriz[i][7];
+                    System.out.println(jogos[i]);
+                }
+
+                contador2 = 0;
+
             }
 
+        }
 
-
-
-
+        for (int i = 0; i < matriz.length; i++) {
+                if (matriz[i][5].equals(editora) && matriz[i][6].equals(categorias[i])) {
+                    System.out.println(categorias[i]);
+                    System.out.println(matriz[i][7]);
+                }
+            }
+        }
 
 
 
@@ -205,13 +228,13 @@ public class MartaAlmeida {
                 System.out.println("Password: ");
                 password = input.next();
 
-                while(!password.equals(passCerta)) {
+                while (!password.equals(passCerta)) {
                     System.out.println("Password Incorreta");
                     System.out.println("Password: ");
                     password = input.next();
                 }
 
-                if (password.equals(passCerta)){
+                if (password.equals(passCerta)) {
                     do {
                         System.out.println("\n*** Menu ***");
                         System.out.println("1. Conteúdo na consola");
@@ -252,7 +275,7 @@ public class MartaAlmeida {
                                 break;
                         }
 
-                    } while(opcao1 != 6);
+                    } while (opcao1 != 6);
                 }
                 break;
 
