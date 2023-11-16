@@ -138,20 +138,13 @@ public class MartaAlmeida {
 
     public static void todasAsCategoriasEJogos(String[][] matriz, String editora) {
 
-        int num =0;
-
-        for (int i = 0; i < matriz.length; i++) {
-            if (matriz[i][5].equals(editora)) {
-                num++;
-            }
-        }
 
         String[] categorias = new String[matriz.length];
         String[] jogos = new String[matriz.length];
         int contador1 = 0, contador2 = 0, cat = 0, jog = 0;
         boolean repetido = false;
 
-
+        System.out.println("\n*** Editora: " + editora + " ***");
         for (int i = 0; i < matriz.length; i++) {
             if (matriz[i][5].equals(editora)) {
 
@@ -164,7 +157,6 @@ public class MartaAlmeida {
                 }
                 if (contador1 == 1) {
                     categorias[i] = matriz[i][6];
-                    System.out.println(categorias[i]);
                 }
 
                 contador1 = 0;
@@ -172,33 +164,36 @@ public class MartaAlmeida {
         }
         for (int i = 0; i < matriz.length; i++) {
             if (matriz[i][5].equals(editora)) {
-
                 for (int k = i; k < matriz.length; k++) {
-                    if (matriz[i][5].equals(matriz[k][5])) {
-                        if (matriz[i][6].equals(matriz[k][6])) {
-                            if (matriz[i][7].equals(matriz[k][7]))
-                                contador2++;
+                    if (matriz[i][6].equals(matriz[k][6])) {
+                        if (matriz[i][7].equals(matriz[k][7])) {
+                            contador2++;
                         }
                     }
+
                 }
                 if (contador2 == 1) {
                     jogos[i] = matriz[i][7];
-                    System.out.println(jogos[i]);
+                    if (categorias[i] != null) {
+                        System.out.println("\n >> " + categorias[i] + " <<");
+                    }
+                    for (int l = 0; l < matriz.length; l++) {
+                        if (matriz[l][6].equals(categorias[i])) {
+                            if (jogos[l] != null) {
+                                System.out.println(jogos[l]);
+                            }
+                        }
+                    }
                 }
-
                 contador2 = 0;
-
-            }
-
-        }
-
-        for (int i = 0; i < matriz.length; i++) {
-                if (matriz[i][5].equals(editora) && matriz[i][6].equals(categorias[i])) {
-                    System.out.println(categorias[i]);
-                    System.out.println(matriz[i][7]);
-                }
             }
         }
+    }
+
+
+
+
+
 
 
 
