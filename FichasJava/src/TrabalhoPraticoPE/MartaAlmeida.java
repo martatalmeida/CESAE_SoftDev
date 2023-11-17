@@ -270,7 +270,6 @@ public class MartaAlmeida {
                             contador2++;
                         }
                     }
-
                 }
                 if (contador2 == 1) {
                     jogos[i] = matriz[i][7];
