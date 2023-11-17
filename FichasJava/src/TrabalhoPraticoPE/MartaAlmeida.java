@@ -275,7 +275,7 @@ public class MartaAlmeida {
                 if (contador2 == 1) {
                     jogos[i] = matriz[i][7];
                     if (categorias[i] != null) {
-                        System.out.println("\n >> " + categorias[i] + " <<");
+                        System.out.println("\n>> " + categorias[i] + " <<");
                     }
                     for (int l = 0; l < matriz.length; l++) {
                         if (matriz[l][6].equals(categorias[i])) {
@@ -296,11 +296,7 @@ public class MartaAlmeida {
         Scanner input = new Scanner(System.in);
 
 
-        String[][] matriz = ficheiroParaMatriz("src/TrabalhoPraticoPE/GameStart_V2.csv");
-
-        String utilizador, password, idCliente, jogoCaro, nomeCliente, contactoCliente, emailCliente, editora;
-        int opcao1, opcao2, numVendas;
-        double valorTotal, lucroTotal;
+        String utilizador, password;
 
         String passCerta = "Pass1234";
 
