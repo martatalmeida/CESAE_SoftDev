@@ -6,7 +6,10 @@ import java.util.Scanner;
 
 public class MartaAlmeida {
 
-
+    /**
+     * Método que contem o menu do administrador
+     * @throws FileNotFoundException Se o ficheiro não for encontrado
+     */
     public static void menuAdmin() throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
@@ -60,6 +63,10 @@ public class MartaAlmeida {
         } while (opcao != 6);
     }
 
+    /**
+     * Método que contem o menu do Cliente
+     * @throws FileNotFoundException Se o ficheiro não for encontrado
+     */
     public static void menuCliente() throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
@@ -108,6 +115,12 @@ public class MartaAlmeida {
         } while (opcao != 5);
     }
 
+    /**
+     * Método para contar as linhas do ficheiro
+     * @param caminhoFicheiro Ficheiro que é lido
+     * @return Número de linhas
+     * @throws FileNotFoundException Se o ficheiro não for encontrado
+     */
     public static int contarLinhas(String caminhoFicheiro) throws FileNotFoundException {
 
         File file = new File(caminhoFicheiro);
@@ -115,6 +128,7 @@ public class MartaAlmeida {
 
         int numLinhas = 0;
 
+        //Ciclo para contar o número total de linhas do ficheiro
         while (scanner.hasNextLine()) {
             scanner.nextLine();
             numLinhas++;
@@ -122,6 +136,12 @@ public class MartaAlmeida {
         return numLinhas;
     }
 
+    /**
+     * Método que lê o conteúdo de um ficheiro e o passa para uma matriz
+     * @param caminhoFicheiro Ficheiro que é lido
+     * @return Conteúdo numa matriz
+     * @throws FileNotFoundException Se o ficheiro não for encontrado
+     */
     public static String[][] ficheiroParaMatriz(String caminhoFicheiro) throws FileNotFoundException {
 
         File file = new File(caminhoFicheiro);
@@ -134,6 +154,7 @@ public class MartaAlmeida {
         String linha = scanner.nextLine();
         int linhaAtual = 0;
 
+        // Ciclo para passar o conteúdo do ficheiro para uma matriz
         while (scanner.hasNextLine()) {
             linha = scanner.nextLine();
             String[] itensLinha = linha.split(";");
@@ -146,6 +167,10 @@ public class MartaAlmeida {
         return matriz;
     }
 
+    /**
+     * Método que imprime o conteúdo do ficheiro na consola através da matriz
+     * @param matriz conteúdo do ficheiro
+     */
     public static void imprimirConteudo(String[][] matriz) {
 
         for (int i = 0; i < matriz.length; i++) {
@@ -154,9 +179,13 @@ public class MartaAlmeida {
             }
             System.out.println();
         }
-
     }
 
+    /**
+     * Método que soma o valor total de todas as vendas
+     * @param matriz conteúdo do ficheiro
+     * @return Valor total das vendas
+     */
     public static double valorTotalVendas(String[][] matriz) {
 
         double total = 0, valor;
@@ -168,6 +197,11 @@ public class MartaAlmeida {
         return total;
     }
 
+    /**
+     * Método que procura as informações de um determinado cliente
+     * @param matriz conteúdo do ficheiro
+     * @param cliente Número do IDCliente
+     */
     public static void informacoesCliente(String[][] matriz, String cliente) {
 
         for (int i = 0; i < matriz.length; i++) {
@@ -178,6 +212,11 @@ public class MartaAlmeida {
         }
     }
 
+    /**
+     * Método para descobrir qual o jogo mais caro
+     * @param matriz conteúdo do ficheiro
+     * @return Jogo com o valor mais alto
+     */
     public static String jogoMaisCaro(String[][] matriz) {
 
         double valor, maisCaro = 0;
@@ -193,6 +232,11 @@ public class MartaAlmeida {
         return jogo;
     }
 
+    /**
+     * Método que procura os clientes que compraram um certo jogo
+     * @param matriz conteúdo do ficheiro
+     * @param jogo Jogo que os clientes compraram
+     */
     public static void clientesQueCompraramJogo(String[][] matriz, String jogo) {
 
         for (int i = 0; i < matriz.length; i++) {
@@ -202,6 +246,9 @@ public class MartaAlmeida {
         }
     }
 
+    /**
+     * Método que procura os lugares vagos que são números triangulares multiplos de 5
+     */
     public static void procurarEstacionamento() {
 
         int soma = 0;
@@ -219,10 +266,16 @@ public class MartaAlmeida {
         }
     }
 
+    /**
+     * Método que imprime todos os jogos sem duplicados
+     * @param matriz conteúdo do ficheiro
+     */
     public static void imprimirTodosOsJogos(String[][] matriz) {
 
         int contador = 0;
 
+        //Ciclo que retira os jogos repetidos através da utilização de um contador. Cada vez que é encontrado um jogo repetido o contador incrementa,
+        // por isso só quando o contador é igual a 1 (ou seja, a unica repetição encontrada foi ele mesmo) é que o jogo é impresso.
         for (int i = 0; i < matriz.length; i++) {
             for (int c = i; c < matriz.length; c++) {
                 if (matriz[i][7].equals(matriz[c][7])) {
@@ -237,14 +290,24 @@ public class MartaAlmeida {
         }
     }
 
+    /**
+     * Método que dada uma editora procura todas as suas categorias e respetivos jogos
+     * @param matriz conteúdo do ficheiro
+     * @param editora parametro para procurar as categorias e jogos
+     */
     public static void todasAsCategoriasEJogos(String[][] matriz, String editora) {
 
 
+        //Criação de dois arrays, um para as categorias e outro para os jogos
         String[] categorias = new String[matriz.length];
         String[] jogos = new String[matriz.length];
+
         int contador1 = 0, contador2 = 0;
 
+
         System.out.println("\n*** Editora: " + editora + " ***");
+
+        // Ciclo que procura as categorias da editora e as adiciona ao array para as categorias criado anteriormente. Utilizei o mesmo método do contador para não inserir a mesma categoria mais do que uma vez no array.
         for (int i = 0; i < matriz.length; i++) {
             if (matriz[i][5].equals(editora)) {
 
@@ -262,6 +325,8 @@ public class MartaAlmeida {
                 contador1 = 0;
             }
         }
+
+        // Ciclo que procura os jogos da editora e os adiciona ao array para os jogos criado anteriormente. Utilizei o mesmo método do contador para não inserir o mesmo jogo mais do que uma vez no array.
         for (int i = 0; i < matriz.length; i++) {
             if (matriz[i][5].equals(editora)) {
                 for (int k = i; k < matriz.length; k++) {
@@ -273,6 +338,7 @@ public class MartaAlmeida {
                 }
                 if (contador2 == 1) {
                     jogos[i] = matriz[i][7];
+                    //Aqui imprimi as categorias uma de cada vez e imprimi os jogos com base na categoria, através do uso de outro ciclo for.
                     if (categorias[i] != null) {
                         System.out.println("\n>> " + categorias[i] + " <<");
                     }
@@ -314,11 +380,13 @@ public class MartaAlmeida {
                 }
 
                 if (password.equals(passCerta)) {
+                    System.out.println("******Bem vindo à GameStart!******");
                     menuAdmin();
                 }
                 break;
 
             case "CLIENTE":
+                System.out.println("******Bem vindo à GameStart!******");
                 menuCliente();
                 break;
         }

@@ -1,0 +1,18 @@
+:root {
+    --cor1: #ffffff;
+    --cor2: #000000;
+    --cor3: blue;
+    --fonte1: 'Times New Roman', Times, serif;
+    --fonte2: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ex1 {
+    font-family: var(--fonte1);
+    color: var(--cor1);
+    background-color: var(--cor2);
+}
+
+.ex2 {
+    font-family: var(--fonte2);
+    color: var(--cor3);
+}
