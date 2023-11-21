@@ -18,7 +18,7 @@ public class Pessoa {
         System.out.println("Nome: " + this.nome);
         System.out.println("Idade: " + this.idade);
         System.out.println("Email: " + this.email);
-        System.out.println("Telemovel: " + this.email);
+        System.out.println("Telemovel: " + this.telemovel);
     }
 
 }
