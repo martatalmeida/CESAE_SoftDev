@@ -26,8 +26,8 @@ public class Main {
         catalogo.listarCatalogo();
         System.out.println("");
 
-        double preçoCatalogo = catalogo.calcularTotal();
-        System.out.println("\nPreço Total do Catalogo: " + preçoCatalogo);
+        double precoCatalogo = catalogo.calcularTotal();
+        System.out.println("\nPreço Total do Catalogo: " + precoCatalogo);
 
     }
 
