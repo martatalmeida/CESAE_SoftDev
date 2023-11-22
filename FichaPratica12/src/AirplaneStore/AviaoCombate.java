@@ -31,7 +31,7 @@ public class AviaoCombate extends Aviao{
     public void listarArmas(){
         System.out.print("Armas: ");
         for (int i = 0; i < armas.size(); i++){
-            System.out.print(armas.get(i) + " | ");
+            System.out.print(this.armas.get(i) + " | ");
         }
     }
 
