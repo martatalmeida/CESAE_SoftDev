@@ -12,7 +12,8 @@ public class Pizza {
     private double preco;
     private TamanhoPizza tamanho;
 
-    private ArrayList<Ingrediente> ingredientes;
+    private ArrayList<IngredientePizza> ingredientes;
+
 
     public Pizza(int codigo, String nome, String descricao, double preco, TamanhoPizza tamanho) {
         this.codigo = codigo;
@@ -20,10 +21,10 @@ public class Pizza {
         this.descricao = descricao;
         this.preco = preco;
         this.tamanho = tamanho;
-        this.ingredientes = new ArrayList<Ingrediente>();
+        this.ingredientes = new ArrayList<IngredientePizza>();
     }
 
-    public void adicionarIngredientes(Ingrediente ingrediente){
+    public void adicionarIngredientes(IngredientePizza ingrediente){
         if(this.ingredientes.size() < 5) {
             this.ingredientes.add(ingrediente);
         } else {
@@ -31,15 +32,43 @@ public class Pizza {
         }
     }
 
-
-    public void editarQuantidade(Ingrediente ingrediente, double quantidade){
-
+    public void editarQuantidade(IngredientePizza ingrediente, double quantidade){
+        ingrediente.setQuantidade(quantidade);
     }
-
-
 
     public void removerIngrediente(String codigo){
-        this.ingredientes.remove(codigo);
+        for (int i = 0; i < ingredientes.size(); i++) {
+            if (ingredientes.get(i).getCodigo().equals(codigo)){
+                ingredientes.remove(i);
+                return;
+            }
+        }
     }
 
+    public double numCaloriasPizza(){
+        double quantidade;
+        double calorias;
+        double totalCalorias=0;
+        for (int i = 0; i < ingredientes.size(); i++){
+            calorias = ingredientes.get(i).getnCaloriasUnidadeMedida();
+            quantidade = ingredientes.get(i).getQuantidade();
+            totalCalorias += calorias * quantidade;
+        }
+        return totalCalorias;
+    }
+
+    public void detalhesPizza()
+    {
+        System.out.println("***** Pizza " + this.nome + " *****");
+        System.out.println("Código: " + this.codigo);
+        System.out.println("Descrição: " + this.descricao);
+        System.out.println("Preço: " + this.preco + "€");
+        System.out.println("Tamanho: " + this.tamanho);
+        for (int i=0; i < ingredientes.size(); i++){
+            System.out.print("Ingrediente " + (i+1) + ": ");
+            ingredientes.get(i).detalhesIngredientesPizza();
+        }
+
+
+    }
 }
