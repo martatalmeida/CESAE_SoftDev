@@ -38,7 +38,7 @@ public class Pizza {
 
     public void removerIngrediente(String codigo){
         for (int i = 0; i < ingredientes.size(); i++) {
-            if (ingredientes.get(i).getCodigo().equals(codigo)){
+            if (ingredientes.get(i).getIngrediente().getCodigo().equals(codigo)){
                 ingredientes.remove(i);
                 return;
             }
@@ -50,7 +50,7 @@ public class Pizza {
         double calorias;
         double totalCalorias=0;
         for (int i = 0; i < ingredientes.size(); i++){
-            calorias = ingredientes.get(i).getnCaloriasUnidadeMedida();
+            calorias = ingredientes.get(i).getIngrediente().getnCaloriasUnidadeMedida();
             quantidade = ingredientes.get(i).getQuantidade();
             totalCalorias += calorias * quantidade;
         }

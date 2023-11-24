@@ -2,12 +2,18 @@ package Pizzaria;
 
 import Pizzaria.Enums.UnidadeMedida;
 
-public class IngredientePizza extends Ingrediente{
+public class IngredientePizza {
+
+    private Ingrediente ingrediente;
     private double quantidade;
 
-    public IngredientePizza(String codigo, String nome, UnidadeMedida unidadeMedida, double nCaloriasUnidadeMedida, double quantidade) {
-        super(codigo, nome, unidadeMedida, nCaloriasUnidadeMedida);
+    public IngredientePizza(Ingrediente ingrediente, double quantidade) {
+        this.ingrediente = ingrediente;
         this.quantidade = quantidade;
+    }
+
+    public Ingrediente getIngrediente() {
+        return ingrediente;
     }
 
     public double getQuantidade() {
@@ -19,16 +25,16 @@ public class IngredientePizza extends Ingrediente{
     }
 
     public void detalhesIngredientesPizza(){
-        if (getUnidadeMedida() == UnidadeMedida.Gramas) {
-            detalhesIngredientes();
+        if (ingrediente.getUnidadeMedida() == UnidadeMedida.Gramas) {
+            ingrediente.detalhesIngredientes();
             System.out.print(this.quantidade + " g\n");
         }
-        if (getUnidadeMedida() == UnidadeMedida.Unidades) {
-            detalhesIngredientes();
+        if (ingrediente.getUnidadeMedida() == UnidadeMedida.Unidades) {
+            ingrediente.detalhesIngredientes();
             System.out.print(this.quantidade + " uni.\n");
         }
-        if (getUnidadeMedida() == UnidadeMedida.Litros) {
-            detalhesIngredientes();
+        if (ingrediente.getUnidadeMedida() == UnidadeMedida.Litros) {
+            ingrediente.detalhesIngredientes();
             System.out.print (this.quantidade + " L.\n");
         }
     }
