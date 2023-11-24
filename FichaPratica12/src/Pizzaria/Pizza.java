@@ -24,13 +24,27 @@ public class Pizza {
         this.ingredientes = new ArrayList<IngredientePizza>();
     }
 
-    public void adicionarIngredientes(IngredientePizza ingrediente){
-        if(this.ingredientes.size() < 5) {
-            this.ingredientes.add(ingrediente);
-        } else {
-            System.out.println("Não pode acrescentar mais ingredientes");
+    public void adicionarIngredientes(IngredientePizza ingrediente) {
+        if (ingrediente.getIngrediente() instanceof Base) {
+            if (this.ingredientes.size() < 1) {
+                this.ingredientes.add(ingrediente);
+            } else {
+                System.out.println("Não pode acrescentar mais bases");
+            }
         }
-    }
+
+            if (ingrediente.getIngrediente() instanceof Topping) {
+                    if (this.ingredientes.size() > 0 && this.ingredientes.size() < 5) {
+                        this.ingredientes.add(ingrediente);
+                    } else {
+                        System.out.println("Não pode acrescentar mais toppings");
+                    }
+                } else {
+                    System.out.println("Tem de acrescentar uma base primeiro.");
+                }
+            }
+
+
 
     public void editarQuantidade(IngredientePizza ingrediente, double quantidade){
         ingrediente.setQuantidade(quantidade);

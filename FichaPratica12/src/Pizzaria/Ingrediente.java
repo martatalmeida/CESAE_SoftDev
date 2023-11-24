@@ -1,5 +1,6 @@
 package Pizzaria;
 
+import Pizzaria.Enums.BasePizza;
 import Pizzaria.Enums.UnidadeMedida;
 
 public class Ingrediente {

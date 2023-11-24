@@ -9,7 +9,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/FichaPratica12/Pizzaria/Ingrediente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FichaPratica12/Pizzaria/Ingrediente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FichaPratica12/Pizzaria/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FichaPratica12/Pizzaria/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FichaPratica12/Pizzaria/Pizza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FichaPratica12/Pizzaria/Pizza.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pizzaria/IngredientePizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizzaria/IngredientePizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pizzaria/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizzaria/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pizzaria/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizzaria/Ingrediente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pizzaria/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizzaria/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pizzaria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizzaria/Pizza.java" afterDir="false" />
     </list>
