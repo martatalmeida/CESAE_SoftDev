@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de4511ff-1ff2-4579-9931-1e2e075be3bc" name="Changes" comment="" />
+    <list default="true" id="de4511ff-1ff2-4579-9931-1e2e075be3bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pizzaria/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizzaria/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pizzaria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizzaria/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB/.BS3_Marta_Almeida.zip.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB/ProjetoFinal/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB/ProjetoFinal/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
