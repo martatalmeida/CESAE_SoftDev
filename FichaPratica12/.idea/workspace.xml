@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="de4511ff-1ff2-4579-9931-1e2e075be3bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/Inseto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/Inseto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/MeioAmbiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/MeioAmbiente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/Planta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/Planta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/SerVivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FichaPratica13/src/InstitutoVidaMundial/SerVivo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

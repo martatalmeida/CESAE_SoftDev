@@ -13,4 +13,12 @@ public class SerVivo {
         this.pais = pais;
         this.idade = idade;
     }
+
+    public void listarInformacoes(){
+        System.out.println("\nNome: " + this.nome + "\nEspecie: " + this.especie + "\nPaís: " + this.pais + "\nIdade: " + this.idade);
+    }
+
+    public String getNome() {
+        return nome;
+    }
 }
