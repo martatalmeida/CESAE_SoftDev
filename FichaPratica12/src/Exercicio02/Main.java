@@ -9,7 +9,7 @@ public class Main {
         Carro carro1 = new Carro("Fiat", "500", 2022, 200, 100, TipoCombustivel.GASOLINA, 4.5,4);
         Carro carro2 = new Carro("Mini", "Cooper", 2008, 200, 100, TipoCombustivel.DIESEL, 5.5,4);
         Mota mota1 = new Mota("Volkswagen", "M-3", 2015, 250, 120, TipoCombustivel.GASOLINA, 6);
-        Camiao camiao1 = new Camiao("Audi", "C8", 2005, 200, 100, TipoCombustivel.DIESEL, 5,500);
+        Camiao camiao1 = new Camiao("Audi", "C8", 2005, 200, 100, 5,500);
 
 
         Veiculo vencedor1 = carro1.corrida(carro2);

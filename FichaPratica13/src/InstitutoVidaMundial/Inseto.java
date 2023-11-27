@@ -13,7 +13,11 @@ public class Inseto extends SerVivo{
         return venenoso;
     }
 
-    public void listarDetalhes(){
+    @Override
+    public void listarInformacoes() {
+        super.listarInformacoes();
         System.out.println("Venenoso: " + this.venenoso);
     }
+
+
 }

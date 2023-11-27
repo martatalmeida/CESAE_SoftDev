@@ -21,7 +21,10 @@ public class Planta extends SerVivo{
         return grauDefesa;
     }
 
-    public void listarDetalhes(){
+    @Override
+    public void listarInformacoes() {
+        super.listarInformacoes();
         System.out.println("Família: " + this.familia + "\nGrau de Defesa: " + this.grauDefesa);
     }
+
 }

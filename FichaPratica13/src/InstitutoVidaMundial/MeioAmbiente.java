@@ -322,15 +322,6 @@ public class MeioAmbiente {
     public void listarSeresVivos(){
         for (int i = 0; i < seres.size(); i++){
             this.seres.get(i).listarInformacoes();
-            if (this.seres.get(i) instanceof Animal){
-                ((Animal) this.seres.get(i)).listarDetalhes();
-            }
-            if (this.seres.get(i) instanceof Planta){
-                ((Planta) this.seres.get(i)).listarDetalhes();
-            }
-            if(this.seres.get(i) instanceof Inseto){
-                ((Inseto) this.seres.get(i)).listarDetalhes();
-            }
         }
     }
 

@@ -43,7 +43,11 @@ public class Animal extends SerVivo{
         return inteligencia;
     }
 
-    public void listarDetalhes(){
+    @Override
+    public void listarInformacoes() {
+        super.listarInformacoes();
         System.out.println("Fome: " + this.fome + "\nPeso: " + this.pesoKg + "\nInteligência: " + this.inteligencia + "\nAlimentação: " + this.alimentacao + "\nBarulho: " + this.barulho);
     }
+
+
 }

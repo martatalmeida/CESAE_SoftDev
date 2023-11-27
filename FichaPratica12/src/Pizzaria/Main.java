@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Base base = new Base("1","Massa Fina",UnidadeMedida.Gramas,5, BasePizza.Massa_Fina);
+        Base base = new Base("1","Massa Fina",5, BasePizza.Massa_Fina);
         Queijo ingrediente1 = new Queijo("2", "Queijo", UnidadeMedida.Gramas,4, OrigemIngrediente.Nacional, TipoQueijo.Mozzarela);
         Carne ingrediente2 = new Carne("2", "Fiambre", UnidadeMedida.Gramas,4, OrigemIngrediente.Importado,TipoCarne.Porco);
         Vegetal ingrediente3 = new Vegetal("3", "Cogumelos",UnidadeMedida.Gramas,6,OrigemIngrediente.Nacional,TipoVegetal.Cogumelos);

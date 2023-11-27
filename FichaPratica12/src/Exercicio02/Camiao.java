@@ -4,8 +4,8 @@ public class Camiao extends Veiculo{
 
     private double capacidadeCargaKg;
 
-    public Camiao(String marca, String modelo, int anoFabrico, int potencia, int cilindrada, TipoCombustivel tipoCombustivel, double litros100km, double capacidadeCargaKg) {
-        super(marca, modelo, anoFabrico, potencia, cilindrada, tipoCombustivel, litros100km);
+    public Camiao(String marca, String modelo, int anoFabrico, int potencia, int cilindrada, double litros100km, double capacidadeCargaKg) {
+        super(marca, modelo, anoFabrico, potencia, cilindrada, TipoCombustivel.DIESEL, litros100km);
         this.capacidadeCargaKg = capacidadeCargaKg;
     }
 
