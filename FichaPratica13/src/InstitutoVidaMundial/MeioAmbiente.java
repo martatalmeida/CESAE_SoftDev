@@ -290,18 +290,17 @@ public class MeioAmbiente {
                             }
                         }
                     }
+
                 }
 
-                if (come) {
-                    animalAtual.setFome(false);
-                }
             } else{
-                System.out.println("O animal está de barriga cheia.");
+                //System.out.println("O animal está de barriga cheia.");
             }
+
+            animalAtual.setFome(false);
 
         }
         if (come) {
-            System.out.println("O animal comeu");
             return true;
         } else{
             return false;
@@ -325,4 +324,187 @@ public class MeioAmbiente {
         }
     }
 
+    public void simulador(int numDiasSimulacao) {
+        int contadorDias=0;
+        int momentoDia = 0;
+        SerVivo ultimoAnimalMorrer = null;
+
+        do {
+            System.out.println("\nUm novo dia começa na " + this.nome);
+            System.out.println("\nSeres Vivos que se encontram vivos: ");
+            listarSeresVivos();
+            for (int i = 0; i < seres.size(); i++) {
+                SerVivo serVivoAtual = this.seres.get(i);
+                if (serVivoAtual instanceof Animal) {
+                    Animal animalAtual = (Animal) serVivoAtual;
+                    animalAtual.setFome(true);
+                }
+            }
+            while (momentoDia < 3) {
+                Random random = new Random();
+                int acontecimento = random.nextInt(1, 5);
+                System.out.println("\nAcontecimento: " + acontecimento);
+
+                if (acontecimento == 1) {
+                    ArrayList<SerVivo> plantas = new ArrayList<SerVivo>();
+
+                    for (int i = 0; i < seres.size(); i++) {
+                        SerVivo serVivoAtual = this.seres.get(i);
+                        if (serVivoAtual instanceof Planta) {
+                            plantas.add(serVivoAtual);
+                        }
+                    }
+
+                    if (plantas.size() > 0) {
+                        int plantaRandom = random.nextInt(0, plantas.size());
+
+                        SerVivo serVivo = plantas.get(plantaRandom);
+                        Planta plantaAtual = (Planta) serVivo;
+                        int funcaoRandom;
+
+                        if (plantaAtual.getFamilia() == FamiliaPlanta.Come_Insetos) {
+                            funcaoRandom = random.nextInt(1, 4);
+                        } else {
+                            funcaoRandom = random.nextInt(1, 3);
+                        }
+
+                        if (funcaoRandom == 1) {
+                            System.out.println("\nPlanta abanou");
+                            plantaAbanaComVento(plantaRandom);
+                        } else if (funcaoRandom == 2) {
+                            System.out.println("\nPlanta bebeu");
+                            plantaBebe(plantaRandom);
+                        } else if (funcaoRandom == 3) {
+                            System.out.println("\nPlanta comeu insetos");
+                            plantaComeInsetos(plantaRandom);
+                        }
+                    }
+
+                }
+                if (acontecimento == 2) {
+                    ArrayList<SerVivo> animais = new ArrayList<SerVivo>();
+
+                    for (int i = 0; i < seres.size(); i++) {
+                        SerVivo serVivoAtual = this.seres.get(i);
+                        if (serVivoAtual instanceof Animal) {
+                            animais.add(serVivoAtual);
+                        }
+                    }
+
+                    if (animais.size() > 0) {
+                        int animalRandom = random.nextInt(0, animais.size());
+
+                        int funcaoRandom = random.nextInt(1, 5);
+
+                        if (funcaoRandom == 1) {
+                            System.out.println("\nAnimal fez barulho");
+                            animalFazBarulho(animalRandom);
+                        } else if (funcaoRandom == 2) {
+                            System.out.println("\nAnimal movimentou-se");
+                            animalMovimenta(animalRandom);
+                        } else if (funcaoRandom == 3) {
+                            System.out.println("\nAnimal bebeu");
+                            animalBebe(animalRandom);
+                        } else if (funcaoRandom == 4) {
+                            System.out.println("\nAnimal comeu");
+                            animalCome(animalRandom);
+                        }
+                    }
+
+                }
+                if (acontecimento == 3) {
+                    ArrayList<SerVivo> insetos = new ArrayList<SerVivo>();
+
+                    for (int i = 0; i < seres.size(); i++) {
+                        SerVivo serVivoAtual = this.seres.get(i);
+                        if (serVivoAtual instanceof Inseto) {
+                            insetos.add(serVivoAtual);
+                        }
+                    }
+                    System.out.println("\nInseto chateou");
+                    insetoChateia();
+
+                }
+                if (acontecimento == 4) {
+                    int cenario = random.nextInt(1, 4);
+
+                    if (cenario == 1) {
+                        System.out.println("\nSeca");
+                        aguaLitros /= 2;
+                    }
+                    if (cenario == 2) {
+                        System.out.println("\nChuvas");
+                        aguaLitros *= 2;
+                    }
+                    if (cenario == 3) {
+                        System.out.println("\nErupcao Vulcanica");
+                        int animais = 0, plantas = 0;
+                        for (int i = 0; i < seres.size(); i++) {
+                            if (seres.get(i) instanceof Animal) {
+                                animais++;
+                            }
+                            if (seres.get(i) instanceof Planta) {
+                                plantas++;
+                            }
+                        }
+                        plantas /= 2;
+                        animais /= 2;
+                        int contador1 = 0, contador2 = 0;
+                        for (int i = 0; i < this.seres.size(); i++) {
+                            SerVivo serVivoAtual = this.seres.get(i);
+                            if (serVivoAtual instanceof Animal) {
+                                contador1++;
+                                if (contador1 > animais) {
+                                    this.seres.remove(serVivoAtual);
+                                    ultimoAnimalMorrer = serVivoAtual;
+                                }
+                            }
+                            if (serVivoAtual instanceof Planta) {
+                                contador2++;
+                                if (contador2 > plantas) {
+                                    this.seres.remove(serVivoAtual);
+                                }
+                            }
+                        }
+                    }
+                }
+                momentoDia++;
+            }
+
+            for (int i = 0; i < this.seres.size(); i++) {
+                SerVivo serVivoAtual = this.seres.get(i);
+                if (serVivoAtual instanceof Animal) {
+                    Animal animalAtual = (Animal) serVivoAtual;
+                    if (animalAtual.isFome()) {
+                        System.out.println("Tem fome");
+                        animalCome(i);
+                        if (animalAtual.isFome()) {
+                            ultimoAnimalMorrer = animalAtual;
+                            seres.remove(animalAtual);
+                            System.out.println("Morreu");
+                        }
+                    }
+                }
+            }
+
+            int contador=0;
+            System.out.println("\nAnimais que se mantiveram vivos:");
+            for (int i = 0; i < seres.size(); i++) {
+                    if (seres.get(i) instanceof Animal) {
+                        contador++;
+                        if (contador >= 1) {
+                            seres.get(i).listarInformacoes();
+                        }
+                    }
+            }
+            if (contador == 0) {
+                System.out.println("Já não há animais vivos");
+                System.out.println("\nÚltimo animal a morrer: " );
+                ultimoAnimalMorrer.listarInformacoes();
+
+            }
+            contadorDias++;
+            momentoDia = 0;
+        } while (contadorDias < numDiasSimulacao);
+    }
 }
