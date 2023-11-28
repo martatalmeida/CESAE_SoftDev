@@ -1,3 +1,12 @@
+/* GERAL */
+
+h2,h3{
+    text-align: center;
+    color: #0F1B40;
+}
+
+/* NAVBAR */
+
 .navbar {
     background-color:#0F1B40;
 }
@@ -23,6 +32,8 @@
     color:#F2D022;
 }
 
+/* IMAGEM CARROSSEL */
+
 .bg {
     height: 100%; 
     background-position: center;
@@ -31,18 +42,107 @@
     background-attachment: fixed;
   }
 
+  /* FOOTER */
+
  .card-footer {
     background-color: #0F1B40;
     color: #fbfbff;
     padding: 25px;
  }
 
- .btn {
-    background-color: #5061BF;
+ .btn-home {
+    background-color: #F2D022;
+    color: #0F1B40;
+ }
+
+ .btn-home:hover {
+    background-color:#fbfbff;
+    color:#0F1B40;
+ }
+
+ /* CARDS DA PÁGINA HOME */
+
+ .card-home {
+    position: relative;
+    overflow: hidden;
+  }
+
+ .card-home img {
+    height: 350px;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  .card-home:hover img {
+    opacity: 0.5;
+  }
+
+  .card-home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#0F1B40;
+    font-size: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .card-home:hover .card-home-text {
+    opacity: 1;
+  }
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+/* CARDS ELENCO */
+
+ .card-img {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* FORMULÁRIO CONTACTO POPUP */
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fbfbff;
+    background-color:#0F1B40;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
+  .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  .form-table,th,td {
+    border: none;
+    border-color: #fbfbff;
+    text-align: right;
+  }
+
+  .btn-form {
+    background-color: #0F1B40;
     color:#F2D022;
  }
 
- .btn:hover {
+ .btn-form:hover {
     background-color: #F2D022;
-    color: #fbfbff;
+    color:#0F1B40;
  }
