@@ -74,14 +74,16 @@ public class Pizza {
     }
 
     public void detalhesPizza() {
+        int contador = 1;
         System.out.println("***** Pizza " + this.nome + " *****");
         System.out.println("Código: " + this.codigo);
         System.out.println("Descrição: " + this.descricao);
         System.out.println("Preço: " + this.preco + "€");
         System.out.println("Tamanho: " + this.tamanho);
-        for (int i=0; i < ingredientes.size(); i++){
-            System.out.print("Ingrediente " + (i+1) + ": ");
-            ingredientes.get(i).detalhesIngredientesPizza();
+        for (IngredientePizza ingredientePizzaAtual: this.ingredientes){
+            System.out.print("Ingrediente " + contador + ": ");
+            ingredientePizzaAtual.detalhesIngredientesPizza();
+            contador++;
         }
     }
 

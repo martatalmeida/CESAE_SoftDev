@@ -137,11 +137,10 @@ public class MeioAmbiente {
             return false;
         }
     }
-
-
+    
     public boolean animalCome(int indexAnimal){
         SerVivo serVivoAtual = this.seres.get(indexAnimal);
-        boolean come = false;
+        boolean come = true;
 
         if (serVivoAtual instanceof Animal){
             Animal animalAtual = (Animal) serVivoAtual;
@@ -157,17 +156,24 @@ public class MeioAmbiente {
                             double capacidadeOutroAnimal = ((Animal) seres.get(i)).getPesoKg() * (2.5*((Animal) seres.get(i)).getInteligencia());
 
                             if (capacidade > capacidadeOutroAnimal){
-                                come = true;
+                                System.out.println(seres.get(i).getNome() + " Foi Comido");
                                 removerSerVivo(i);
+                                animalAtual.setFome(false);
+                                come = true;
                                 break;
+                            } else {
+                                come = false;
                             }
                         }
                         if (seres.get(i) instanceof Inseto){
                             if (((Inseto) seres.get(i)).isVenenoso()){
                                 removerSerVivo(indexAnimal);
+                                come = false;
+                                break;
                             } else {
-                                come = true;
                                 removerSerVivo(i);
+                                animalAtual.setFome(false);
+                                come = true;
                                 break;
                             }
                         }
@@ -180,44 +186,62 @@ public class MeioAmbiente {
                         if (seres.get(i) instanceof Planta) {
                             if (inteligencia < 20) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() == 0) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 19 && inteligencia < 40) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 2) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 39 && inteligencia < 60) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 3) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 59 && inteligencia < 80){
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 4){
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 79 && inteligencia < 95) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 5){
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 94 && inteligencia <=100) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() <= 5) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                         }
@@ -231,78 +255,98 @@ public class MeioAmbiente {
                             double capacidadeOutroAnimal = ((Animal) seres.get(i)).getPesoKg() * (2.5*((Animal) seres.get(i)).getInteligencia());
 
                             if (capacidade > capacidadeOutroAnimal){
-                                come = true;
                                 removerSerVivo(i);
+                                animalAtual.setFome(false);
+                                come = true;
                                 break;
+                            } else {
+                                come = false;
                             }
                         }
                         if (seres.get(i) instanceof Inseto){
                             if (((Inseto) seres.get(i)).isVenenoso()){
                                 removerSerVivo(indexAnimal);
+                                come = false;
+                                break;
                             } else {
-                                come = true;
                                 removerSerVivo(i);
+                                animalAtual.setFome(false);
+                                come = true;
                                 break;
                             }
                         }
                         if (seres.get(i) instanceof Planta) {
                             if (inteligencia < 20) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() == 0) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 19 && inteligencia < 40) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 2) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 39 && inteligencia < 60) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 3) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 59 && inteligencia < 80){
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 4){
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 79 && inteligencia < 95) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() < 5){
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                             if (inteligencia > 94 && inteligencia <=100) {
                                 if (((Planta) seres.get(i)).getGrauDefesa() <= 5) {
-                                    come = true;
                                     removerSerVivo(i);
+                                    animalAtual.setFome(false);
+                                    come = true;
                                     break;
+                                } else {
+                                    come = false;
                                 }
                             }
                         }
                     }
 
                 }
-
             } else{
                 //System.out.println("O animal está de barriga cheia.");
             }
-
-            animalAtual.setFome(false);
-
         }
         if (come) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
@@ -323,6 +367,133 @@ public class MeioAmbiente {
             this.seres.get(i).listarInformacoes();
         }
     }
+
+    public void plantaFazAcao(){
+        Random random = new Random();
+        ArrayList<SerVivo> plantas = new ArrayList<SerVivo>();
+
+        for (int i = 0; i < seres.size(); i++) {
+            SerVivo serVivoAtual = this.seres.get(i);
+            if (serVivoAtual instanceof Planta) {
+                plantas.add(serVivoAtual);
+            }
+        }
+
+        if (!plantas.isEmpty()) {
+            int plantaRandom = random.nextInt(0, plantas.size());
+
+            SerVivo serVivo = plantas.get(plantaRandom);
+            Planta plantaAtual = (Planta) serVivo;
+            int funcaoRandom;
+
+            if (plantaAtual.getFamilia() == FamiliaPlanta.Come_Insetos) {
+                funcaoRandom = random.nextInt(1, 4);
+            } else {
+                funcaoRandom = random.nextInt(1, 3);
+            }
+
+            if (funcaoRandom == 1) {
+                System.out.println("Planta abanou");
+                plantaAbanaComVento(plantaRandom);
+            } else if (funcaoRandom == 2) {
+                System.out.println("Planta bebeu");
+                plantaBebe(plantaRandom);
+            } else if (funcaoRandom == 3) {
+                System.out.println("Planta comeu insetos");
+                plantaComeInsetos(plantaRandom);
+            }
+        }
+    }
+
+    public void animalFazAcao(){
+        Random random = new Random();
+        ArrayList<SerVivo> animais = new ArrayList<SerVivo>();
+
+        for (int i = 0; i < seres.size(); i++) {
+            SerVivo serVivoAtual = this.seres.get(i);
+            if (serVivoAtual instanceof Animal) {
+                animais.add(serVivoAtual);
+            }
+        }
+
+        if (!animais.isEmpty()) {
+            int animalRandom = random.nextInt(0, animais.size());
+
+            int funcaoRandom = random.nextInt(1, 5);
+
+            if (funcaoRandom == 1) {
+                System.out.println("Animal fez barulho");
+                animalFazBarulho(animalRandom);
+            } else if (funcaoRandom == 2) {
+                System.out.println("Animal movimentou-se");
+                animalMovimenta(animalRandom);
+            } else if (funcaoRandom == 3) {
+                System.out.println("Animal bebeu");
+                animalBebe(animalRandom);
+            } else if (funcaoRandom == 4) {
+                System.out.println("Animal comeu");
+                animalCome(animalRandom);
+            }
+        }
+    }
+
+    public void insetoFazAcao() {
+        ArrayList<SerVivo> insetos = new ArrayList<SerVivo>();
+
+        for (int i = 0; i < seres.size(); i++) {
+            SerVivo serVivoAtual = this.seres.get(i);
+            if (serVivoAtual instanceof Inseto) {
+                insetos.add(serVivoAtual);
+            }
+        }
+        System.out.println("Inseto chateou");
+        insetoChateia();
+    }
+
+    public void catastrofeNatural() {
+        Random random = new Random();
+        int cenario = random.nextInt(1, 4);
+
+        if (cenario == 1) {
+            System.out.println("Seca");
+            aguaLitros /= 2;
+        }
+        if (cenario == 2) {
+            System.out.println("Chuvas");
+            aguaLitros *= 2;
+        }
+        if (cenario == 3) {
+            System.out.println("Erupcao Vulcanica");
+            int animais = 0, plantas = 0;
+            for (int i = 0; i < seres.size(); i++) {
+                if (seres.get(i) instanceof Animal) {
+                    animais++;
+                }
+                if (seres.get(i) instanceof Planta) {
+                    plantas++;
+                }
+            }
+            plantas /= 2;
+            animais /= 2;
+            int contador1 = 0, contador2 = 0;
+            for (int i = 0; i < this.seres.size(); i++) {
+                SerVivo serVivoAtual = this.seres.get(i);
+                if (serVivoAtual instanceof Animal) {
+                    contador1++;
+                    if (contador1 > animais) {
+                        this.seres.remove(serVivoAtual);
+                    }
+                }
+                if (serVivoAtual instanceof Planta) {
+                    contador2++;
+                    if (contador2 > plantas) {
+                        this.seres.remove(serVivoAtual);
+                    }
+                }
+            }
+        }
+    }
+
 
     public void simulador(int numDiasSimulacao) {
         int contadorDias=0;
@@ -346,145 +517,43 @@ public class MeioAmbiente {
                 System.out.println("\nAcontecimento: " + acontecimento);
 
                 if (acontecimento == 1) {
-                    ArrayList<SerVivo> plantas = new ArrayList<SerVivo>();
-
-                    for (int i = 0; i < seres.size(); i++) {
-                        SerVivo serVivoAtual = this.seres.get(i);
-                        if (serVivoAtual instanceof Planta) {
-                            plantas.add(serVivoAtual);
-                        }
-                    }
-
-                    if (plantas.size() > 0) {
-                        int plantaRandom = random.nextInt(0, plantas.size());
-
-                        SerVivo serVivo = plantas.get(plantaRandom);
-                        Planta plantaAtual = (Planta) serVivo;
-                        int funcaoRandom;
-
-                        if (plantaAtual.getFamilia() == FamiliaPlanta.Come_Insetos) {
-                            funcaoRandom = random.nextInt(1, 4);
-                        } else {
-                            funcaoRandom = random.nextInt(1, 3);
-                        }
-
-                        if (funcaoRandom == 1) {
-                            System.out.println("\nPlanta abanou");
-                            plantaAbanaComVento(plantaRandom);
-                        } else if (funcaoRandom == 2) {
-                            System.out.println("\nPlanta bebeu");
-                            plantaBebe(plantaRandom);
-                        } else if (funcaoRandom == 3) {
-                            System.out.println("\nPlanta comeu insetos");
-                            plantaComeInsetos(plantaRandom);
-                        }
-                    }
-
+                   plantaFazAcao();
                 }
+
                 if (acontecimento == 2) {
-                    ArrayList<SerVivo> animais = new ArrayList<SerVivo>();
-
-                    for (int i = 0; i < seres.size(); i++) {
-                        SerVivo serVivoAtual = this.seres.get(i);
-                        if (serVivoAtual instanceof Animal) {
-                            animais.add(serVivoAtual);
-                        }
-                    }
-
-                    if (animais.size() > 0) {
-                        int animalRandom = random.nextInt(0, animais.size());
-
-                        int funcaoRandom = random.nextInt(1, 5);
-
-                        if (funcaoRandom == 1) {
-                            System.out.println("\nAnimal fez barulho");
-                            animalFazBarulho(animalRandom);
-                        } else if (funcaoRandom == 2) {
-                            System.out.println("\nAnimal movimentou-se");
-                            animalMovimenta(animalRandom);
-                        } else if (funcaoRandom == 3) {
-                            System.out.println("\nAnimal bebeu");
-                            animalBebe(animalRandom);
-                        } else if (funcaoRandom == 4) {
-                            System.out.println("\nAnimal comeu");
-                            animalCome(animalRandom);
-                        }
-                    }
-
+                    animalFazAcao();
                 }
-                if (acontecimento == 3) {
-                    ArrayList<SerVivo> insetos = new ArrayList<SerVivo>();
 
-                    for (int i = 0; i < seres.size(); i++) {
-                        SerVivo serVivoAtual = this.seres.get(i);
-                        if (serVivoAtual instanceof Inseto) {
-                            insetos.add(serVivoAtual);
-                        }
-                    }
-                    System.out.println("\nInseto chateou");
-                    insetoChateia();
+                if (acontecimento == 3) {
+                   insetoFazAcao();
 
                 }
                 if (acontecimento == 4) {
-                    int cenario = random.nextInt(1, 4);
-
-                    if (cenario == 1) {
-                        System.out.println("\nSeca");
-                        aguaLitros /= 2;
-                    }
-                    if (cenario == 2) {
-                        System.out.println("\nChuvas");
-                        aguaLitros *= 2;
-                    }
-                    if (cenario == 3) {
-                        System.out.println("\nErupcao Vulcanica");
-                        int animais = 0, plantas = 0;
-                        for (int i = 0; i < seres.size(); i++) {
-                            if (seres.get(i) instanceof Animal) {
-                                animais++;
-                            }
-                            if (seres.get(i) instanceof Planta) {
-                                plantas++;
-                            }
-                        }
-                        plantas /= 2;
-                        animais /= 2;
-                        int contador1 = 0, contador2 = 0;
-                        for (int i = 0; i < this.seres.size(); i++) {
-                            SerVivo serVivoAtual = this.seres.get(i);
-                            if (serVivoAtual instanceof Animal) {
-                                contador1++;
-                                if (contador1 > animais) {
-                                    this.seres.remove(serVivoAtual);
-                                    ultimoAnimalMorrer = serVivoAtual;
-                                }
-                            }
-                            if (serVivoAtual instanceof Planta) {
-                                contador2++;
-                                if (contador2 > plantas) {
-                                    this.seres.remove(serVivoAtual);
-                                }
-                            }
-                        }
-                    }
+                    catastrofeNatural();
                 }
                 momentoDia++;
             }
 
-            for (int i = 0; i < this.seres.size(); i++) {
-                SerVivo serVivoAtual = this.seres.get(i);
-                if (serVivoAtual instanceof Animal) {
-                    Animal animalAtual = (Animal) serVivoAtual;
-                    if (animalAtual.isFome()) {
-                        System.out.println("Tem fome");
-                        animalCome(i);
+            int c = 0;
+            while (c < seres.size()){
+                for (int i = 0; i < this.seres.size(); i++) {
+                    SerVivo serVivoAtual = this.seres.get(i);
+                    if (serVivoAtual instanceof Animal) {
+                        Animal animalAtual = (Animal) serVivoAtual;
                         if (animalAtual.isFome()) {
-                            ultimoAnimalMorrer = animalAtual;
-                            seres.remove(animalAtual);
-                            System.out.println("Morreu");
+                            System.out.println("\n" + animalAtual.getNome() + " Tem fome");
+                            if (animalCome(i)) {
+                                System.out.println(animalAtual.getNome() + " Comeu");
+                                animalAtual.setFome(false);
+                            } else {
+                                ultimoAnimalMorrer = animalAtual;
+                                removerSerVivo(i);
+                                System.out.println(animalAtual.getNome() + " Morreu");
+                            }
                         }
                     }
                 }
+                c++;
             }
 
             int contador=0;
