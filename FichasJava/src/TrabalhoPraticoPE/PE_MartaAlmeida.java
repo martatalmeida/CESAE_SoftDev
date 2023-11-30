@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class MartaAlmeida {
+public class PE_MartaAlmeida {
 
     /**
      * Método que contem o menu do administrador
@@ -14,7 +14,7 @@ public class MartaAlmeida {
 
         Scanner input = new Scanner(System.in);
 
-        String[][] matriz = ficheiroParaMatriz("src/TrabalhoPraticoPE/GameStart_V2.csv");
+        String[][] matriz = ficheiroParaMatriz("GameStart_V2.csv");
 
         String idCliente, jogoCaro;
         int opcao, numVendas;
@@ -37,7 +37,7 @@ public class MartaAlmeida {
                     imprimirConteudo(matriz);
                     break;
                 case 2:
-                    numVendas = contarLinhas("src/TrabalhoPraticoPE/GameStart_V2.csv") - 1;
+                    numVendas = contarLinhas("GameStart_V2.csv") - 1;
                     valorTotal = valorTotalVendas(matriz);
                     System.out.println("Número de Vendas Total: " + numVendas);
                     System.out.println("Valor total de Vendas: " + valorTotal);
@@ -71,7 +71,7 @@ public class MartaAlmeida {
 
         Scanner input = new Scanner(System.in);
 
-        String[][] matriz = ficheiroParaMatriz("src/TrabalhoPraticoPE/GameStart_V2.csv");
+        String[][] matriz = ficheiroParaMatriz("GameStart_V2.csv");
 
         String nomeCliente, contactoCliente, emailCliente, editora;
         int opcao;
