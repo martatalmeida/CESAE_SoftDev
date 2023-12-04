@@ -8,12 +8,12 @@ public class Main {
 
         Base base = new Base("1","Massa Fina",5, BasePizza.Massa_Fina);
         Queijo ingrediente1 = new Queijo("2", "Queijo", UnidadeMedida.Gramas,4, OrigemIngrediente.Nacional, TipoQueijo.Mozzarela);
-        Carne ingrediente2 = new Carne("2", "Fiambre", UnidadeMedida.Gramas,4, OrigemIngrediente.Importado,TipoCarne.Porco);
-        Vegetal ingrediente3 = new Vegetal("3", "Cogumelos",UnidadeMedida.Gramas,6,OrigemIngrediente.Nacional,TipoVegetal.Cogumelos);
-        Carne ingrediente4 = new Carne("4","Presunto",UnidadeMedida.Unidades, 15, OrigemIngrediente.Importado,TipoCarne.Porco);
-        FrutosdoMar ingrediente5 = new FrutosdoMar("5", "Camarão", UnidadeMedida.Unidades, 10, OrigemIngrediente.Nacional,TipoFrutosdoMar.Camarao);
-        Vegetal ingrediente6 = new Vegetal("6","Tomate",UnidadeMedida.Gramas,5,OrigemIngrediente.Nacional,TipoVegetal.Tomate);
-        Vegetal ingrediente7 = new Vegetal("7", "Pimento", UnidadeMedida.Gramas, 3, OrigemIngrediente.Importado, TipoVegetal.Pimento);
+        Carne ingrediente2 = new Carne("3", "Fiambre", UnidadeMedida.Gramas,4, OrigemIngrediente.Importado,TipoCarne.Porco);
+        Vegetal ingrediente3 = new Vegetal("4", "Cogumelos",UnidadeMedida.Gramas,6,OrigemIngrediente.Nacional,TipoVegetal.Cogumelos);
+        Carne ingrediente4 = new Carne("5","Presunto",UnidadeMedida.Unidades, 15, OrigemIngrediente.Importado,TipoCarne.Porco);
+        FrutosdoMar ingrediente5 = new FrutosdoMar("6", "Camarão", UnidadeMedida.Unidades, 10, OrigemIngrediente.Nacional,TipoFrutosdoMar.Camarao);
+        Vegetal ingrediente6 = new Vegetal("7","Tomate",UnidadeMedida.Gramas,5,OrigemIngrediente.Nacional,TipoVegetal.Tomate);
+        Vegetal ingrediente7 = new Vegetal("8", "Pimento", UnidadeMedida.Gramas, 3, OrigemIngrediente.Importado, TipoVegetal.Pimento);
 
 
         IngredientePizza massa = new IngredientePizza(base, 200);
