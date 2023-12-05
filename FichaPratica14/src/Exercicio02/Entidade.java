@@ -24,5 +24,5 @@ public abstract class Entidade {
         return forca;
     }
 
-    public abstract void atacar(NPC npc);
+
 }

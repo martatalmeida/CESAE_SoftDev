@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a3711a-2e6c-4c66-be91-ea0ae512aa4a" name="Changes" comment="" />
+    <list default="true" id="92a3711a-2e6c-4c66-be91-ea0ae512aa4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FichaPratica14/Exercicio01/FigurasGeometricasDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FichaPratica14/Exercicio01/FigurasGeometricasDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercicio02/Entidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercicio02/Entidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercicio02/NPC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercicio02/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercicio02/Personagem.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +33,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2Z56vMZEBU3BReQji3V4ekI3SWA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -30,7 +45,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

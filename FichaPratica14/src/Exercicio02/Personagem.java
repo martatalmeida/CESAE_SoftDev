@@ -13,10 +13,5 @@ public class Personagem extends Entidade{
         this.arma = arma;
     }
 
-    @Override
-    public void atacar(NPC npc) {
-        do{
 
-        }while(this.getVida() <= 0 || npc.getVida() <= 0);
-    }
 }
