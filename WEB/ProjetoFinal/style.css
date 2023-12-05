@@ -50,13 +50,13 @@ h2,h3{
     padding: 25px;
  }
 
- .btn-home {
+ .btn-footer {
     background-color: #F2D022;
     color: #0F1B40;
  }
 
- .btn-home:hover {
-    background-color:#fbfbff;
+ .btn-footer:hover {
+  background-color:#d2c56f;
     color:#0F1B40;
  }
 
@@ -119,30 +119,43 @@ h2,h3{
     transform: translate(-50%, -50%);
     color: #fbfbff;
     background-color:#0F1B40;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    z-index: 9999;
+    z-index: 1;
   }
   .popup-close {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 7px;
+    right: 7px;
     cursor: pointer;
   }
 
-  .form-table,th,td {
-    border: none;
-    border-color: #fbfbff;
-    text-align: right;
-  }
-
   .btn-form {
-    background-color: #0F1B40;
-    color:#F2D022;
+    background-color: #F2D022;
+    color:#0F1B40;
+    border-radius: 6px;
  }
 
  .btn-form:hover {
-    background-color: #F2D022;
-    color:#0F1B40;
+  background-color:#d2c56f;
+  color:#0F1B40;
+ }
+
+ .submitStatus{
+  font-size: 12px;
+ }
+
+ /* SOBRE O FILME */
+
+ .imagem-sinopse{
+  text-align: right;
+ }
+
+ .img-sinopse{
+  height: 400px;
+ }
+
+ .sinopse{
+  text-align: left;
  }

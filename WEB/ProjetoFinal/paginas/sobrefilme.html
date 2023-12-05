@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
 </head>
 
 
@@ -47,7 +48,7 @@
                 <img src="/imagens/riso.jpeg" class="d-block w-100" alt="fotoriso">
               </div>
               <div class="carousel-item">
-                <img src="/imagens/abraço2.webp" class="d-block w-100" alt="capalalaland">
+                <img src="/imagens/rua.webp" class="d-block w-100" alt="andarnarua">
             </div>
               <div class="carousel-item">
                 <img src="/imagens/lalaland.jpeg" class="d-block w-100" alt="capalalaland">
@@ -69,22 +70,79 @@
         </div>
        </header>
 
+       <br><br>
 
-       <br><br><br>
+       <h2>O que precisa de saber sobre o filme</h2>
+
+       <br><br>
+
+       <div class="container">
+        <div class="row justify-content-center">
+          <!-- Second column with smaller size -->
+          <div class="col-md-3">
+            <div class="imagem-sinopse">
+              <img class = "img-sinopse" src="/imagens/capafilme.png" alt="capafilme">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="sinopse">
+              <h5>Sinopse</h5>
+              <p>La La Land é um filme musical, de 2016, que pinta um exuberante caminho de música e dança através de uma história de amor que muda a vida de um pianista de jazz e de uma aspirante a atriz. Enquanto ambos navegam as suas carreiras em Los Angeles, apaixonam-se e tentam conciliar as suas aspirações para o futuro. <br> O filme explora os seus encontros, a paixão e os desafios ao longo do caminho, mostrando as suas jornadas individuais e o impacto que os seus objetivos têm no seu relacionamento. Ambientado em uma atmosfera de sonho, "La La Land" é uma celebração do amor, da arte e da busca pela realização dos sonhos, enquanto enfrenta as realidades do mundo moderno. <br>O título é uma referência à cidade na qual o filme é ambientado e ao termo Lalaland, que significa estar fora da realidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="custom-col">
+              Smaller space in the second column
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-col">
+              Bigger space in the first column
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br>
 
        <!-- FOOTER -->
        
-         <footer>
-       
-           <div class="card text-center">
-               <div class="card-footer">
-                 <p class="card-text">Marta Almeida</p>
-                 <a href="#" class="btn">Contact Me</a>
-               </div>
-             </div>
-             
-       
-         </footer>
+       <footer>
+
+        <div class="card text-center">
+        <div class="card-footer">
+          <p class="card-text">Marta Almeida</p>
+          <button class="btn btn-primary btn-footer" onclick="openContactForm()">Contact Me</button>
+
+          <div class="popup" id="contactPopup">
+            <span class="popup-close" onclick="closeContactForm()">&times;</span>
+            <form id="contactForm">
+              <h3 style="color:white;">Contact Me</h3>
+              <label for="name">Nome:</label><br>
+              <input type="text" id="name" required><br><br>
+      
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" required><br><br>
+      
+              <label for="message">Mensagem:</label><br>
+              <textarea id="message" rows="4" required></textarea><br><br>
+              
+              <button class ="btn-form"type="button" onclick="submitForm()">Submit</button>
+              <div class="submitStatus"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+          
+    
+      </footer>
 
     </body>
 </html>

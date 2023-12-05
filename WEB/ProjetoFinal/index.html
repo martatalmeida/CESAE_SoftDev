@@ -51,7 +51,7 @@
                 <img src="/imagens/riso.jpeg" class="d-block w-100" alt="fotoriso">
               </div>
               <div class="carousel-item">
-                <img src="/imagens/abraço2.webp" class="d-block w-100" alt="capalalaland">
+                <img src="/imagens/rua.webp" class="d-block w-100" alt="andarnarua">
             </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -118,38 +118,26 @@
     <div class="card text-center">
         <div class="card-footer">
           <p class="card-text">Marta Almeida</p>
-          <button class="btn btn-primary btn-home" onclick="openContactForm()">Contact Me</button>
+          <button class="btn btn-primary btn-footer" onclick="openContactForm()">Contact Me</button>
 
           <div class="popup" id="contactPopup">
             <span class="popup-close" onclick="closeContactForm()">&times;</span>
-            <table class="table form-table mx-auto">
-              <thead>
-                <tr>
-                  <th colspan="2" class="text-center">
-                    <h3>Contact Me</h3>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Nome:</th>
-                  <td><input type="text" class="form-control" name="name" required></td>
-                </tr>
-                <tr>
-                  <th>E-mail:</th>
-                  <td><input type="email" class="form-control" name="email" required></td>
-                </tr>
-                <tr>
-                  <th>Mensagem:</th>
-                  <td><textarea class="form-control" name="message" rows="5" required></textarea></td>
-                </tr>
-                <tr>
-                  <td colspan="2" class="text-center">
-                    <button type="submit" class="btn btn-primary btn-form">Submit</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <form id="contactForm">
+              <h3 style="color:white;">Contact Me</h3>
+              <label for="name">Nome:</label><br>
+              <input type="text" id="name" required><br><br>
+      
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" required><br><br>
+      
+              <label for="message">Mensagem:</label><br>
+              <textarea id="message" rows="4" required></textarea><br><br>
+              
+            
+              <button class ="btn-form"type="button" onclick="submitForm()">Submit</button>
+              <div class="submitStatus"></div>
+
+            </form>
           </div>
         </div>
       </div>
