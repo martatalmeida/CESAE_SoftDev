@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92a3711a-2e6c-4c66-be91-ea0ae512aa4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FichaPratica14/Exercicio01/FigurasGeometricasDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FichaPratica14/Exercicio01/FigurasGeometricasDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercicio02/Entidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercicio02/Entidade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercicio02/NPC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercicio02/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercicio02/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercicio03/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercicio03/Curso.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

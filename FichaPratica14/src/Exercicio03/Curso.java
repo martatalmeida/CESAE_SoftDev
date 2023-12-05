@@ -71,6 +71,7 @@ public class Curso{
             for (DisciplinaCurso disciplinaCursoAtual : this.planoCurricular){
                 duracaoTotal += disciplinaCursoAtual.getDisciplina().getDuracaoHoras();
             }
+            return duracaoTotal;
         }
 
 
