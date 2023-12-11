@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="de4511ff-1ff2-4579-9931-1e2e075be3bc" name="Changes" comment="" />
+    <list default="true" id="b656d2df-c8e1-4d47-8d83-3a2e97fd498f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +10,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -24,10 +20,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2YWeRPVwRibsshhTJttRLXPvmHE" />
+  <component name="ProjectId" id="2ZOI4YCJGdorlgoAKHEBLncI5c9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,18 +30,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/softdev/Desktop/MartaAlmeida_SoftDev/FactoryMethod"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="de4511ff-1ff2-4579-9931-1e2e075be3bc" name="Changes" comment="" />
-      <created>1700645757060</created>
+      <changelist id="b656d2df-c8e1-4d47-8d83-3a2e97fd498f" name="Changes" comment="" />
+      <created>1702286509175</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1700645757060</updated>
+      <updated>1702286509175</updated>
     </task>
     <servers />
   </component>
