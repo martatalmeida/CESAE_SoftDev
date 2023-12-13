@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cd99e89-f2a2-4057-a943-178a27cd0393" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex03/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex03/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex03/OvernightShippingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex03/OvernightShippingStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex03/ShippingCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex03/ShippingCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex03/StandardShippingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex03/StandardShippingStrategy.java" afterDir="false" />
-    </list>
+    <list default="true" id="3cd99e89-f2a2-4057-a943-178a27cd0393" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,23 +24,23 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ZP7Bgl6gjdQZfV0UvbCeRi8riF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/Strategy"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/Strategy&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
