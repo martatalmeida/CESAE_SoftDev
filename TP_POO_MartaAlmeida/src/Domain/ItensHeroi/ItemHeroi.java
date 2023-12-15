@@ -20,8 +20,10 @@ public abstract class ItemHeroi {
         System.out.println("Preço: " + this.precoMoedasOuro + " moedas");
     }
 
-    public void addHeroiPermitido(ArrayList<String> heroiPermitido){
-        this.heroisPermitidos.add(String.valueOf(heroiPermitido));
+    public void addHeroiPermitido(ArrayList<String> heroisNovos){
+        for (String heroiNovoAtual: heroisNovos){
+            this.heroisPermitidos.add(heroiNovoAtual);
+        }
     }
 
 }
