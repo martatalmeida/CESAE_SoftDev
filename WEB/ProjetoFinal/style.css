@@ -149,13 +149,28 @@ h2,h3{
  /* SOBRE O FILME */
 
  .imagem-sinopse{
-  text-align: right;
+  text-align: left;
  }
 
  .img-sinopse{
+  width: 270px;
   height: 400px;
  }
 
  .sinopse{
+  text-align: right;
+ }
+
+ .premios{
   text-align: left;
  }
+
+ .img-oscars{
+  width: 270px;
+  height: 400px;
+ }
+
+ .imagem-premios{
+  text-align: right;
+ }
+

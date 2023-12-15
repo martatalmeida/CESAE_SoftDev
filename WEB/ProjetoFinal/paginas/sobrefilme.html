@@ -70,6 +70,7 @@
         </div>
        </header>
 
+       <div id="content">
        <br><br>
 
        <h2>O que precisa de saber sobre o filme</h2>
@@ -78,16 +79,15 @@
 
        <div class="container">
         <div class="row justify-content-center">
-          <!-- Second column with smaller size -->
-          <div class="col-md-3">
-            <div class="imagem-sinopse">
-              <img class = "img-sinopse" src="/imagens/capafilme.png" alt="capafilme">
-            </div>
-          </div>
           <div class="col-md-6">
             <div class="sinopse">
               <h5>Sinopse</h5>
               <p>La La Land é um filme musical, de 2016, que pinta um exuberante caminho de música e dança através de uma história de amor que muda a vida de um pianista de jazz e de uma aspirante a atriz. Enquanto ambos navegam as suas carreiras em Los Angeles, apaixonam-se e tentam conciliar as suas aspirações para o futuro. <br> O filme explora os seus encontros, a paixão e os desafios ao longo do caminho, mostrando as suas jornadas individuais e o impacto que os seus objetivos têm no seu relacionamento. Ambientado em uma atmosfera de sonho, "La La Land" é uma celebração do amor, da arte e da busca pela realização dos sonhos, enquanto enfrenta as realidades do mundo moderno. <br>O título é uma referência à cidade na qual o filme é ambientado e ao termo Lalaland, que significa estar fora da realidade.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="imagem-sinopse">
+              <img class = "img-sinopse" src="/imagens/capafilme.png" alt="capafilme">
             </div>
           </div>
         </div>
@@ -96,19 +96,29 @@
       <br><br><br>
 
       <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="custom-col">
-              Smaller space in the second column
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="imagem-premios">
+              <img class="img-oscars" src="/imagens/oscars.jpg" alt="oscars">
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="custom-col">
-              Bigger space in the first column
+          <div class="col-md-8">
+            <div class="premios">
+              <h5>Prémios</h5>
+              <p>La La Land foi nomeado para 260 prémios e ganhou 112. Entre estes ganhou sete Óscares:</p>
+              <ul>
+                <li><b>Melhor Diretor:</b> Damien Chazelle</li>
+                <li><b>Melhor Atriz:</b> Emma Stone</li>
+                <li><b>Melhor Banda Sonora:</b> Justin Hurwitz</li>
+                <li><b>Melhor Canção Original:</b> <em>"City of Stars"</em>, de Justin Hurwitz, Pasek and Paul</li>
+                <li><b>Melhor Direção de Arte:</b> David Wasco e Sandy Reynolds-Wasco</li>
+                <li><b>Melhor Fotografia:</b> Linus Sandgren</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+       </div>
 
       <br><br><br>
 
@@ -118,8 +128,8 @@
 
         <div class="card text-center">
         <div class="card-footer">
-          <p class="card-text">Marta Almeida</p>
           <button class="btn btn-primary btn-footer" onclick="openContactForm()">Contact Me</button>
+          <p class="card-text"><br>Desenvolvido por Marta Almeida</p>
 
           <div class="popup" id="contactPopup">
             <span class="popup-close" onclick="closeContactForm()">&times;</span>
@@ -134,7 +144,7 @@
               <label for="message">Mensagem:</label><br>
               <textarea id="message" rows="4" required></textarea><br><br>
               
-              <button class ="btn-form"type="button" onclick="submitForm()">Submit</button>
+              <button class ="btn-form" type="button" onclick="submitForm()">Submit</button>
               <div class="submitStatus"></div>
             </form>
           </div>
