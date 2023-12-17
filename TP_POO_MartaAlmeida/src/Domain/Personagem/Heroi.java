@@ -19,4 +19,6 @@ public abstract class Heroi extends Entidade {
         this.armaPrincipal = armaPrincipal;
         this.inventario = new ArrayList<Consumivel>();
     }
+
+    public abstract void atacar(NPC npc);
 }

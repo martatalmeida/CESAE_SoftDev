@@ -1,8 +1,16 @@
 tipo;nome;preco;heroisPermitidos;ataque;ataqueEspecial;ataqueInstantaneo;vida;forca
-ArmaPrincipal;Excalibur;75;[Cavaleiro,Feiticeiro];20;35;0;0;0
-ArmaPrincipal;Faca Manteiga;5;[Cavaleiro];2;3;0;0;0
-ArmaPrincipal;Arco Velho;4;[Arqueiro];3;5;0;0;0
-ConsumivelCombate;Granada de Mao;10;[Cavaleiro,Arqueiro];0;0;30;0;0
-ConsumivelCombate;Avada Kedavra;25;[Feiticeiro];0;0;200;0;0
-Pocao;Vinho do Porto;5;[Cavaleiro,Arqueiro,Feiticeiro];0;0;0;8;15
-Pocao;Injecao Adrenalina;18;[Cavaleiro,Arqueiro];0;0;0;-15;15
+ArmaPrincipal;Espada de Metal;75;[Humano,Feiticeiro,Elfo];20;35;0;0;0
+ArmaPrincipal;Machado Ferrugento;5;[Humano];2;3;0;0;0
+ArmaPrincipal;Arco de Salgueiro;4;[Elfo];3;5;0;0;0
+ArmaPrincipal;Bastão Mágico;4;[Feiticeiro];3;5;0;0;0
+ConsumivelCombate;Flecha Flamejante;10;[Elfo];0;0;45;0;0
+ConsumivelCombate;Faca Voadora;10;[Humano,Elfo];0;0;45;0;0
+ConsumivelCombate;Dinamite;10;[Humano];0;0;45;0;0
+ConsumivelCombate;Cubo da Tempestade;25;[Feiticeiro];0;0;50;0;0
+ConsumivelCombate;Bomba de Fumo Venenoso;10;[Humano];0;0;45;0;0
+ConsumivelCombate;Talismã da Morte;10;[Feiticeiro];0;0;100;0;0
+Pocao;Pocao de Vida;5;[Humano,Elfo,Feiticeiro];0;0;0;25;0
+Pocao;Pocao do Sacrificio;18;[Humano,Elfo,Feiticeiro];0;0;0;-30;30
+Pocao;Pocao Maxima;150;[Humano,Elfo,Feiticeiro];0;0;0;100;0
+Pocao;Pocao Fortificante;18;[Humano,Elfo,Feiticeiro];0;0;0;0;20
+
