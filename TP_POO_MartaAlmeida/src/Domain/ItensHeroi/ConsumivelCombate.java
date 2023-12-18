@@ -11,6 +11,10 @@ public class ConsumivelCombate extends Consumivel {
         AtaqueInstantaneo = ataqueInstantaneo;
     }
 
+    public int getAtaqueInstantaneo() {
+        return AtaqueInstantaneo;
+    }
+
     @Override
     public void mostrarDetalhes() {
         super.mostrarDetalhes();

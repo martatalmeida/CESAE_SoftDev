@@ -2,6 +2,7 @@ package Domain.Personagem;
 
 import Domain.ItensHeroi.ArmaPrincipal;
 import Domain.ItensHeroi.Consumivel;
+import Domain.ItensHeroi.ConsumivelCombate;
 
 import java.util.ArrayList;
 
@@ -12,13 +13,35 @@ public abstract class Heroi extends Entidade {
     private ArmaPrincipal armaPrincipal;
     private ArrayList<Consumivel> inventario;
 
-    public Heroi(String nome, int vidaMax, int forca, int nivel, int ouro, ArmaPrincipal armaPrincipal) {
+    public Heroi(String nome, int vidaMax, int forca, int nivel, int ouro) {
         super(nome, vidaMax, forca);
         this.nivel = nivel;
         this.ouro = ouro;
-        this.armaPrincipal = armaPrincipal;
+        this.armaPrincipal = null;
         this.inventario = new ArrayList<Consumivel>();
     }
 
-    public abstract void atacar(NPC npc);
+    public int getNivel() {
+        return nivel;
+    }
+
+    public int getOuro() {
+        return ouro;
+    }
+
+    public ArmaPrincipal getArmaPrincipal() {
+        return armaPrincipal;
+    }
+
+    public ArrayList<Consumivel> getInventario() {
+        return inventario;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public void setOuro(int ouro) {
+        this.ouro = ouro;
+    }
 }

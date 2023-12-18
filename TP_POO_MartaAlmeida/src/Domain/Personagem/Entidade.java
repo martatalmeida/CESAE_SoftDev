@@ -14,6 +14,30 @@ public abstract class Entidade {
         this.forca = forca;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getVidaMax() {
+        return vidaMax;
+    }
+
+    public int getVidaAtual() {
+        return vidaAtual;
+    }
+
+    public int getForca() {
+        return forca;
+    }
+
+    public void setVidaAtual(int vidaAtual) {
+        this.vidaAtual = vidaAtual;
+    }
+
+    public void setForca(int forca) {
+        this.forca = forca;
+    }
+
     public void mostrarDetalhes(){
         System.out.println("*** Detalhes da Personagem ***");
         System.out.println("Nome: " +this.nome);
@@ -21,5 +45,8 @@ public abstract class Entidade {
         System.out.println("Vida Atual: " + this.vidaAtual);
         System.out.println("Força: " + this.forca);
     }
+
+
+
 
 }

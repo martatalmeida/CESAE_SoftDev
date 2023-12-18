@@ -65,7 +65,7 @@ public class CSVItensReader {
             }
 
             arrayItens.add(item);
-            item.addHeroiPermitido(verheroisPermitidos(heroisPermitidos));
+            item.addHeroisPermitido(verheroisPermitidos(heroisPermitidos));
 
         }
         return arrayItens;

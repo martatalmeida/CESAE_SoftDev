@@ -10,4 +10,8 @@ public class NPC extends Entidade {
         super(nome, vidaMax, forca);
         this.ouro = ouro;
     }
+
+    public int getOuro() {
+        return ouro;
+    }
 }

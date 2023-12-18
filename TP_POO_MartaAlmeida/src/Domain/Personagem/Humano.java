@@ -4,12 +4,11 @@ import Domain.ItensHeroi.ArmaPrincipal;
 
 public class Humano extends Heroi {
 
-    public Humano(String nome, int vidaMax, int forca, int nivel, int ouro, ArmaPrincipal armaPrincipal) {
-        super(nome, vidaMax, forca, nivel, ouro, armaPrincipal);
+    public Humano(String nome, int vidaMax, int forca, int nivel, int ouro) {
+        super(nome, vidaMax, forca, nivel, ouro);
     }
 
-    @Override
-    public void atacar(NPC npc) {
 
-    }
+
+
 }

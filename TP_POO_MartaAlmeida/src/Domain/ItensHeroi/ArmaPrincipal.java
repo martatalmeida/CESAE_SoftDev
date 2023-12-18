@@ -4,19 +4,27 @@ import Domain.ItensHeroi.ItemHeroi;
 
 public class ArmaPrincipal extends ItemHeroi {
 
-    private int Ataque;
-    private int AtaqueEspecial;
+    private int ataque;
+    private int ataqueEspecial;
 
     public ArmaPrincipal(String nome, int precoMoedasOuro, int ataque, int ataqueEspecial) {
         super(nome, precoMoedasOuro);
-        Ataque = ataque;
-        AtaqueEspecial = ataqueEspecial;
+        ataque = ataque;
+        ataqueEspecial = ataqueEspecial;
     }
 
     @Override
     public void mostrarDetalhes() {
         super.mostrarDetalhes();
-        System.out.println("Ataque: " + this.Ataque);
-        System.out.println("Ataque Especial: " + this.AtaqueEspecial);
+        System.out.println("Ataque: " + this.ataque);
+        System.out.println("Ataque Especial: " + this.ataqueEspecial);
+    }
+
+    public int getAtaque() {
+        return ataque;
+    }
+
+    public int getAtaqueEspecial() {
+        return ataqueEspecial;
     }
 }
