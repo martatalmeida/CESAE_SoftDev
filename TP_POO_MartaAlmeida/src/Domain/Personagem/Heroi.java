@@ -44,4 +44,8 @@ public abstract class Heroi extends Entidade {
     public void setOuro(int ouro) {
         this.ouro = ouro;
     }
+
+    public void setArmaPrincipal(ArmaPrincipal armaPrincipal) {
+        this.armaPrincipal = armaPrincipal;
+    }
 }

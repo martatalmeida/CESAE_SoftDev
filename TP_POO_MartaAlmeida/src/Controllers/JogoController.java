@@ -159,11 +159,17 @@ public class JogoController {
 
 
 
-    public void imprimirLoja(){
+    public void imprimirLoja(Vendedor vendedor) throws FileNotFoundException {
         Random random = new Random();
         ArrayList<Integer> arrayIndexAleatorio = new ArrayList<>();
         while(arrayIndexAleatorio.size()<10){
-
+            int indexAleatorio = random.nextInt(0,vendedor.getLoja().size());
+            if (!arrayIndexAleatorio.contains(indexAleatorio)){
+                arrayIndexAleatorio.add(indexAleatorio);
+            }
+        }
+        for (int i = 0; i < arrayIndexAleatorio.size(); i++){
+            vendedor.getLoja().get(arrayIndexAleatorio.get(i)).mostrarDetalhes();
         }
     }
 

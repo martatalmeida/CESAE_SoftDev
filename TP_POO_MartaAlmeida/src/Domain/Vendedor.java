@@ -16,6 +16,7 @@ public class Vendedor {
         this.loja = repositorio.getItensArray();
     }
 
-
-
+    public ArrayList<ItemHeroi> getLoja() {
+        return loja;
+    }
 }
