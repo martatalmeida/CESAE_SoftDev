@@ -58,7 +58,7 @@ public class JogoView {
             System.out.println("Quantos pontos de criação quer atribuir à vida da personagem?");
             vida = input.nextInt();
 
-            System.out.println("Restam-lhe " + (pontos - vida) + "pontos de criação. Quantos pontos de criação quer atribuir à força da personagem?");
+            System.out.println("Restam-lhe " + (pontos - vida) + " pontos de criação. Quantos pontos de criação quer atribuir à força da personagem?");
             forca = input.nextInt();
         }
 

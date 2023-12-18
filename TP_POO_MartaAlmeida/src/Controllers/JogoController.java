@@ -3,21 +3,21 @@ package Controllers;
 import Domain.ItensHeroi.Consumivel;
 import Domain.ItensHeroi.ConsumivelCombate;
 import Domain.ItensHeroi.ItemHeroi;
+import Domain.ItensHeroi.Pocao;
 import Domain.Personagem.*;
 import Domain.Vendedor;
 import Repository.ItensRepository;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class JogoController {
 
-    private ArrayList<ItemHeroi> todosOsItens;
 
-    public JogoController() throws FileNotFoundException {
-        ItensRepository repositorio = new ItensRepository("Ficheiro/ItensHeroiRPG.csv");
-        this.todosOsItens = repositorio.getItensArray();
+    public JogoController() {
+
     }
 
     public Heroi criarPersonagem(int tipo, String nome, int dificuldade,int vida, int forca){
@@ -95,7 +95,7 @@ public class JogoController {
                         ArrayList<Integer> arrayContador = new ArrayList<>();
                         for (Consumivel consumivelAtual : heroi.getInventario()){
                             if (consumivelAtual instanceof ConsumivelCombate){
-                                System.out.println(indice + "");
+                                System.out.println(indice + ". ");
                                 arrayContador.add(indice);
                                 consumivelAtual.mostrarDetalhes();
                             }
@@ -106,17 +106,13 @@ public class JogoController {
                         do{
                             System.out.println("Que Ataque Consumível quer utilizar? Digite 0 se quiser cancelar este ataque");
                             ataqueConsumivel = input.nextInt();
-                            if (ataqueConsumivel == 0){
-                                break;
+                            if (ataqueConsumivel != 0){
+                                ConsumivelCombate consumivelCombate = (ConsumivelCombate) heroi.getInventario().get(ataqueConsumivel);
+                                npc.setVidaAtual(npc.getVidaAtual()-consumivelCombate.getAtaqueInstantaneo());
+                                heroi.getInventario().remove(consumivelCombate);
                             }
 
-                        } while(!arrayContador.contains(ataqueConsumivel));
-
-
-
-                        ConsumivelCombate consumivelCombate = (ConsumivelCombate) heroi.getInventario().get(ataqueConsumivel);
-                        npc.setVidaAtual(npc.getVidaAtual()-consumivelCombate.getAtaqueInstantaneo());
-                        heroi.getInventario().remove(consumivelCombate);
+                        } while(!arrayContador.contains(ataqueConsumivel) && ataqueConsumivel != 0);
                         break;
                     }
 
@@ -132,7 +128,44 @@ public class JogoController {
             heroi.setOuro(heroi.getOuro()+ npc.getOuro());
         }
         return vencedor;
+    }
+
+
+    public void usarPocao(Heroi heroi){
+        Scanner input = new Scanner(System.in);
+        ArrayList<Integer> contador = new ArrayList<>();
+        int indice = 0, opcao;
+        for (Consumivel consumivelAtual : heroi.getInventario()){
+            if (consumivelAtual instanceof Pocao){
+                System.out.println(indice + ". ");
+                contador.add(indice);
+                consumivelAtual.mostrarDetalhes();
+            }
+            indice++;
         }
+
+        do {
+            System.out.println("Que Poção quer utilizar?");
+            opcao = input.nextInt();
+        } while(!contador.contains(opcao));
+
+        Pocao pocao = (Pocao) heroi.getInventario().get(opcao);
+
+        heroi.setVidaAtual(heroi.getVidaAtual()+ pocao.getVidaACurar());
+        heroi.setForca(heroi.getForca()+ pocao.getAumentoForça());
+
+        heroi.getInventario().remove(pocao);
+    }
+
+
+
+    public void imprimirLoja(){
+        Random random = new Random();
+        ArrayList<Integer> arrayIndexAleatorio = new ArrayList<>();
+        while(arrayIndexAleatorio.size()<10){
+
+        }
+    }
 
 
 }

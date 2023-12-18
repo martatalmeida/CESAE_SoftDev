@@ -24,14 +24,17 @@ public abstract class ItemHeroi {
 
     public void mostrarDetalhes(){
         System.out.println("*** Detalhes do Item ***");
-        System.out.println("Nome: " + this.nome);
-        System.out.println("Preço: " + this.precoMoedasOuro + " moedas");
+        System.out.println("Nome: " + this.nome + " | Preço: " + this.precoMoedasOuro + " moedas");
     }
 
     public void addHeroisPermitido(ArrayList<String> heroisNovos){
         for (String heroiNovoAtual: heroisNovos){
             this.heroisPermitidos.add(heroiNovoAtual);
         }
+    }
+
+    public void addHeroiPermitido(String heroiNovo){
+        this.heroisPermitidos.add(heroiNovo);
     }
 
 }
