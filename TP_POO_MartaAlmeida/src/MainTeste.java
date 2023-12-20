@@ -6,6 +6,7 @@ import Domain.Personagem.NPC;
 import Domain.Vendedor;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class MainTeste {
 
@@ -21,7 +22,8 @@ public class MainTeste {
 
         JogoController jogoController = new JogoController();
 
-        jogoController.imprimirLoja(vendedor);
+        jogoController.loja(vendedor, elfo);
+
 
     }
 

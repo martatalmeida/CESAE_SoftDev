@@ -2,6 +2,7 @@ package View;
 
 import Controllers.JogoController;
 import Domain.Personagem.Heroi;
+import Domain.Vendedor;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -11,13 +12,17 @@ public class JogoView {
     public JogoView() {
     }
 
-    public static void menuCriarPersonagem() throws FileNotFoundException {
+    public static void Jogo() throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
         JogoController jogoController = new JogoController();
+        Heroi heroi = null;
 
         System.out.println("***** Bem-Vindo ao Jogo *****");
+
+
+        /* Criação da Personagem */
 
         System.out.println("\n\nVamos criar a sua Personagem! ");
         System.out.println("*** Tipos de Heroi ***");
@@ -53,7 +58,7 @@ public class JogoView {
         System.out.println("Restam-lhe " + (pontos - vida) + "pontos de criação. Quantos pontos de criação quer atribuir à força da personagem?");
         forca = input.nextInt();
 
-        while (forca + vida > 200) {
+        while (forca + vida > pontos) {
             System.out.println("Atribuiu demasiados pontos de criação. Volte a atribuir os " + pontos + " pontos de criação.");
             System.out.println("Quantos pontos de criação quer atribuir à vida da personagem?");
             vida = input.nextInt();
@@ -63,8 +68,56 @@ public class JogoView {
         }
 
         if (forca + vida <= pontos) {
-            Heroi heroi = jogoController.criarPersonagem(tipo, nome, dificuldade, vida, forca);
+            heroi = jogoController.criarPersonagem(tipo, nome, dificuldade, vida, forca);
         }
+
+        System.out.println("\n\n **** Início do Jogo **** ");
+
+        System.out.println("\n\nNo ano de ..., o exército das sombras amaldiçoou os dragões, metendo-os num sono profundo.");
+        System.out.println("Assim, os humanos, que viviam em harmonia com os dragões viram as suas defesas enfraquecidas.");
+        System.out.println("Durante os anos que se seguiram o exército das sombras conquistou e destruiu cidades onde humanos, elfos e feiticeiros viviam.");
+        System.out.println("Hoje, apenas Arcádia, a capital do reino, se mantém de pé.");
+        System.out.println("A única hipótese de parar o exército é com o poder dos dragões.");
+        System.out.println("Há uma antiga biblioteca perdida no meio da montanha onde se diz haver um livro que contém a solução para quebrar a maldição.");
+        System.out.println("É a tua missão encontrar esse livro!");
+        System.out.println("Encontras-te na floresta ao lado da cidade.");
+        System.out.println("Passa por ti um vendedor ambulante cheio de itens. É melhor abasteceres-te antes de começares a tua jornada.");
+
+        Vendedor vendedor = new Vendedor();
+        jogoController.loja(vendedor,heroi);
+
+        System.out.println("\nAgora tens de escolher por que caminho queres ir?");
+        System.out.println("1. Continuar pelo caminho conhecido que tem muita luz, mas é mais demorado.");
+        System.out.println("2. Cortar caminho e ir pelo caminho escuro.");
+        System.out.println("Qual escolhes?");
+        int caminho = input.nextInt();
+
+        switch (caminho){
+            case 1:
+                System.out.println("Começas a andar e acabas por encontrar uma fonte com água e apercebes-te que tens muita sede.");
+                System.out.println("1. Bebes água da fonte");
+                System.out.println("2. Achas melhor não beber e continuas o caminho.");
+                System.out.println("O que preferes?");
+                int agua = input.nextInt();
+
+                switch (agua){
+                    case 1:
+                        System.out.println("Bebes a água, mas não era potável então perdes 20 pontos de vida.");
+                        jogoController.agua(heroi,agua);
+                        break;
+                    case 2:
+                        System.out.println("Não bebes água");
+                }
+                break;
+            case 2:
+                System.out.println("Começas a andar e acabas por encontrar um templo em ruínas.");
+                System.out.println("1. Decides entrar para explorar.");
+                System.out.println("2. Não queres perder tempo então continuas o caminho.");
+                int ruinas = input.nextInt();
+                break;
+        }
+
     }
+
 
 }

@@ -22,8 +22,15 @@ public abstract class ItemHeroi {
         return precoMoedasOuro;
     }
 
+    public ArrayList<String> getHeroisPermitidos() {
+        return heroisPermitidos;
+    }
+
     public void mostrarDetalhes(){
-        System.out.print("Nome: " + this.nome + " | Preço: " + this.precoMoedasOuro + " moedas");
+        System.out.print("Nome: " + this.nome + " | Preço em moedas: " + this.precoMoedasOuro + " | Heróis Permitidos: ");
+        for (String heroiPermitidoAtual : this.heroisPermitidos){
+            System.out.print(heroiPermitidoAtual + " | ");
+        }
     }
 
     public void addHeroisPermitido(ArrayList<String> heroisNovos){

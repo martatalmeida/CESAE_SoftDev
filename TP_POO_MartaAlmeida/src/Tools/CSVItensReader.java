@@ -19,8 +19,8 @@ public class CSVItensReader {
     }
 
     public ArrayList<String> verheroisPermitidos(String heroiPermitidoFile){
-        heroiPermitidoFile.replace("[","");
-        heroiPermitidoFile.replace("]","");
+        heroiPermitidoFile = heroiPermitidoFile.replace("[","");
+        heroiPermitidoFile = heroiPermitidoFile.replace("]","");
         String[] arrayHeroisPermitidos = heroiPermitidoFile.split(",");
         ArrayList<String> heroisPermitidos = new ArrayList<>();
         for (int i = 0; i < arrayHeroisPermitidos.length; i++){
