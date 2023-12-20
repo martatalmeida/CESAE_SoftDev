@@ -17,7 +17,7 @@ public abstract class Heroi extends Entidade {
         super(nome, vidaMax, forca);
         this.nivel = nivel;
         this.ouro = ouro;
-        this.armaPrincipal = null;
+        this.armaPrincipal = new ArmaPrincipal("Punhos", 0, 0, 1);
         this.inventario = new ArrayList<Consumivel>();
     }
 

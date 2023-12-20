@@ -34,6 +34,10 @@ public abstract class Entidade {
         this.vidaAtual = vidaAtual;
     }
 
+    public void setVidaMax(int vidaMax) {
+        this.vidaMax = vidaMax;
+    }
+
     public void setForca(int forca) {
         this.forca = forca;
     }

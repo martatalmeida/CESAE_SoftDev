@@ -1,7 +1,9 @@
 package View;
 
 import Controllers.JogoController;
+import Domain.Personagem.Entidade;
 import Domain.Personagem.Heroi;
+import Domain.Personagem.NPC;
 import Domain.Vendedor;
 
 import java.io.FileNotFoundException;
@@ -12,7 +14,7 @@ public class JogoView {
     public JogoView() {
     }
 
-    public static void Jogo() throws FileNotFoundException {
+    public static Heroi menuCriarPersonagem() throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
@@ -70,6 +72,17 @@ public class JogoView {
         if (forca + vida <= pontos) {
             heroi = jogoController.criarPersonagem(tipo, nome, dificuldade, vida, forca);
         }
+        return heroi;
+    }
+
+    public static void Jogo(Heroi heroi) throws FileNotFoundException {
+
+        Scanner input = new Scanner(System.in);
+        JogoController jogoController = new JogoController();
+        Heroi heroiInicial = heroi;
+
+        NPC orc = new NPC("Orc", 80, 15,40);
+        NPC goblin = new NPC("Goblin", 70,20,50);
 
         System.out.println("\n\n **** Início do Jogo **** ");
 
@@ -93,29 +106,119 @@ public class JogoView {
         int caminho = input.nextInt();
 
         switch (caminho){
+
+            /* Escolhe o caminho com luz*/
             case 1:
-                System.out.println("Começas a andar e acabas por encontrar uma fonte com água e apercebes-te que tens muita sede.");
+                System.out.println("\nComeças a andar e acabas por encontrar uma fonte com água e apercebes-te que tens muita sede.");
                 System.out.println("1. Bebes água da fonte");
                 System.out.println("2. Achas melhor não beber e continuas o caminho.");
                 System.out.println("O que preferes?");
                 int agua = input.nextInt();
 
                 switch (agua){
+
+                    /*Escolhe beber água*/
                     case 1:
-                        System.out.println("Bebes a água, mas não era potável então perdes 20 pontos de vida.");
+                        System.out.println("\nBebes a água, mas não era potável então perdes 20 pontos de vida.");
                         jogoController.agua(heroi,agua);
                         break;
+
+                    /*Escolhe não beber água*/
                     case 2:
-                        System.out.println("Não bebes água");
+                        System.out.println("\nNão bebes água então ficas mais fraco e perdes 5 pontos de força.");
+                        jogoController.agua(heroi,agua);
+                        break;
                 }
                 break;
+
+            /*Escolhe o caminho escuro*/
             case 2:
-                System.out.println("Começas a andar e acabas por encontrar um templo em ruínas.");
+                System.out.println("\nComeças a andar e acabas por encontrar um templo em ruínas.");
                 System.out.println("1. Decides entrar para explorar.");
                 System.out.println("2. Não queres perder tempo então continuas o caminho.");
                 int ruinas = input.nextInt();
+
+                switch (ruinas){
+
+                    /*Escolhe explorar as ruínas*/
+                    case 1:
+                        System.out.println("\nEntras no templo e começas a explorar, mas encontras um dos soldados do exército das sombras.");
+                        System.out.println("De forma a saíres do templo tens de lutar.");
+                        Entidade vencedor = jogoController.atacar(heroi,orc);
+                        if (vencedor == heroi){
+                            System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
+                        } else {
+                            System.out.println("\nPerdeste! :( Podes:");
+                            System.out.println("1. Jogar novamente com a mesma personagem.");
+                            System.out.println("2. Criar uma nova personagem.");
+                            System.out.println("3. Fechar o jogo.");
+                            System.out.println("O que queres fazer?");
+                            int perder = input.nextInt();
+
+                            jogoController.perder(perder,heroiInicial);
+                        }
+                        break;
+
+                    /*Escolhe não explorar ruínas*/
+                    case 2:
+                        System.out.println("\nContinuas caminho e acabas por encontrar um inimigo morto. Reparas que ele tem uma poção e guardas no teu inventário.");
+                        jogoController.encontrarPocao(heroi);
+                        break;
+                }
                 break;
         }
+
+        System.out.println("\nAndas mais um bocado e chegas a um rio. Para passar tens três opções");
+        System.out.println("1. Ir por uma ponte quase a cair.");
+        System.out.println("2. Pedir boleia a um barqueiro duvidoso.");
+        System.out.println("3. Ir a nadar até ao outro lado.");
+        System.out.println("Qual preferes?");
+        int rio = input.nextInt();
+
+        switch (rio){
+
+            /*Escolhe ir pela ponte quase a cair*/
+            case 1:
+                System.out.println("\nComeças a passar a ponte e do nada aparece um goblin. Para conseguires passar para o outro lado tens de o derrotar.");
+                Entidade vencedor = jogoController.atacar(heroi,goblin);
+
+                if (vencedor == heroi){
+                    System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
+                } else {
+                    System.out.println("\nPerdeste! :( Podes:");
+                    System.out.println("1. Jogar novamente com a mesma personagem.");
+                    System.out.println("2. Criar uma nova personagem.");
+                    System.out.println("3. Fechar o jogo.");
+                    System.out.println("O que queres fazer?");
+                    int perder = input.nextInt();
+
+                    jogoController.perder(perder,heroiInicial);
+                }
+                break;
+
+            /*Escolhe ir ter com o barqueiro*/
+            case 2:
+                System.out.println("\nVais ter com o barqueiro e ele pede 5 moedas de ouro para te levar.");
+                heroi.setOuro(heroi.getOuro()-5);
+                break;
+
+            /*Escolhe ir a nadar*/
+            case 3:
+                System.out.println("\nComeças a atravessar o rio, mas a corrente é muito forte e acabas por te afogar.");
+                System.out.println("\nPerdeste! :( Podes:");
+                System.out.println("1. Jogar novamente com a mesma personagem.");
+                System.out.println("2. Criar uma nova personagem.");
+                System.out.println("3. Fechar o jogo.");
+                System.out.println("O que queres fazer?");
+                int perder = input.nextInt();
+
+                jogoController.perder(perder,heroiInicial);
+                break;
+        }
+
+        System.out.println("Conseguiste atravessar o rio e encontras outro vendedor. Ele mostra os itens que tem à venda.");
+        jogoController.loja(vendedor,heroi);
+
 
     }
 

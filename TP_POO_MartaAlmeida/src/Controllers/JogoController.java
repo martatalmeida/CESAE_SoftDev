@@ -4,11 +4,14 @@ import Domain.ItensHeroi.*;
 import Domain.Personagem.*;
 import Domain.Vendedor;
 import Repository.ItensRepository;
+import View.JogoView;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+
+import static View.JogoView.menuCriarPersonagem;
 
 public class JogoController {
 
@@ -45,7 +48,7 @@ public class JogoController {
         int contador = 0;
         Entidade vencedor = null;
         do {
-            System.out.println("1. Ataque Normal");
+            System.out.println("\n1. Ataque Normal");
             System.out.println("2. Ataque Especial");
             System.out.println("3. Ataque Consumível");
             System.out.println("Que ataque quer usar?");
@@ -55,32 +58,44 @@ public class JogoController {
                 case 1:
                     if (heroi instanceof Feiticeiro) {
                         npc.setVidaAtual(npc.getVidaAtual() - (heroi.getForca() + heroi.getArmaPrincipal().getAtaque()));
+                        System.out.println("O heroi atacou");
                         heroi.setVidaAtual(heroi.getVidaAtual() - (npc.getForca()));
+                        System.out.println("O inimigo atacou");
                     }
                     if (heroi instanceof Humano) {
                         heroi.setVidaAtual(heroi.getVidaAtual() - (npc.getForca()));
+                        System.out.println("O inimigo atacou");
                         npc.setVidaAtual(npc.getVidaAtual() - (heroi.getForca() + heroi.getArmaPrincipal().getAtaque()));
+                        System.out.println("O heroi atacou");
                     }
                     if (heroi instanceof Elfo) {
                         npc.setVidaAtual(npc.getVidaAtual() - (heroi.getForca() + heroi.getArmaPrincipal().getAtaque()));
+                        System.out.println("O heroi atacou");
                         heroi.setVidaAtual((int) (heroi.getVidaAtual() - (npc.getForca() - (npc.getForca() * 0.2))));
+                        System.out.println("O inimigo atacou");
                     }
                     break;
                 case 2:
                     if (contador == 0) {
                         if (heroi instanceof Feiticeiro) {
                             npc.setVidaAtual(npc.getVidaAtual() - (heroi.getForca() + heroi.getArmaPrincipal().getAtaqueEspecial()));
+                            System.out.println("O heroi usou ataque especial");
                             heroi.setVidaAtual(heroi.getVidaAtual() - (npc.getForca()));
+                            System.out.println("O inimigo atacou");
                             contador++;
                         }
                         if (heroi instanceof Humano) {
                             heroi.setVidaAtual(heroi.getVidaAtual() - (npc.getForca()));
+                            System.out.println("O inimigo atacou");
                             npc.setVidaAtual(npc.getVidaAtual() - (heroi.getForca() + heroi.getArmaPrincipal().getAtaqueEspecial()));
+                            System.out.println("O heroi usou ataque especial");
                             contador++;
                         }
                         if (heroi instanceof Elfo) {
                             npc.setVidaAtual(npc.getVidaAtual() - (heroi.getForca() + heroi.getArmaPrincipal().getAtaqueEspecial()));
+                            System.out.println("O heroi usou ataque especial");
                             heroi.setVidaAtual((int) (heroi.getVidaAtual() - (npc.getForca() - (npc.getForca() * 0.2))));
+                            System.out.println("O inimigo atacou");
                             contador++;
                         }
                     } else {
@@ -106,6 +121,7 @@ public class JogoController {
                         if (ataqueConsumivel != 0) {
                             ConsumivelCombate consumivelCombate = (ConsumivelCombate) heroi.getInventario().get(ataqueConsumivel);
                             npc.setVidaAtual(npc.getVidaAtual() - consumivelCombate.getAtaqueInstantaneo());
+                            System.out.println("Usaste um consumível de combate");
                             heroi.getInventario().remove(consumivelCombate);
                         }
 
@@ -120,7 +136,7 @@ public class JogoController {
         } else if (npc.getVidaAtual() <= 0) {
             vencedor = heroi;
             heroi.setNivel(heroi.getNivel() + 1);
-            heroi.setVidaAtual(heroi.getVidaAtual() + 10);
+            heroi.setVidaMax(heroi.getVidaMax() + 10);
             heroi.setForca(heroi.getForca() + 1);
             heroi.setOuro(heroi.getOuro() + npc.getOuro());
         }
@@ -149,6 +165,11 @@ public class JogoController {
         Pocao pocao = (Pocao) heroi.getInventario().get(opcao);
 
         heroi.setVidaAtual(heroi.getVidaAtual() + pocao.getVidaACurar());
+
+        if (heroi.getVidaAtual() > heroi.getVidaMax()){
+            heroi.setVidaAtual(heroi.getVidaMax());
+        }
+
         heroi.setForca(heroi.getForca() + pocao.getAumentoForça());
 
         heroi.getInventario().remove(pocao);
@@ -178,17 +199,19 @@ public class JogoController {
             vendedor.getLoja().get(arrayIndexAleatorio.get(i)).mostrarDetalhes();
         }
 
-        System.out.println("\n\nQuer comprar um item? sim/nao");
-        String opcao = input.next();
+        String opcao;
+        do {
+            System.out.println("\n\nQuer comprar um item? sim/nao");
+            opcao = input.next();
 
-        opcao.toLowerCase();
-        if(opcao.equals("sim") || opcao.equals("s")) {
-            System.out.println("\nQue item quer comprar?");
-            int item = input.nextInt();
+            opcao = opcao.toLowerCase();
+            if (opcao.equals("sim") || opcao.equals("s")) {
+                System.out.println("\nQue item quer comprar?");
+                int item = input.nextInt();
 
-            for (int i = 0; i < arrayIndexAleatorio.size(); i++) {
-                if (i == item) {
-                    ItemHeroi itemHeroi = vendedor.getLoja().get(arrayIndexAleatorio.get(item));
+                for (int i = 0; i < arrayIndexAleatorio.size(); i++) {
+                    if (i == item) {
+                        ItemHeroi itemHeroi = vendedor.getLoja().get(arrayIndexAleatorio.get(item));
                         if (validarPermissao(heroi, itemHeroi)) {
                             if (heroi.getOuro() >= itemHeroi.getPrecoMoedasOuro()) {
                                 if (itemHeroi instanceof ArmaPrincipal) {
@@ -200,21 +223,22 @@ public class JogoController {
                                     heroi.getInventario().add(consumivel);
                                     vendedor.getLoja().remove(consumivel);
                                 }
-                                heroi.setOuro(heroi.getOuro()-itemHeroi.getPrecoMoedasOuro());
+                                heroi.setOuro(heroi.getOuro() - itemHeroi.getPrecoMoedasOuro());
                                 System.out.println("Removeu o " + itemHeroi.getNome());
                             } else {
                                 System.out.println("Não tem ouro suficiente para comprar este item. Escolha outro item.");
-                                loja(vendedor,heroi);
+                                loja(vendedor, heroi);
                             }
-                        }else {
+                        } else {
                             System.out.println("Não pode comprar este item");
                         }
                     }
                 }
             } else {
-            System.out.println("Nao comprou nada");
-            return;
-        }
+                System.out.println("Nao comprou nada");
+                return;
+            }
+        } while (opcao.equals("sim"));
     }
 
     public void agua(Heroi heroi, int agua){
@@ -227,6 +251,34 @@ public class JogoController {
                 break;
         }
     }
+
+    public void encontrarPocao(Heroi heroi){
+        Pocao pocao = new Pocao("Poção Encontrada",20,30,5);
+        heroi.getInventario().add(pocao);
+    }
+
+    public void perder(int escolha, Heroi heroi) throws FileNotFoundException {
+
+        switch (escolha){
+
+            /*Escolhe jogar com a mesma personagem*/
+            case 1:
+                JogoView.Jogo(heroi);
+                break;
+
+            /*Escolhe criar nova personagem*/
+            case 2:
+                JogoView.Jogo(JogoView.menuCriarPersonagem());
+                break;
+
+            /*Escolhe sair do jogo*/
+            case 3:
+                System.out.println("Saiu do Jogo.");
+                break;
+        }
+    }
+
+
 
 }
 

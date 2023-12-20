@@ -9,8 +9,8 @@ public class ArmaPrincipal extends ItemHeroi {
 
     public ArmaPrincipal(String nome, int precoMoedasOuro, int ataque, int ataqueEspecial) {
         super(nome, precoMoedasOuro);
-        ataque = ataque;
-        ataqueEspecial = ataqueEspecial;
+        this.ataque = ataque;
+        this.ataqueEspecial = ataqueEspecial;
     }
 
     @Override

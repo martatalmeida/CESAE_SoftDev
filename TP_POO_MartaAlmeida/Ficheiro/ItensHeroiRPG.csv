@@ -1,8 +1,8 @@
 tipo;nome;preco;heroisPermitidos;ataque;ataqueEspecial;ataqueInstantaneo;vida;forca
 ArmaPrincipal;Espada de Metal;75;[Humano,Feiticeiro,Elfo];20;35;0;0;0
-ArmaPrincipal;Machado Ferrugento;5;[Humano];2;3;0;0;0
-ArmaPrincipal;Arco de Salgueiro;4;[Elfo];3;5;0;0;0
-ArmaPrincipal;Bastão Mágico;4;[Feiticeiro];3;5;0;0;0
+ArmaPrincipal;Machado Ferrugento;5;[Humano];15;20;0;0;0
+ArmaPrincipal;Arco de Salgueiro;4;[Elfo];10;15;0;0;0
+ArmaPrincipal;Bastão Mágico;4;[Feiticeiro];10;30;0;0;0
 ConsumivelCombate;Flecha Flamejante;10;[Elfo];0;0;45;0;0
 ConsumivelCombate;Faca Voadora;10;[Humano,Elfo];0;0;45;0;0
 ConsumivelCombate;Dinamite;10;[Humano];0;0;45;0;0
