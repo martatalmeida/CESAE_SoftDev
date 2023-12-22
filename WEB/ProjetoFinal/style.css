@@ -1,6 +1,6 @@
 /* GERAL */
 
-h2,h3{
+h2,h3,h4,h5{
     text-align: center;
     color: #0F1B40;
 }
@@ -148,29 +148,113 @@ h2,h3{
 
  /* SOBRE O FILME */
 
- .imagem-sinopse{
-  text-align: left;
- }
+ .sobrefilme{
+  margin-top:20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
 
  .img-sinopse{
-  width: 270px;
-  height: 400px;
+  width: 300px;
+  height: 460px;
  }
 
  .sinopse{
-  text-align: right;
+  text-align: justify;
  }
+
+ .sinopse h5 {
+  text-align: center;
+  color: #0F1B40;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.sinopse p {
+  padding-left: 30px;
+  padding-right: 15px;
+  color:#0F1B40;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
  .premios{
-  text-align: left;
+  padding-left: 10px;
+  text-align: justify;
  }
+
+ .premios h5 {
+  text-align: center;
+  color: #0F1B40;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.premios p {
+  color: #0F1B40;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.premios ul li {
+  color: #0F1B40;
+  margin-bottom: 10px;
+}
 
  .img-oscars{
-  width: 270px;
-  height: 400px;
+  width: 300px;
+  height: 460px;
  }
 
- .imagem-premios{
-  text-align: right;
- }
+ .img-sinopse,
+.img-oscars {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.trailer h5 {
+  color: #0F1B40;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* BANDA SONORA */
+
+.bandasonora {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tracklist{
+  margin-right: 50px;
+}
+
+.tracklist li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #0F1B40;
+}
+
+.spotify{
+  margin-left: 50px;
+}
+
+
+.embed-responsive-item{
+  border-radius: 6px;
+}
+
+.card-title-musica {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
