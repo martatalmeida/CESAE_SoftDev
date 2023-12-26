@@ -1,15 +1,15 @@
 tipo;nome;preco;heroisPermitidos;ataque;ataqueEspecial;ataqueInstantaneo;vida;forca
-ArmaPrincipal;Espada de Metal;75;[Humano,Feiticeiro,Elfo];20;35;0;0;0
-ArmaPrincipal;Machado Ferrugento;5;[Humano];15;20;0;0;0
-ArmaPrincipal;Arco de Salgueiro;4;[Elfo];10;15;0;0;0
-ArmaPrincipal;Bastão Mágico;4;[Feiticeiro];10;30;0;0;0
-ConsumivelCombate;Flecha Flamejante;10;[Elfo];0;0;45;0;0
+ArmaPrincipal;Espada de Metal;40;[Humano,Feiticeiro,Elfo];20;35;0;0;0
+ArmaPrincipal;Machado Ferrugento;25;[Humano];15;20;0;0;0
+ArmaPrincipal;Arco de Salgueiro;25;[Elfo];10;25;0;0;0
+ArmaPrincipal;Bastão Mágico;25;[Feiticeiro];10;30;0;0;0
+ConsumivelCombate;Flecha Flamejante;15;[Elfo];0;0;45;0;0
 ConsumivelCombate;Faca Voadora;10;[Humano,Elfo];0;0;45;0;0
-ConsumivelCombate;Dinamite;10;[Humano];0;0;45;0;0
-ConsumivelCombate;Cubo da Tempestade;25;[Feiticeiro];0;0;50;0;0
-ConsumivelCombate;Bomba de Fumo Venenoso;10;[Humano];0;0;45;0;0
-ConsumivelCombate;Talismã da Morte;10;[Feiticeiro];0;0;100;0;0
-Pocao;Pocao de Vida;5;[Humano,Elfo,Feiticeiro];0;0;0;25;0
-Pocao;Pocao do Sacrificio;18;[Humano,Elfo,Feiticeiro];0;0;0;-30;30
-Pocao;Pocao Maxima;150;[Humano,Elfo,Feiticeiro];0;0;0;100;0
-Pocao;Pocao Fortificante;18;[Humano,Elfo,Feiticeiro];0;0;0;0;20
+ConsumivelCombate;Dinamite;20;[Humano];0;0;45;0;0
+ConsumivelCombate;Cubo da Tempestade;15;[Feiticeiro];0;0;50;0;0
+ConsumivelCombate;Bomba de Fumo Venenoso;15;[Humano];0;0;45;0;0
+ConsumivelCombate;Talismã da Morte;25;[Feiticeiro];0;0;100;0;0
+Pocao;Pocao de Vida;10;[Humano,Elfo,Feiticeiro];0;0;0;25;0
+Pocao;Pocao do Sacrificio;10;[Humano,Elfo,Feiticeiro];0;0;0;-30;30
+Pocao;Pocao Maxima;55;[Humano,Elfo,Feiticeiro];0;0;0;100;0
+Pocao;Pocao Fortificante;60;[Humano,Elfo,Feiticeiro];0;0;0;0;20

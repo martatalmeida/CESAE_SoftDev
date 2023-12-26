@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="427935c6-d2e0-4eac-8280-5032bf885806" name="Changes" comment="" />
+    <list default="true" id="427935c6-d2e0-4eac-8280-5032bf885806" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ficheiro/ItensHeroiRPG.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro/ItensHeroiRPG.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/JogoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/JogoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/JogoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/JogoView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,9 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2ZZhpF26UTmLGLdObHwgF3Evspp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -50,6 +56,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-69315bf7" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
       </set>
     </attachedChunks>
   </component>

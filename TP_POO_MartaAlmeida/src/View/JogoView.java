@@ -81,12 +81,13 @@ public class JogoView {
         JogoController jogoController = new JogoController();
         Heroi heroiInicial = heroi;
 
-        NPC orc = new NPC("Orc", 80, 15,40);
-        NPC goblin = new NPC("Goblin", 70,20,50);
+        NPC goblin = new NPC("Goblin", 90, 15,40);
+        NPC troll = new NPC("Troll", 80,20,50);
+        NPC orc = new NPC("Orc", 120, 30,20);
 
         System.out.println("\n\n **** Início do Jogo **** ");
 
-        System.out.println("\n\nNo ano de ..., o exército das sombras amaldiçoou os dragões, metendo-os num sono profundo.");
+        System.out.println("\n\nNo ano de 459 da Segunda Era, o exército das sombras amaldiçoou os dragões, metendo-os num sono profundo.");
         System.out.println("Assim, os humanos, que viviam em harmonia com os dragões viram as suas defesas enfraquecidas.");
         System.out.println("Durante os anos que se seguiram o exército das sombras conquistou e destruiu cidades onde humanos, elfos e feiticeiros viviam.");
         System.out.println("Hoje, apenas Arcádia, a capital do reino, se mantém de pé.");
@@ -99,7 +100,7 @@ public class JogoView {
         Vendedor vendedor = new Vendedor();
         jogoController.loja(vendedor,heroi);
 
-        System.out.println("\nAgora tens de escolher por que caminho queres ir?");
+        System.out.println("\nAgora tens de escolher por que caminho queres ir.");
         System.out.println("1. Continuar pelo caminho conhecido que tem muita luz, mas é mais demorado.");
         System.out.println("2. Cortar caminho e ir pelo caminho escuro.");
         System.out.println("Qual escolhes?");
@@ -129,6 +130,9 @@ public class JogoView {
                         jogoController.agua(heroi,agua);
                         break;
                 }
+
+                jogoController.usarPocao(heroi);
+
                 break;
 
             /*Escolhe o caminho escuro*/
@@ -144,7 +148,7 @@ public class JogoView {
                     case 1:
                         System.out.println("\nEntras no templo e começas a explorar, mas encontras um dos soldados do exército das sombras.");
                         System.out.println("De forma a saíres do templo tens de lutar.");
-                        Entidade vencedor = jogoController.atacar(heroi,orc);
+                        Entidade vencedor = jogoController.atacar(heroi,goblin);
                         if (vencedor == heroi){
                             System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
                         } else {
@@ -165,7 +169,11 @@ public class JogoView {
                         jogoController.encontrarPocao(heroi);
                         break;
                 }
+
+                jogoController.usarPocao(heroi);
+
                 break;
+
         }
 
         System.out.println("\nAndas mais um bocado e chegas a um rio. Para passar tens três opções");
@@ -180,10 +188,11 @@ public class JogoView {
             /*Escolhe ir pela ponte quase a cair*/
             case 1:
                 System.out.println("\nComeças a passar a ponte e do nada aparece um goblin. Para conseguires passar para o outro lado tens de o derrotar.");
-                Entidade vencedor = jogoController.atacar(heroi,goblin);
+                Entidade vencedor = jogoController.atacar(heroi,troll);
 
                 if (vencedor == heroi){
                     System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
+                    jogoController.usarPocao(heroi);
                 } else {
                     System.out.println("\nPerdeste! :( Podes:");
                     System.out.println("1. Jogar novamente com a mesma personagem.");
@@ -198,13 +207,16 @@ public class JogoView {
 
             /*Escolhe ir ter com o barqueiro*/
             case 2:
-                System.out.println("\nVais ter com o barqueiro e ele pede 5 moedas de ouro para te levar.");
-                heroi.setOuro(heroi.getOuro()-5);
+                int moedas = jogoController.barqueiroOuro();
+                System.out.println("\nVais ter com o barqueiro e ele pede-te " + moedas + " de ouro para te levar.");
+                heroi.setOuro(heroi.getOuro()-moedas);
+                jogoController.usarPocao(heroi);
                 break;
 
             /*Escolhe ir a nadar*/
             case 3:
                 System.out.println("\nComeças a atravessar o rio, mas a corrente é muito forte e acabas por te afogar.");
+
                 System.out.println("\nPerdeste! :( Podes:");
                 System.out.println("1. Jogar novamente com a mesma personagem.");
                 System.out.println("2. Criar uma nova personagem.");
@@ -213,11 +225,106 @@ public class JogoView {
                 int perder = input.nextInt();
 
                 jogoController.perder(perder,heroiInicial);
+
                 break;
         }
 
-        System.out.println("Conseguiste atravessar o rio e encontras outro vendedor. Ele mostra os itens que tem à venda.");
+        /*Aparece o Vendedor*/
+        System.out.println("\nConseguiste atravessar o rio e encontras outro vendedor. Ele mostra os itens que tem à venda.");
         jogoController.loja(vendedor,heroi);
+
+        jogoController.usarPocao(heroi);
+
+        System.out.println("\nChegas finalmente à Montanha e tens duas formas de a subir.");
+        System.out.println("1. Apanhar um balão de ar quente até ao cimo.");
+        System.out.println("2. Escalar a Montanha.");
+        System.out.println("Qual é a tua decisão?");
+        int montanha = input.nextInt();
+        int balao=0,grifo=0;
+
+        switch (montanha) {
+            /*Escolhe ir de balão*/
+            case 1:
+                System.out.println("\nApanhas o balão e começas a subir. Podes escolher:");
+                System.out.println("1. Ir um bocado acima das nuvens para tentares avistar a biblioteca.");
+                System.out.println("2. Ir direto ao cimo sem passar as nuvens.");
+                System.out.println("O que te parece melhor?");
+                balao = input.nextInt();
+
+                switch (balao) {
+
+                    /*Escolhe subir acima das nuvens*/
+                    case 1:
+                        System.out.println("\nSobes acima das nuvens, mas, de repente, aparece um pássaro e fura o balão, fazendo com que caia e morras.");
+
+                        System.out.println("\nPerdeste! :( Podes:");
+                        System.out.println("1. Jogar novamente com a mesma personagem.");
+                        System.out.println("2. Criar uma nova personagem.");
+                        System.out.println("3. Fechar o jogo.");
+                        System.out.println("O que queres fazer?");
+                        int perder = input.nextInt();
+
+                        jogoController.perder(perder,heroiInicial);
+
+                        break;
+
+                    /*Escolhe ir direto*/
+                    case 2:
+                        System.out.println("\nConsegues chegar ao topo da Montanha e encontras um inimigo que está a guardar a porta da biblioteca.");
+                        jogoController.usarPocao(heroi);
+                        break;
+                }
+
+                break;
+
+            /*Escolhe escalar*/
+            case 2:
+                System.out.println("\nEstás a escalar e encontras um grifo, criatura que faz parte do exército das sombras, a dormir e a tapar a passagem. Podes");
+                System.out.println("1. Matar o grifo para passares.");
+                System.out.println("2. Tentar ir à volta sem o acordares.");
+                grifo = input.nextInt();
+
+                switch (grifo) {
+
+                    /*Escolhe matar o grifo*/
+                    case 1:
+                        System.out.println("\nConsegues matar o grifo sem o acordar e continuas o caminho até ao cimo da Montanha.");
+                        System.out.println("Encontras um inimigo a guardar a entrada da biblioteca.");
+                        jogoController.usarPocao(heroi);
+                        break;
+
+                    /*Escolhe ir à volta*/
+                    case 2:
+                        System.out.println("\nTentas ir à volta, mas o grifo acorda e apercebe-se do que estás a tentar fazer.");
+                        System.out.println("Ele pega em ti com as garras e começa a voar. Leva-te para uma das cidades do exército das sombras.");
+                        System.out.println("Nunca mais conseguiste voltar para a Montanha e encontrar a biblioteca.");
+                        System.out.println("O exército das sombras ganhou a guerra...");
+                        break;
+                }
+                break;
+        }
+
+        /*Chegaram à entrada da biblioteca*/
+        if (balao == 2 || grifo == 1) {
+            System.out.println("\nPara conseguires entrar na biblioteca tens de combater.");
+
+            Entidade vencedor = jogoController.atacar(heroi,orc);
+
+            if (vencedor == heroi){
+                System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
+                System.out.println("\nEntras na biblioteca e, depois de passar umas horas lá, encontras o livro necessário para salvar o mundo.");
+                System.out.println("Os humanos, elfos e feiticeiros ganham a guerra!");
+            } else {
+                System.out.println("\nPerdeste! :( Podes:");
+                System.out.println("1. Jogar novamente com a mesma personagem.");
+                System.out.println("2. Criar uma nova personagem.");
+                System.out.println("3. Fechar o jogo.");
+                System.out.println("O que queres fazer?");
+                int escolha = input.nextInt();
+
+                jogoController.perder(escolha,heroiInicial);
+            }
+        }
 
 
     }
