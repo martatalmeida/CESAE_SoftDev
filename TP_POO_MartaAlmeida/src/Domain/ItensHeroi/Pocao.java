@@ -13,6 +13,9 @@ public class Pocao extends Consumivel {
         this.aumentoForça = aumentoForça;
     }
 
+    /**
+     * Método para mostrar os detalhes da Poção
+     */
     @Override
     public void mostrarDetalhes() {
         System.out.print("Tipo: Pocao | ");

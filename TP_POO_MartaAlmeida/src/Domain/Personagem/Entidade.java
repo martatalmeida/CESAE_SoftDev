@@ -42,6 +42,9 @@ public abstract class Entidade {
         this.forca = forca;
     }
 
+    /**
+     * Método para mostrar os detalhes da Entidade
+     */
     public void mostrarDetalhes(){
         System.out.println("*** Detalhes da Personagem ***");
         System.out.println("Nome: " +this.nome);

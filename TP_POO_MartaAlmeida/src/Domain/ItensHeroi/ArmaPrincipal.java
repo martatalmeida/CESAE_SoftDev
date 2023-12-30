@@ -13,6 +13,9 @@ public class ArmaPrincipal extends ItemHeroi {
         this.ataqueEspecial = ataqueEspecial;
     }
 
+    /**
+     * Método para mostrar os detalhes da ArmaPrincipal
+     */
     @Override
     public void mostrarDetalhes() {
         System.out.print("Tipo: Arma Principal | ");

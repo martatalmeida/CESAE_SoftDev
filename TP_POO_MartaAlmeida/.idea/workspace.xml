@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="427935c6-d2e0-4eac-8280-5032bf885806" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ficheiro/ItensHeroiRPG.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro/ItensHeroiRPG.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/JogoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/JogoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/ArmaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/ArmaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/ConsumivelCombate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/ConsumivelCombate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/ItemHeroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/ItemHeroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/Pocao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/Pocao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Jogo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Personagem/Entidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Personagem/Entidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTeste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tools/CSVItensReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tools/CSVItensReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/JogoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/JogoView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,16 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/TP_POO_MartaAlmeida"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/TP_POO_MartaAlmeida&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\softdev\Desktop\MartaAlmeida_SoftDev\TP_POO_MartaAlmeida\Ficheiro" />

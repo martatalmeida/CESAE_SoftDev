@@ -18,6 +18,11 @@ public class CSVItensReader {
         this.filePath = filePath;
     }
 
+    /**
+     * Método que separa os herois permitidos e os coloca num ArrayList
+     * @param heroiPermitidoFile String com todos os herois permitidos de um certo item
+     * @return ArrayList com os herois que sao permitidos comprarem o item
+     */
     public ArrayList<String> verheroisPermitidos(String heroiPermitidoFile){
         heroiPermitidoFile = heroiPermitidoFile.replace("[","");
         heroiPermitidoFile = heroiPermitidoFile.replace("]","");
@@ -29,6 +34,11 @@ public class CSVItensReader {
         return heroisPermitidos;
     }
 
+    /**
+     * Método para ler o ficheiro CSV com os itens e passá-lo para o repositório
+     * @return ArrayList dos itens do ficheiro
+     * @throws FileNotFoundException se não encontrar o ficheiro
+     */
     public ArrayList<ItemHeroi> readCSVToRepository() throws FileNotFoundException {
         File file = new File(this.filePath);
         Scanner scanner = new Scanner(file);

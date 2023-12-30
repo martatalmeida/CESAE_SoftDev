@@ -19,4 +19,9 @@ public class Vendedor {
     public ArrayList<ItemHeroi> getLoja() {
         return loja;
     }
+
+    public void removeItem(int index) {
+        this.loja.remove(index);
+    }
+
 }

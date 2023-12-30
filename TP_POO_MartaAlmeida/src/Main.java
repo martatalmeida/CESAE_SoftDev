@@ -10,8 +10,7 @@ public class Main {
 
         Heroi heroi = JogoView.menuCriarPersonagem();
 
-        JogoView.Jogo(heroi);
-
+        JogoView.buscaPelaSalvacao(heroi);
 
 
     }

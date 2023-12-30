@@ -15,6 +15,9 @@ public class ConsumivelCombate extends Consumivel {
         return AtaqueInstantaneo;
     }
 
+    /**
+     * Método para mostrar os detalhes do ConsumívelCombate
+     */
     @Override
     public void mostrarDetalhes() {
         System.out.print("Tipo: Consumível Combate | ");

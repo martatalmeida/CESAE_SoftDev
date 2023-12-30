@@ -26,6 +26,9 @@ public abstract class ItemHeroi {
         return heroisPermitidos;
     }
 
+    /**
+     * Método para mostrar os detalhes do ItemHeroi
+     */
     public void mostrarDetalhes(){
         System.out.print("Nome: " + this.nome + " | Preço em moedas: " + this.precoMoedasOuro + " | Heróis Permitidos: ");
         for (String heroiPermitidoAtual : this.heroisPermitidos){
@@ -33,14 +36,15 @@ public abstract class ItemHeroi {
         }
     }
 
+    /**
+     * Método para adicionar os herois permitidos de um certo item
+     * @param heroisNovos ArrayList com os herois que são permitidos comprarem o item
+     */
     public void addHeroisPermitido(ArrayList<String> heroisNovos){
         for (String heroiNovoAtual: heroisNovos){
             this.heroisPermitidos.add(heroiNovoAtual);
         }
     }
 
-    public void addHeroiPermitido(String heroiNovo){
-        this.heroisPermitidos.add(heroiNovo);
-    }
 
 }

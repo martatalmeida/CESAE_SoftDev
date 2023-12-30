@@ -14,7 +14,11 @@ public class JogoView {
     public JogoView() {
     }
 
-    public static Heroi menuCriarPersonagem() throws FileNotFoundException {
+    /**
+     * Menu de criação da personagem
+     * @return Heroi que foi criado
+     */
+    public static Heroi menuCriarPersonagem() {
 
         Scanner input = new Scanner(System.in);
 
@@ -26,12 +30,12 @@ public class JogoView {
 
         /* Criação da Personagem */
 
-        System.out.println("\n\nVamos criar a sua Personagem! ");
+        System.out.println("\n\nVamos criar a tua Personagem! ");
         System.out.println("*** Tipos de Heroi ***");
         System.out.println("1. Feiticeiro");
         System.out.println("2. Humano");
         System.out.println("3. Elfo");
-        System.out.print("Que Heroi quer criar?");
+        System.out.print("Que Heroi queres criar?");
         int tipo = input.nextInt();
 
         System.out.print("\nNome do Heroi: ");
@@ -40,32 +44,32 @@ public class JogoView {
         System.out.println("\n*** Dificuldade ***");
         System.out.println("1. Fácil");
         System.out.println("2. Difícil");
-        System.out.print("Que dificuldade deseja?");
+        System.out.print("Que dificuldade desejas?");
         int dificuldade = input.nextInt();
 
         int pontos = 0, vida, forca;
         if (dificuldade == 1) {
-            System.out.println("\nTem direito a 300 pontos de criação.");
+            System.out.println("\nTens direito a 300 pontos de criação.");
             pontos = 300;
         } else if (dificuldade == 2) {
-            System.out.println("\nTem direito a 200 pontos de criação.");
+            System.out.println("\nTens direito a 200 pontos de criação.");
             pontos = 200;
         }
 
         System.out.println("\nCada ponto de vida vale 1 ponto de criação e cada ponto de força vale 5 pontos de criação.");
 
-        System.out.println("Quantos pontos de criação quer atribuir à vida da personagem?");
+        System.out.println("\nQuantos pontos de criação queres atribuir à vida da personagem?");
         vida = input.nextInt();
 
-        System.out.println("Restam-lhe " + (pontos - vida) + " pontos de criação. Quantos pontos de criação quer atribuir à força da personagem?");
+        System.out.println("Restam-te " + (pontos - vida) + " pontos de criação. Quantos pontos de criação queres atribuir à força da personagem?");
         forca = input.nextInt();
 
         while (forca + vida > pontos) {
-            System.out.println("Atribuiu demasiados pontos de criação. Volte a atribuir os " + pontos + " pontos de criação.");
-            System.out.println("Quantos pontos de criação quer atribuir à vida da personagem?");
+            System.out.println("Atribuíste demasiados pontos de criação. Volta a atribuir os " + pontos + " pontos de criação.");
+            System.out.println("Quantos pontos de criação queres atribuir à vida da personagem?");
             vida = input.nextInt();
 
-            System.out.println("Restam-lhe " + (pontos - vida) + " pontos de criação. Quantos pontos de criação quer atribuir à força da personagem?");
+            System.out.println("Restam-te " + (pontos - vida) + " pontos de criação. Quantos pontos de criação queres atribuir à força da personagem?");
             forca = input.nextInt();
         }
 
@@ -75,7 +79,14 @@ public class JogoView {
         return heroi;
     }
 
-    public static void Jogo(Heroi heroi) throws FileNotFoundException {
+    /* Início do Jogo */
+
+    /**
+     * O jogo com as salas e as escolhas
+     * @param heroi heroi que está a jogar
+     * @throws FileNotFoundException se não encontrar o ficheiro com os itens
+     */
+    public static void buscaPelaSalvacao(Heroi heroi) throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
         JogoController jogoController = new JogoController();
@@ -146,11 +157,12 @@ public class JogoView {
 
                     /*Escolhe explorar as ruínas*/
                     case 1:
-                        System.out.println("\nEntras no templo e começas a explorar, mas encontras um dos soldados do exército das sombras.");
+                        System.out.println("\nEntras no templo e começas a explorar, mas encontras um goblin do exército das sombras.");
                         System.out.println("De forma a saíres do templo tens de lutar.");
                         Entidade vencedor = jogoController.atacar(heroi,goblin);
                         if (vencedor == heroi){
                             System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
+                            System.out.println("Ficaste com as " + goblin.getOuro() + " moedas de ouro do goblin.");
                         } else {
                             System.out.println("\nPerdeste! :( Podes:");
                             System.out.println("1. Jogar novamente com a mesma personagem.");
@@ -187,11 +199,12 @@ public class JogoView {
 
             /*Escolhe ir pela ponte quase a cair*/
             case 1:
-                System.out.println("\nComeças a passar a ponte e do nada aparece um goblin. Para conseguires passar para o outro lado tens de o derrotar.");
+                System.out.println("\nComeças a passar a ponte e do nada aparece um troll. Para conseguires passar para o outro lado tens de o derrotar.");
                 Entidade vencedor = jogoController.atacar(heroi,troll);
 
                 if (vencedor == heroi){
                     System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
+                    System.out.println("Ficaste com as " + troll.getOuro() + " moedas de ouro do troll.");
                     jogoController.usarPocao(heroi);
                 } else {
                     System.out.println("\nPerdeste! :( Podes:");
@@ -208,9 +221,20 @@ public class JogoView {
             /*Escolhe ir ter com o barqueiro*/
             case 2:
                 int moedas = jogoController.barqueiroOuro();
-                System.out.println("\nVais ter com o barqueiro e ele pede-te " + moedas + " de ouro para te levar.");
-                heroi.setOuro(heroi.getOuro()-moedas);
-                jogoController.usarPocao(heroi);
+                System.out.println("\nVais ter com o barqueiro e ele pede-te " + moedas + " moedas de ouro para te levar para o outro lado do rio.");
+                if (moedas < heroi.getOuro()) {
+                    heroi.setOuro(heroi.getOuro() - moedas);
+                    System.out.println("\nTu pagas para conseguir passar.");
+                    jogoController.usarPocao(heroi);
+                } else {
+                    System.out.println("\nTu não tens moedas suficientes para pagar então não podes continuar o jogo. Podes:");
+                    System.out.println("1. Jogar novamente com a mesma personagem.");
+                    System.out.println("2. Criar uma nova personagem.");
+                    System.out.println("3. Fechar o jogo.");
+                    System.out.println("O que queres fazer?");
+                    int perder = input.nextInt();
+                    jogoController.perder(perder,heroiInicial);
+                }
                 break;
 
             /*Escolhe ir a nadar*/
@@ -270,7 +294,7 @@ public class JogoView {
 
                     /*Escolhe ir direto*/
                     case 2:
-                        System.out.println("\nConsegues chegar ao topo da Montanha e encontras um inimigo que está a guardar a porta da biblioteca.");
+                        System.out.println("\nConsegues chegar ao topo da Montanha e encontras um orc que está a guardar a porta da biblioteca.");
                         jogoController.usarPocao(heroi);
                         break;
                 }
@@ -289,7 +313,7 @@ public class JogoView {
                     /*Escolhe matar o grifo*/
                     case 1:
                         System.out.println("\nConsegues matar o grifo sem o acordar e continuas o caminho até ao cimo da Montanha.");
-                        System.out.println("Encontras um inimigo a guardar a entrada da biblioteca.");
+                        System.out.println("Encontras um orc a guardar a entrada da biblioteca.");
                         jogoController.usarPocao(heroi);
                         break;
 
@@ -307,13 +331,12 @@ public class JogoView {
         /*Chegaram à entrada da biblioteca*/
         if (balao == 2 || grifo == 1) {
             System.out.println("\nPara conseguires entrar na biblioteca tens de combater.");
-
             Entidade vencedor = jogoController.atacar(heroi,orc);
 
             if (vencedor == heroi){
                 System.out.println("\nParabéns! Conseguiste derrotar o inimigo!");
                 System.out.println("\nEntras na biblioteca e, depois de passar umas horas lá, encontras o livro necessário para salvar o mundo.");
-                System.out.println("Os humanos, elfos e feiticeiros ganham a guerra!");
+                System.out.println("Os humanos, elfos e feiticeiros ganham a guerra graças a ti! Conseguiste acabar o jogo!");
             } else {
                 System.out.println("\nPerdeste! :( Podes:");
                 System.out.println("1. Jogar novamente com a mesma personagem.");
