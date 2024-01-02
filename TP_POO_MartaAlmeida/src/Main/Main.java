@@ -1,3 +1,4 @@
+package Main;
 
 import Domain.Personagem.Heroi;
 import View.JogoView;

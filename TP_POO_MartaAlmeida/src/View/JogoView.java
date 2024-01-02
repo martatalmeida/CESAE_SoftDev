@@ -15,7 +15,7 @@ public class JogoView {
     }
 
     /**
-     * Menu de criação da personagem
+     * Método com o menu de criação da personagem
      * @return Heroi que foi criado
      */
     public static Heroi menuCriarPersonagem() {
@@ -86,7 +86,7 @@ public class JogoView {
     /* Início do Jogo */
 
     /**
-     * O jogo com as salas e as escolhas
+     * Método com com as salas e as escolhas do jogo
      * @param heroi heroi que está a jogar
      * @throws FileNotFoundException se não encontrar o ficheiro com os itens
      */
