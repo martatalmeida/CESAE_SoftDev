@@ -25,13 +25,14 @@ public class JogoView {
         JogoController jogoController = new JogoController();
         Heroi heroi = null;
 
-        System.out.println("***** Bem-Vindo ao Jogo *****");
-
+        System.out.println("\n*****************************");
+        System.out.println("****  Bem-Vindo ao Jogo  ****");
+        System.out.println("*****************************");
 
         /* Criação da Personagem */
 
         System.out.println("\n\nVamos criar a tua Personagem! ");
-        System.out.println("*** Tipos de Heroi ***");
+        System.out.println("\n*** Tipos de Heroi ***");
         System.out.println("1. Feiticeiro");
         System.out.println("2. Humano");
         System.out.println("3. Elfo");
@@ -79,6 +80,9 @@ public class JogoView {
         return heroi;
     }
 
+
+
+
     /* Início do Jogo */
 
     /**
@@ -90,7 +94,7 @@ public class JogoView {
 
         Scanner input = new Scanner(System.in);
         JogoController jogoController = new JogoController();
-        Heroi heroiInicial = heroi;
+        Heroi heroiInicial = heroi.heroiInicial();
 
         NPC goblin = new NPC("Goblin", 90, 15,40);
         NPC troll = new NPC("Troll", 80,20,50);
@@ -98,7 +102,7 @@ public class JogoView {
 
         System.out.println("\n\n **** Início do Jogo **** ");
 
-        System.out.println("\n\nNo ano de 459 da Segunda Era, o exército das sombras amaldiçoou os dragões, metendo-os num sono profundo.");
+        System.out.println("\nNo ano de 459 da Segunda Era, o exército das sombras amaldiçoou os dragões, metendo-os num sono profundo.");
         System.out.println("Assim, os humanos, que viviam em harmonia com os dragões viram as suas defesas enfraquecidas.");
         System.out.println("Durante os anos que se seguiram o exército das sombras conquistou e destruiu cidades onde humanos, elfos e feiticeiros viviam.");
         System.out.println("Hoje, apenas Arcádia, a capital do reino, se mantém de pé.");
@@ -323,6 +327,15 @@ public class JogoView {
                         System.out.println("Ele pega em ti com as garras e começa a voar. Leva-te para uma das cidades do exército das sombras.");
                         System.out.println("Nunca mais conseguiste voltar para a Montanha e encontrar a biblioteca.");
                         System.out.println("O exército das sombras ganhou a guerra...");
+
+                        System.out.println("\nPodes:");
+                        System.out.println("1. Jogar novamente com a mesma personagem.");
+                        System.out.println("2. Criar uma nova personagem.");
+                        System.out.println("3. Fechar o jogo.");
+                        System.out.println("O que queres fazer?");
+                        int escolha = input.nextInt();
+
+                        jogoController.perder(escolha,heroiInicial);
                         break;
                 }
                 break;

@@ -7,16 +7,10 @@
     <list default="true" id="427935c6-d2e0-4eac-8280-5032bf885806" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/JogoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/JogoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/ArmaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/ArmaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/ConsumivelCombate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/ConsumivelCombate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/ItemHeroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/ItemHeroi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ItensHeroi/Pocao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ItensHeroi/Pocao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Jogo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Personagem/Entidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Personagem/Entidade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Vendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainTeste.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tools/CSVItensReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tools/CSVItensReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Personagem/Elfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Personagem/Elfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Personagem/Feiticeiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Personagem/Feiticeiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Personagem/Heroi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Personagem/Heroi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Personagem/Humano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Personagem/Humano.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/JogoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/JogoView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

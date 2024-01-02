@@ -8,7 +8,9 @@ public class Humano extends Heroi {
         super(nome, vidaMax, forca, nivel, ouro);
     }
 
-
-
+    @Override
+    public Heroi heroiInicial() {
+        return new Humano(this.getNome(),this.getVidaMax(), this.getForca(), this.getNivel(), this.getOuro());
+    }
 
 }

@@ -48,4 +48,11 @@ public abstract class Heroi extends Entidade {
     public void setArmaPrincipal(ArmaPrincipal armaPrincipal) {
         this.armaPrincipal = armaPrincipal;
     }
+
+    /**
+     * Método para guardar o heroi inicial
+     * @return heroi inicial
+     */
+    public abstract Heroi heroiInicial();
+
 }

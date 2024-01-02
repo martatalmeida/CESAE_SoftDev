@@ -12,7 +12,6 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
-import static View.JogoView.menuCriarPersonagem;
 
 public class JogoController {
 
@@ -71,6 +70,8 @@ public class JogoController {
             int ataque = input.nextInt();
 
             switch (ataque) {
+
+                /* Ataque Normal */
                 case 1:
                     if (heroi instanceof Feiticeiro) {
                         npc.setVidaAtual(npc.getVidaAtual() - (heroi.getForca() + heroi.getArmaPrincipal().getAtaque()));
@@ -91,6 +92,8 @@ public class JogoController {
                         System.out.println("O inimigo atacou");
                     }
                     break;
+
+                /* Ataque Especial */
                 case 2:
                     if (contador == 0) {
                         if (heroi instanceof Feiticeiro) {
@@ -118,6 +121,8 @@ public class JogoController {
                         System.out.println("Já usaste o Ataque Especial nesta luta.");
                     }
                     break;
+
+                /* Ataque Consumível */
                 case 3:
                     int indice = 1;
                     ArrayList<Integer> arrayContador = new ArrayList<>();
@@ -146,6 +151,7 @@ public class JogoController {
             }
         } while (heroi.getVidaAtual() > 0 && npc.getVidaAtual() > 0);
 
+
         if (heroi.getVidaAtual() <= 0) {
             vencedor = npc;
         } else if (npc.getVidaAtual() <= 0) {
@@ -164,63 +170,78 @@ public class JogoController {
      */
     public void usarPocao(Heroi heroi) {
         Scanner input = new Scanner(System.in);
-        String escolha =null;
+        String escolha ="";
+        boolean pocoes = false;
             do {
                 if (!heroi.getInventario().isEmpty()) {
-                System.out.println("\n*** Poções no Inventário ***");
-                ArrayList<Integer> contador = new ArrayList<>();
-                int indice = 0, opcao;
-                for (Consumivel consumivelAtual : heroi.getInventario()) {
-                    if (consumivelAtual instanceof Pocao) {
-                        System.out.print("\nItem " + indice + ". ");
-                        contador.add(indice);
-                        consumivelAtual.mostrarDetalhes();
+
+                    /* Ver se há poções no inventário*/
+                    for (Consumivel consumivelAtual: heroi.getInventario()) {
+                        if (consumivelAtual instanceof Pocao) {
+                            pocoes = true;
+                            break;
+                        }
                     }
-                    indice++;
-                }
 
-                System.out.println("\nQueres usar uma poção? sim/nao");
-                escolha = input.next();
-                escolha = escolha.toLowerCase();
+                    /* Imprimir as poções */
+                    if (pocoes) {
+                        System.out.println("\n*** Poções no Inventário ***");
 
-                if (escolha.equals("sim")) {
-                    System.out.println("Que Poção queres utilizar?");
-                    opcao = input.nextInt();
-
-                    Pocao pocao = (Pocao) heroi.getInventario().get(opcao);
-
-
-                    if ((heroi.getVidaAtual() + pocao.getVidaACurar()) > heroi.getVidaMax()) {
-                        System.out.println("A poção cura " + pocao.getVidaACurar() + " pontos de vida. Tu tens " + heroi.getVidaAtual() + " pontos de vida. Só podes utilizar " + (heroi.getVidaMax() - heroi.getVidaAtual()) + " da poção.");
-                        System.out.println("Queres usar a poção na mesma? sim/nao");
-                        String confirmar = input.next();
-
-                        confirmar = confirmar.toLowerCase();
-
-                        if (confirmar.equals("sim")) {
-                            System.out.println("Ganhaste " + pocao.getVidaACurar() + " pontos de vida.");
-                            heroi.setVidaAtual(heroi.getVidaAtual() + pocao.getVidaACurar());
-                            if (heroi.getVidaAtual() > heroi.getVidaMax()) {
-                                heroi.setVidaAtual(heroi.getVidaMax());
+                        ArrayList<Integer> contador = new ArrayList<>();
+                        int indice = 0, opcao;
+                        for (Consumivel consumivelAtual : heroi.getInventario()) {
+                            if (consumivelAtual instanceof Pocao) {
+                                System.out.print("\nItem " + indice + ". ");
+                                contador.add(indice);
+                                consumivelAtual.mostrarDetalhes();
                             }
-                            System.out.println("Ganhaste " + pocao.getAumentoForça() + " pontos de força.");
-                            heroi.setForca(heroi.getForca() + pocao.getAumentoForça());
+                            indice++;
                         }
 
-                    } else {
-                        System.out.println("Ganhaste " + pocao.getVidaACurar() + " pontos de vida.");
-                        heroi.setVidaAtual(heroi.getVidaAtual() + pocao.getVidaACurar());
-                        System.out.println("Ganhaste " + pocao.getAumentoForça() + " pontos de força.");
-                        heroi.setForca(heroi.getForca() + pocao.getAumentoForça());
-                    }
+                        System.out.println("\nQueres usar uma poção? sim/nao");
+                        escolha = input.next();
+                        escolha = escolha.toLowerCase();
 
-                    heroi.getInventario().remove(pocao);
-                }
-            } else {
-                    System.out.println("Não tem poções no inventário");
+                        if (escolha.equals("sim")) {
+                            System.out.println("Que Poção queres utilizar?");
+                            opcao = input.nextInt();
+
+                            Pocao pocao = (Pocao) heroi.getInventario().get(opcao);
+
+                            /* Se a poção curar pontos de vida a mais */
+                            if ((heroi.getVidaAtual() + pocao.getVidaACurar()) > heroi.getVidaMax()) {
+                                System.out.println("A poção cura " + pocao.getVidaACurar() + " pontos de vida. Tu tens " + heroi.getVidaAtual() + " pontos de vida. Só podes utilizar " + (heroi.getVidaMax() - heroi.getVidaAtual()) + " da poção.");
+                                System.out.println("Queres usar a poção na mesma? sim/nao");
+                                String confirmar = input.next();
+
+                                confirmar = confirmar.toLowerCase();
+
+                                if (confirmar.equals("sim")) {
+                                    System.out.println("Ganhaste " + pocao.getVidaACurar() + " pontos de vida.");
+                                    heroi.setVidaAtual(heroi.getVidaAtual() + pocao.getVidaACurar());
+                                    if (heroi.getVidaAtual() > heroi.getVidaMax()) {
+                                        heroi.setVidaAtual(heroi.getVidaMax());
+                                    }
+                                    System.out.println("Ganhaste " + pocao.getAumentoForça() + " pontos de força.");
+                                    heroi.setForca(heroi.getForca() + pocao.getAumentoForça());
+                                }
+
+                            } else {
+                                System.out.println("Ganhaste " + pocao.getVidaACurar() + " pontos de vida.");
+                                heroi.setVidaAtual(heroi.getVidaAtual() + pocao.getVidaACurar());
+                                System.out.println("Ganhaste " + pocao.getAumentoForça() + " pontos de força.");
+                                heroi.setForca(heroi.getForca() + pocao.getAumentoForça());
+                            }
+                            heroi.getInventario().remove(pocao);
+                        }
+                    } else {
+                        System.out.println("Não tens poções no inventário.");
+                    }
+                } else {
+                    System.out.println("\nNão tens poções no inventário.");
                     break;
                 }
-        } while (escolha.equals("sim"));
+            } while (escolha.equals("sim"));
     }
 
     /**
@@ -249,6 +270,8 @@ public class JogoController {
         Random random = new Random();
         ArrayList<Integer> arrayIndexAleatorio = new ArrayList<>();
         System.out.println("\n*** Itens da Loja ***");
+
+        /* 10 itens aleatórios */
         while (arrayIndexAleatorio.size() < 10) {
             int indexAleatorio = random.nextInt(0, vendedor.getLoja().size());
             if (!arrayIndexAleatorio.contains(indexAleatorio)) {
@@ -256,6 +279,7 @@ public class JogoController {
             }
         }
 
+        /* Imprimir a loja */
         for (int i = 0; i < arrayIndexAleatorio.size(); i++) {
             System.out.print("\nItem " + i + ": ");
             vendedor.getLoja().get(arrayIndexAleatorio.get(i)).mostrarDetalhes();
@@ -301,7 +325,6 @@ public class JogoController {
                             System.out.println("Não podes comprar este item");
                         }
                     }
-
                 }
             } else {
                 System.out.println("Nao compraste nada");
@@ -315,7 +338,6 @@ public class JogoController {
         /* Remover os itens comprados da loja */
         for (int i = 0; i < itensComprados.size(); i++) {
             int index = itensComprados.get(i);
-            System.out.println(index);
                 int numero = index - contador;
                 vendedor.removeItem(numero);
             contador++;

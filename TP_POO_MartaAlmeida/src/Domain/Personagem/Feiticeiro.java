@@ -11,4 +11,10 @@ public class Feiticeiro extends Heroi {
         super(nome, vidaMax, forca, nivel, ouro);
     }
 
+    @Override
+    public Heroi heroiInicial() {
+        return new Feiticeiro(this.getNome(),this.getVidaMax(), this.getForca(), this.getNivel(), this.getOuro());
+    }
+
+
 }
