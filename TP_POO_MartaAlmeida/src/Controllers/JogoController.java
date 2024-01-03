@@ -393,6 +393,7 @@ public class JogoController {
             /*Escolhe sair do jogo*/
             case 3:
                 System.out.println("Saiu do Jogo.");
+                System.exit(0);
                 break;
         }
     }
