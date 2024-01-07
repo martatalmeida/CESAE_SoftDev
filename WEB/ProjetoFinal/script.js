@@ -7,7 +7,12 @@ function openContactForm() {
   }
 
   function submitForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
     var statusElement = document.querySelector(".submitStatus");
+
+    if (name !== '' && email !== '' && message !== '') {
       statusElement.innerText = "Submitted";
 
       setTimeout(function() {
@@ -16,3 +21,4 @@ function openContactForm() {
 
       document.getElementById("contactForm").reset();
   }
+}

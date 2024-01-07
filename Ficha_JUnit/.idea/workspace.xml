@@ -58,12 +58,16 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/Ficha_JUnit",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$USER_HOME$/Desktop/SoftDev/CESAE_SoftDev" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Ex02" />

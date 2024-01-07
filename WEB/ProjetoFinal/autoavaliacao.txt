@@ -1,0 +1,9 @@
+Na desenvolvimento deste trabalho, apliquei conhecimentos de HTML, CSS, Bootstrap e um pouco de JavaScript que 
+fui aprendendo nas aulas e criei um site simples e intuitivo.
+As minhas maiores dificuldades na realização do projeto penso que foram o posicionamento dos elementos na página,
+pois, por vezes, era difícil colocá-los no lugar que queria, e a responsividade.
+Dos pontos mencionados no enunciado apenas não coloquei uma tabela, uma vez que achei que não fazia tanto sentido 
+no meu site.
+Acho que mereço um 17 pois, apesar da responsividade não ser a melhor, consegui criar um site simples e fácil de
+navegar com todos os elementos essenciais e penso que fiz um bom projeto com base nos conhecimentos adquiridos
+nas aulas.
