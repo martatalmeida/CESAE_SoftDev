@@ -1,0 +1,280 @@
+/* GERAL */
+
+h2 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2,h3,h4,h5{
+    text-align: center;
+    color: #0F1B40;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color:#0F1B40;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-brand {
+    color:#fbfbff;
+    font-size: 30px;
+    
+}
+
+.navbar-brand:hover {
+    color:#fbfbff;
+}
+
+.nav-link {
+    color: #fbfbff;
+}
+
+.nav-link:hover {
+    color: #F2D022;
+}
+
+.nav-link.active {
+    color:#F2D022;
+}
+
+/* IMAGEM CARROSSEL */
+
+.bg {
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  /* FOOTER */
+
+ .card-footer {
+    background-color: #0F1B40;
+    color: #fbfbff;
+    padding: 25px;
+ }
+
+ .btn-footer {
+    background-color: #F2D022;
+    color: #0F1B40;
+ }
+
+ .btn-footer:hover {
+  background-color:#d2c56f;
+    color:#0F1B40;
+ }
+
+ /* CARDS DA PÁGINA HOME */
+
+ .card-home {
+    position: relative;
+    overflow: hidden;
+  }
+
+ .card-home img {
+    height: 350px;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  .card-home:hover img {
+    opacity: 0.5;
+  }
+
+  .card-home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#0F1B40;
+    font-size: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .card-home:hover .card-home-text {
+    opacity: 1;
+  }
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+/* CARDS ELENCO */
+
+ .card-img {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* FORMULÁRIO CONTACTO POPUP */
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fbfbff;
+    background-color:#0F1B40;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+  .popup-close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+  }
+
+  .btn-form {
+    background-color: #F2D022;
+    color:#0F1B40;
+    border-radius: 6px;
+ }
+
+ .btn-form:hover {
+  background-color:#d2c56f;
+  color:#0F1B40;
+ }
+
+ .submitStatus{
+  font-size: 12px;
+ }
+
+ /* SOBRE O FILME */
+
+ .sobrefilme{
+  margin-top:20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+ .img-sinopse{
+  width: 300px;
+  height: 460px;
+ }
+
+ .sinopse{
+  text-align: justify;
+ }
+
+ .sinopse h5 {
+  text-align: center;
+  color: #0F1B40;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.sinopse p {
+  padding-left: 30px;
+  padding-right: 15px;
+  color:#0F1B40;
+  font-size: 16px;
+  line-height: 1.6;
+  
+}
+
+ .premios{
+  text-align: justify;
+ }
+
+ .premios h5 {
+  text-align: center;
+  color: #0F1B40;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.premios p {
+  padding-left: 30px;
+  padding-right: 15px;
+  color: #0F1B40;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.premios ul li {
+  color: #0F1B40;
+  margin-bottom: 10px;
+}
+
+ .img-oscars{
+  width: 300px;
+  height: 460px;
+ }
+
+ .img-sinopse,
+.img-oscars {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.trailer h5 {
+  color: #0F1B40;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.video-trailer{
+
+    border-radius: 6px;
+    width:570px;
+    height: 380px;
+  
+}
+
+
+
+/* BANDA SONORA */
+
+.bandasonora {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tracklist{
+  margin-right: 30px;
+}
+
+.tracklist li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #0F1B40;
+}
+
+.spotify{
+  margin-left: 20px;
+}
+
+
+.video-musica{
+  border-radius: 6px;
+  width:450px;
+  height: 280px;
+}
+
+.card-title-musica {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
