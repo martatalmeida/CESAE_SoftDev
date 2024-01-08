@@ -15,6 +15,11 @@ public class Conta {
         this.titularConta = titularConta;
     }
 
+    public double getSaldo() {
+        return saldo;
+    }
+
+
     public boolean pedirEmprestimo(double valor){
         if (this.valorDivida == 0) {
             if (this.saldo * margemEmprestimo >= valor) {
@@ -31,25 +36,30 @@ public class Conta {
         return false;
     }
 
-    public void transferencia(double valor, Conta contaDestinatario){
+    public boolean transferencia(double valor, Conta contaDestinatario){
         if (this.saldo >= valor) {
             this.saldo = this.saldo - valor;
             contaDestinatario.saldo = contaDestinatario.saldo + valor;
             System.out.println("A transferência foi bem sucedida.");
+            return true;
         }
+        return false;
     }
 
-    public void depositar(double valor){
+    public double depositar(double valor){
         this.saldo = this.saldo + valor;
         System.out.println("Foram depositados " + valor + ". O saldo foi atualizado: " + this.saldo);
+        return this.saldo;
     }
 
-    public void levantar(double valor) {
+    public boolean levantar(double valor) {
         if (this.saldo >= valor){
             this.saldo = this.saldo - valor;
             System.out.println("Levantou " + valor + ". O saldo foi atualizado: " + this.saldo);
+            return true;
         } else {
             System.out.println("Não é possível realizar a operação.");
+            return false;
         }
     }
 
