@@ -1,23 +1,37 @@
 import Controllers.AdministradorController;
-import Domain.Venda;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestAdministrador {
+public class TestAdministradorController {
 
     AdministradorController administradorController;
 
     @BeforeEach
-    void setUp() throws FileNotFoundException {
+    void setUp() throws IOException {
         this.administradorController = new AdministradorController("src/test/resources/minimercadoTest.csv");
+
+        File fileTest = new File("src/test/resources/login_grandesNegociosTest.csv");
+        File fileOriginal = new File("src/test/resources/login_grandesNegociosTestOriginal.csv");
+
+        FileWriter fw = new FileWriter(fileTest);
+        Scanner sc = new Scanner(fileOriginal);
+
+        while(sc.hasNextLine()){
+            String linha = sc.nextLine();
+            fw.write(linha);
+            if(sc.hasNextLine()){
+                fw.write("\n");
+            }
+        }
+        fw.close();
     }
+
 
     @Test
     void produtoMaisVendidoTest(){
@@ -149,6 +163,29 @@ public class TestAdministrador {
         assertNotEquals(429,administradorController.mediaVendas());
         assertNotEquals(500,administradorController.mediaVendas());
 
+    }
+
+    @Test
+    void getTodasVendasTest(){
+        assertEquals(133,administradorController.getTodasVendas().size());
+    }
+
+    @AfterEach
+    void tearDown() throws IOException {
+        File fileTest = new File("src/test/resources/login_grandesNegociosTest.csv");
+        File fileOriginal = new File("src/test/resources/login_grandesNegociosTestOriginal.csv");
+
+        FileWriter fw = new FileWriter(fileTest);
+        Scanner sc = new Scanner(fileOriginal);
+
+        while(sc.hasNextLine()){
+            String linha = sc.nextLine();
+            fw.write(linha);
+            if(sc.hasNextLine()){
+                fw.write("\n");
+            }
+        }
+        fw.close();
     }
 
 }

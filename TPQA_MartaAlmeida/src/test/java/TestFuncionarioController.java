@@ -3,21 +3,36 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class TestFuncionario {
+public class TestFuncionarioController {
 
     FuncionarioController funcionarioController;
 
     @BeforeEach
-    void setUp() throws FileNotFoundException {
+    void setUp() throws IOException {
         this.funcionarioController = new FuncionarioController("src/test/resources/minimercadoTest.csv");
+
+
+        File fileTest = new File("src/test/resources/minimercadoTest.csv");
+        File fileOriginal = new File("src/test/resources/minimercadoTestOriginal.csv");
+
+        FileWriter fw = new FileWriter(fileTest);
+        Scanner sc = new Scanner(fileOriginal);
+
+        while(sc.hasNextLine()){
+            String linha = sc.nextLine();
+            fw.write(linha);
+            if(sc.hasNextLine()){
+                fw.write("\n");
+            }
+        }
+        fw.close();
+
     }
 
     @Test
@@ -114,8 +129,22 @@ public class TestFuncionario {
     }
 
     @AfterEach
-    void tearDown(){
+    void tearDown() throws IOException {
+        File fileTest = new File("src/test/resources/minimercadoTest.csv");
+        File fileOriginal = new File("src/test/resources/minimercadoTestOriginal.csv");
 
+        FileWriter fw = new FileWriter(fileTest);
+        Scanner sc = new Scanner(fileOriginal);
+
+        while(sc.hasNextLine()){
+            String linha = sc.nextLine();
+            fw.write(linha);
+            if(sc.hasNextLine()){
+                fw.write("\n");
+            }
+        }
+        fw.close();
     }
+
 
 }

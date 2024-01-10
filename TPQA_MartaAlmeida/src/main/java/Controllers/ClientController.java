@@ -14,6 +14,10 @@ public class ClientController {
         this.todasVendas = repository.getVendaArray();
     }
 
+    public ArrayList<Venda> getTodasVendas() {
+        return todasVendas;
+    }
+
     public Venda produtoMaisCaro() {
         double precoMaisCaro = 0;
         Venda vendaProdutoMaisCaro = null;
