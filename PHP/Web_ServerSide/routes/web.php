@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('bemvindos');
+
+Route::get('/home', function () {
+    return view('main.home');
+})->name('home.index');
 
 Route::get('/hello', function () {
     return '<h1>Hello Turma de SoftDev</h1>';
@@ -23,4 +27,12 @@ Route::get('/hello', function () {
 
 Route::get('/hello/{nome}', function ($nome) {
     return '<h1>Hello Turma de SoftDev</h1>'.$nome;
+});
+
+Route::get('/users/add', function() {
+    return view('users.add_user');
+})->name('users.add');
+
+Route::fallback(function(){
+    return view('main.fallback');
 });
