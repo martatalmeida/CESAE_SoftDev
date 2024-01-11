@@ -1,4 +1,4 @@
-/*CREATE TABLE cliente (
+CREATE TABLE cliente (
     id_cliente INT AUTO_INCREMENT,
     nome VARCHAR(50) NOT NULL,
     cidade VARCHAR(40),
@@ -29,7 +29,7 @@ CREATE TABLE produto (
     preco FLOAT NOT NULL,
     stock INT NOT NULL,
     PRIMARY KEY(id_produto)
-);*/
+);
 
 ALTER TABLE venda
 ADD FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente);
@@ -60,7 +60,7 @@ insert into produto (descricao, preco, stock) values
 ('Torneira', 20.99, 11), 
 ('Lampada', 1.5, 0), 
 ('Broca', 2.6, 60), 
-('Extensão', 10.5, 0), 
+('ExtensÃ£o', 10.5, 0), 
 ('Tripla', 5.5, 16), 
 ('Pincel', 3.99, 34), 
 ('Calha', 2.99, 0); 
@@ -134,5 +134,104 @@ FROM cliente;
 SELECT DISTINCT cidade
 FROM cliente;
 
-SELECT descricao, preco, preco*1.23 AS 'Preço + IVA'
+SELECT descricao, preco, preco*1.23 AS 'PreÃ§o + IVA'
 FROM produto;
+
+SELECT *
+FROM cliente 
+WHERE data_inscricao BETWEEN '2000-01-01' AND '2009-01-01' AND pontos > 1000;
+
+SELECT * 
+FROM produto 
+WHERE stock IN (0,15,60);
+
+SELECT *
+FROM cliente
+WHERE nome LIKE '%ana%'
+ORDER BY id_cliente DESC;
+
+SELECT *
+FROM cliente
+WHERE nome LIKE '____a';
+
+SELECT *
+FROM produto
+WHERE descricao REGEXP '^P|^T|CA$'; 
+
+SELECT *
+FROM cliente
+ORDER BY pontos DESC
+LIMIT 5, 3;
+
+SELECT cidade
+FROM cliente
+GROUP BY cidade
+HAVING COUNT(cidade) > 1;
+
+SELECT *
+FROM venda
+WHERE desconto=0;
+
+SELECT *
+FROM produto
+ORDER BY preco DESC
+LIMIT 0, 3;
+
+SELECT *
+FROM venda
+WHERE desconto > 0.11;
+
+SELECT v.id_venda, c.nome, c.cidade
+FROM cliente AS c
+JOIN venda AS v
+ON v.id_cliente = c.id_cliente;
+
+SELECT p.descricao, p.preco
+FROM venda as v
+JOIN linha_venda AS lv
+ON v.id_venda = lv.id_venda
+JOIN produto as p
+ON p.id_produto = lv.id_produto
+WHERE v.id_venda = 9;
+
+SELECT p.descricao, p.preco, lv.quantidade
+FROM venda as v
+JOIN linha_venda AS lv
+ON v.id_venda = lv.id_venda
+JOIN produto as p
+ON p.id_produto = lv.id_produto
+WHERE v.id_venda = 10;
+
+SELECT p.descricao, p.preco, lv.quantidade, p.preco*lv.quantidade AS 'Total por Produto'
+FROM venda as v
+JOIN linha_venda AS lv
+ON v.id_venda = lv.id_venda
+JOIN produto as p
+ON p.id_produto = lv.id_produto
+WHERE v.id_venda = 10;
+
+SELECT p.*
+FROM venda as v
+JOIN linha_venda AS lv
+ON v.id_venda = lv.id_venda
+JOIN produto as p
+ON p.id_produto = lv.id_produto
+WHERE v.data_venda BETWEEN '2021-05-01' AND '2021-08-01';
+
+SELECT v.id_venda, CONCAT(ROUND(SUM(p.preco*lv.quantidade),2),' â‚¬') AS 'Total faturado'
+FROM venda as v
+JOIN linha_venda AS lv
+ON v.id_venda = lv.id_venda
+JOIN produto as p
+ON p.id_produto = lv.id_produto
+GROUP BY v.id_venda;
+
+SELECT p.*, c.*
+FROM venda as v
+JOIN linha_venda AS lv
+ON v.id_venda = lv.id_venda
+JOIN produto as p
+ON p.id_produto = lv.id_produto
+JOIN cliente AS c
+ON c.id_cliente = v.id_cliente
+WHERE c.cidade = 'Gaia';
