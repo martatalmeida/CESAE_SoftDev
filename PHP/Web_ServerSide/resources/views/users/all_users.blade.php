@@ -5,4 +5,7 @@
     <p>{{$hello}}</p>
     <p>{{$helloAgain}}</p>
     <p>{{$daysOfWeek[2]}}</p>
+    <p>{{$info['name']}}</p>
+    <p>{{$info['modules'][0]}}</p>
+    <p>{{$info[0][2]}}</p>
 @endsection
