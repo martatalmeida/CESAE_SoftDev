@@ -7,6 +7,23 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index(){
-        return view('main.home');
+
+        $cesaeInfo = $this->getCesaeInfo();
+
+        return view('main.home', compact(
+            'cesaeInfo'
+        ));
+    }
+
+
+    private function  getCesaeInfo(){
+        $cesaeInfo = [
+        'name' => 'Cesae',
+        'address' => 'Rua Ciriaco Cardoso 186, 4150-212 Porto',
+        'email' => 'cesae@cesae.pt',
+        ];
+
+        return $cesaeInfo;
     }
 }
+

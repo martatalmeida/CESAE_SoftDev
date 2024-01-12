@@ -11,6 +11,11 @@
             <li><a href="{{route('users.add')}}">Aqui podes adicionar utilizadores</a></li>
             <li><a href="{{route('users.all')}}">Aqui podes ver todos os users</a></li>
         </ul>
+
+        <h3>Dados do Cesae</h3>
+        <p>Nome: {{$cesaeInfo['name']}}</p>
+        <p>Morada: {{$cesaeInfo['address']}}</p>
+        <p>Email: {{$cesaeInfo['email']}}</p>
     @endsection
 
     @section('content2')
