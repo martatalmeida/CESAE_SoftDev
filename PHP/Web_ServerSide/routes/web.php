@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('bemvindos');
+
+Route::get('/home', [IndexController::class, 'index'])->name('home.index');
 
 Route::get('/hello', function () {
     return '<h1>Hello Turma de SoftDev</h1>';
@@ -23,4 +27,13 @@ Route::get('/hello', function () {
 
 Route::get('/hello/{nome}', function ($nome) {
     return '<h1>Hello Turma de SoftDev</h1>'.$nome;
+});
+
+Route::get('/users/add', [UserController::class, 'addUser'])->name('users.add');
+
+Route::get('/users/all', [UserController::class, 'allUsers'])->name('users.all');
+
+
+Route::fallback(function(){
+    return view('main.fallback');
 });
