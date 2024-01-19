@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-Target '03_PrimeiraApp' in project '03_PrimeiraApp' (no dependencies)
