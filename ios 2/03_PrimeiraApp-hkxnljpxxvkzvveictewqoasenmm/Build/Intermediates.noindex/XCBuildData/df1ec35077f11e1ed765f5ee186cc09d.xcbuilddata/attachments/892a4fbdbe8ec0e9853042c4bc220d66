@@ -1,0 +1,48 @@
+{
+  "" : {
+    "diagnostics" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/03_PrimeiraApp-master.dia",
+    "emit-module-dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/03_PrimeiraApp-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/03_PrimeiraApp-master-emit-module.dia",
+    "swift-dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/03_PrimeiraApp-master.swiftdeps"
+  },
+  "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp/AppDelegate.swift" : {
+    "const-values" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp/SceneDelegate.swift" : {
+    "const-values" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate.swiftconstvalues",
+    "dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate.d",
+    "diagnostics" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate.dia",
+    "index-unit-output-path" : "/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate.o",
+    "swift-dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate.swiftdeps",
+    "swiftmodule" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/SceneDelegate~partial.swiftmodule"
+  },
+  "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp/ViewController.swift" : {
+    "const-values" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController.swiftconstvalues",
+    "dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController.d",
+    "diagnostics" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController.dia",
+    "index-unit-output-path" : "/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController.o",
+    "llvm-bc" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController.bc",
+    "object" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController.o",
+    "swift-dependencies" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController.swiftdeps",
+    "swiftmodule" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/03_PrimeiraApp.build/Debug-iphonesimulator/03_PrimeiraApp.build/Objects-normal/arm64/ViewController~partial.swiftmodule"
+  }
+}

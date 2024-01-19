@@ -1,0 +1,65 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "0f13b6e3b04a2c129f2eef3267395a38695d2242ae9a924a3c8dbd1b0b34ae53"
+    }
+  ],
+  "containerPath" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator17.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Products",
+      "derivedDataPath" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2",
+      "indexDataStoreFolderPath" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone16,1",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "17.2",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone16,1",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "CLANG_COVERAGE_MAPPING" : "YES",
+          "CLANG_PROFILE_DATA_DIRECTORY" : "/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/ios 2/03_PrimeiraApp-hkxnljpxxvkzvveictewqoasenmm/Build/ProfileData",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "TARGET_DEVICE_IDENTIFIER" : "5F38DD3C-8595-4148-9EBF-56D567C7FBC8",
+          "TARGET_DEVICE_MODEL" : "iPhone16,1",
+          "TARGET_DEVICE_OS_VERSION" : "17.2",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array/>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFox</string>
+			<key>relativePath</key>
+			<string>./fox.imageset</string>
+			<key>swiftSymbol</key>
+			<string>fox</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameLion</string>
+			<key>relativePath</key>
+			<string>./lion.imageset</string>
+			<key>swiftSymbol</key>
+			<string>lion</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameMonkey</string>
+			<key>relativePath</key>
+			<string>./monkey.imageset</string>
+			<key>swiftSymbol</key>
+			<string>monkey</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/IOS 15.57.04/03_PrimeiraApp/03_PrimeiraApp/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNamePig</string>
+			<key>relativePath</key>
+			<string>./pig.imageset</string>
+			<key>swiftSymbol</key>
+			<string>pig</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>
