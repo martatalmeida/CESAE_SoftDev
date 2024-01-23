@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_4_ProjetoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Layout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQp-Ty-ABE">
+                                <rect key="frame" x="16" y="109" width="344" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bola" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-MP-ycO">
+                                <rect key="frame" x="16" y="195" width="344" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="0ER-wx-0sR"/>
+                                    <constraint firstAttribute="height" constant="203" id="VSN-ra-d2i"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira Apelido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-dP-SO8">
+                                <rect key="frame" x="220" y="453" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="PTT-IJ-Fns"/>
+                                    <constraint firstAttribute="width" constant="140" id="PWU-2O-asC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Smr-V6-hVc"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="bBv-dK-gEK"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="dkL-Dh-shn"/>
+                                    <constraint firstAttribute="height" constant="34" id="eLc-sn-MHT"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="qkf-0h-b7s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ApelidoField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="yRg-4D-ehS"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8K3-ib-12X">
+                                <rect key="frame" x="36" y="453" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="maa-BX-1b2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="NomeField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="kR5-sW-Aij"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qD-Xg-q0i">
+                                <rect key="frame" x="150" y="518" width="94" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Dizer Olá"/>
+                                <connections>
+                                    <action selector="DizerOlaBotao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGZ-Z3-Sta"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="36" id="0cN-Mk-Wk0"/>
+                            <constraint firstItem="8K3-ib-12X" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="3Gf-32-SFW"/>
+                            <constraint firstItem="BEy-MP-ycO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5QR-tr-gJ7"/>
+                            <constraint firstItem="ebh-dP-SO8" firstAttribute="leading" secondItem="8K3-ib-12X" secondAttribute="trailing" constant="44" id="5wW-d0-bsT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="16" id="6gV-1d-Il2"/>
+                            <constraint firstItem="BEy-MP-ycO" firstAttribute="top" secondItem="cQp-Ty-ABE" secondAttribute="bottom" constant="50" id="7Bp-kv-dxn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cQp-Ty-ABE" secondAttribute="trailing" constant="16" id="AWH-UM-RwA"/>
+                            <constraint firstItem="ebh-dP-SO8" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="EoG-Na-mj5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="16" id="FrI-aT-7Xt"/>
+                            <constraint firstItem="ebh-dP-SO8" firstAttribute="leading" secondItem="8K3-ib-12X" secondAttribute="trailing" constant="44" id="GFy-pv-Jzf"/>
+                            <constraint firstItem="ebh-dP-SO8" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="IKL-ew-q3q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BEy-MP-ycO" secondAttribute="trailing" constant="16" id="Lpx-1J-K6m"/>
+                            <constraint firstItem="cQp-Ty-ABE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="VX9-gE-KwE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="36" id="XL4-7y-PoM"/>
+                            <constraint firstItem="8K3-ib-12X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="YBe-C1-54T"/>
+                            <constraint firstItem="ebh-dP-SO8" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="ePp-ml-sxE"/>
+                            <constraint firstItem="ebh-dP-SO8" firstAttribute="leading" secondItem="8K3-ib-12X" secondAttribute="trailing" constant="44" id="jL3-fP-l8r"/>
+                            <constraint firstItem="cQp-Ty-ABE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jW6-hD-9OJ"/>
+                            <constraint firstItem="BEy-MP-ycO" firstAttribute="top" secondItem="cQp-Ty-ABE" secondAttribute="bottom" constant="50" id="xLF-6q-E6x"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84.732824427480907" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bola" width="3840" height="2160"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -7,7 +7,7 @@
     <layouts>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
         <config>
-          <theme>@style/Theme.FirstApp</theme>
+          <theme>@style/Theme.PrimeiraApp</theme>
         </config>
       </layout>
     </layouts>
@@ -16,17 +16,25 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e753cf24-8ae1-44bc-a823-7a27c6d349d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/ProjetoKotlin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoKotlin/src/Main.kt" beforeDir="false" />
+    <list default="true" id="27a34444-351e-4aa6-a69c-717c5f20a456" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout.xcodeproj/project.xcworkspace/xcuserdata/martaalmeida.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout.xcodeproj/xcuserdata/martaalmeida.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/AppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Assets.xcassets/bola.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Assets.xcassets/bola.imageset/bola.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/SceneDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04_ProjetoLayout/04_ProjetoLayout/ViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +43,6 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/martaalmeida/.android/avd/Pixel_4_API_34.avd]" />
   <component name="ExternalProjectsData">
@@ -48,13 +53,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="KotlinCodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2b5SIr7tNgJhLkNJdkxZ2SWdYwx" />
+  <component name="ProjectId" id="2bJUmKcsUMHZDGiQZxr4zk2GxhU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,19 +63,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "emulator"
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="FirstApp.app.main" />
+      <module name="PrimeiraApp.app.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -146,11 +140,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e753cf24-8ae1-44bc-a823-7a27c6d349d1" name="Changes" comment="" />
-      <created>1705503369162</created>
+      <changelist id="27a34444-351e-4aa6-a69c-717c5f20a456" name="Changes" comment="" />
+      <created>1705932832846</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1705503369162</updated>
+      <updated>1705932832846</updated>
     </task>
     <servers />
   </component>
