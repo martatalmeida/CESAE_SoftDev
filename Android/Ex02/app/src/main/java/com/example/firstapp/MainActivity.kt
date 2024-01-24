@@ -10,16 +10,39 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
+    /* Exercício de Conversão para dolares
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         binding.buttonConverter.setOnClickListener{
             var euros: Double = binding.editEuros.text.toString().toDouble()
-            binding.textResultado.text = "Resultado: " + (euros*1.08)
-        }
 
+            var dolares : Double = euros*1.08
+            dolares = String.format("%.2f", dolares).toDouble()
+            binding.textResultado.text = "$dolares $"
+        }
     }
+    */
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+
+        binding.buttonConverter.setOnClickListener{
+            var nome: String = binding.editNome.text.toString()
+            var apelido: String = binding.editApelido.text.toString()
+
+            if (nome.isEmpty() || apelido.isEmpty()){
+                binding.textResultado.text = "Nome ou Apelido não inserido"
+            } else {
+                binding.textResultado.text = "Olá $nome $apelido"
+            }
+        }
+    }
+
 }
 
 
