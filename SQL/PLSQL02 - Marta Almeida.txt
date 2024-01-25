@@ -1,0 +1,132 @@
+a.
+
+CREATE VIEW Ex_a AS
+SELECT id_treinador, nome, idade
+FROM treinador
+WHERE idade < 40;
+
+
+b.
+
+CREATE VIEW Ex_b AS
+SELECT *
+FROM experiencia
+WHERE id_escalao = 3 OR anos > 10;
+
+
+c.
+
+CREATE VIEW ex_c AS
+SELECT *
+FROM treinador
+WHERE idade BETWEEN 45 AND 53
+ORDER BY idade DESC;
+
+
+d.
+
+CREATE VIEW Ex_d AS
+SELECT *
+FROM treinador
+WHERE nome LIKE 'A%';
+
+
+e.
+
+CREATE VIEW Ex_e AS 
+SELECT COUNT(*) AS "Total de Equipas"
+FROM equipa;
+
+
+f.
+
+CREATE VIEW Ex_f AS 
+SELECT COUNT(*) AS "Treinadores com + de 40 anos", AVG(idade)
+FROM treinador
+WHERE idade > 40;
+
+
+g.
+
+CREATE VIEW Ex_g AS 
+SELECT MAX(idade)
+FROM treinador;
+
+
+h.
+
+CREATE VIEW Ex_h AS
+SELECT e.id_equipa, b.fabricante
+FROM equipa AS e
+JOIN bola AS b
+ON b.id_equipa = e.id_equipa
+WHERE b.fabricante = "Adidas";
+
+
+i.
+
+CREATE VIEW Ex_i AS
+SELECT DISTINCT e.id_equipa, b.fabricante
+FROM equipa AS e
+JOIN bola AS b
+ON b.id_equipa = e.id_equipa
+WHERE b.fabricante = "Adidas";
+
+
+j.
+
+CREATE VIEW Ex_j AS
+SELECT AVG(idade)
+FROM treinador AS t
+JOIN experiencia AS exp
+ON t.id_treinador = exp.id_treinador
+JOIN escalao AS e
+ON exp.id_escalao = e.id_escalao
+WHERE e.id_escalao = 2;
+
+
+k.
+
+CREATE VIEW Ex_k AS
+SELECT t.nome, t.telefone, e.nome AS "Equipa"
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa;
+
+
+l.
+
+CREATE VIEW Ex_l AS
+SELECT e.*, t.nome AS "Treinador"
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa
+WHERE e.nome = "Académico";
+
+
+m.
+
+CREATE VIEW Ex_m AS
+SELECT MAX(idade)
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa
+WHERE e.nome = "Académico"
+
+
+n.
+
+CREATE VIEW Ex_n AS
+SELECT SUM(exp.anos)
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa
+WHERE e.nome = "Académico" AND t.nome = "António";

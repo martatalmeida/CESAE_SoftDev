@@ -108,3 +108,74 @@ CREATE VIEW Ex_d AS
 SELECT *
 FROM treinador
 WHERE nome LIKE 'A%';
+
+CREATE VIEW Ex_e AS 
+SELECT COUNT(*) AS "Total de Equipas"
+FROM equipa;
+
+CREATE VIEW Ex_f AS 
+SELECT COUNT(*) AS "Treinadores com + de 40 anos", AVG(idade)
+FROM treinador
+WHERE idade > 40;
+
+CREATE VIEW Ex_g AS 
+SELECT MAX(idade)
+FROM treinador;
+
+CREATE VIEW Ex_h AS
+SELECT e.id_equipa, b.fabricante
+FROM equipa AS e
+JOIN bola AS b
+ON b.id_equipa = e.id_equipa
+WHERE b.fabricante = "Adidas";
+
+CREATE VIEW Ex_i AS
+SELECT DISTINCT e.id_equipa, b.fabricante
+FROM equipa AS e
+JOIN bola AS b
+ON b.id_equipa = e.id_equipa
+WHERE b.fabricante = "Adidas";
+
+CREATE VIEW Ex_j AS
+SELECT AVG(idade)
+FROM treinador AS t
+JOIN experiencia AS exp
+ON t.id_treinador = exp.id_treinador
+JOIN escalao AS e
+ON exp.id_escalao = e.id_escalao
+WHERE e.id_escalao = 2;
+
+CREATE VIEW Ex_k AS
+SELECT t.nome, t.telefone, e.nome AS "Equipa"
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa;
+
+CREATE VIEW Ex_l AS
+SELECT e.*, t.nome AS "Treinador"
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa
+WHERE e.nome = "Académico";
+
+CREATE VIEW Ex_m AS
+SELECT MAX(idade)
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa
+WHERE e.nome = "Académico"
+
+CREATE VIEW Ex_n AS
+SELECT SUM(exp.anos)
+FROM treinador AS t
+JOIN experiencia As exp
+ON t.id_treinador = exp.id_treinador
+JOIN equipa As e
+ON e.id_equipa = exp.id_equipa
+WHERE e.nome = "Académico" AND t.nome = "António";
