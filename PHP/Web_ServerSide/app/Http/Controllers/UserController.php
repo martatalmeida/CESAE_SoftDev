@@ -3,10 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
     public function addUser(){
+        DB::table('users')
+        ->UpdateOrInsert(
+            [
+                'email'=>'martatalmeida@gmail.com',
+            ],
+            [
+            'name'=> 'Marta',
+            'password'=> 'marta123',
+            'updated_at'=> now(),
+            'created_at'=> now()
+        ]);
+
+        $users = DB::table('users')
+        ->get();
+
+        $myUser = DB::table('users')
+        ->where('email','martatalmeida@gmail.com')
+        ->first();
+
+        dd($myUser);
+
         return view('users.add_user');
     }
 
