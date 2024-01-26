@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 
 class UserController extends Controller
 {
@@ -27,8 +29,6 @@ class UserController extends Controller
         ->where('email','martatalmeida@gmail.com')
         ->first();
 
-        dd($myUser);
-
         return view('users.add_user');
     }
 
@@ -40,7 +40,6 @@ class UserController extends Controller
     $info = $this->info();
     $users = $this->getContacts();
 
-
     return view('users.all_users', compact(
         'hello',
         'helloAgain',
@@ -48,6 +47,20 @@ class UserController extends Controller
         'info',
         'users'
     ));
+    }
+
+    public function viewUser($id){
+
+        $myUser = User::where('id', $id)->first();
+
+        return view('users.view', compact('myUser'));
+    }
+
+    public function deleteUser(){
+
+        User::where('id', $id)->delete();
+
+        return back;
     }
 
     private function getWeekDays(){
@@ -67,13 +80,21 @@ class UserController extends Controller
 
     private function getContacts(){
 
-        $contacts = [
+        /* $contacts = [
             ['id' => 1, 'name' => 'Sara', 'phone' => '985654455', 'email' => 'sara@gmail.com'],
             ['id' => 2, 'name' => 'Bruno', 'phone' => '985654455', 'email' => 'bruno@gmail.com'],
             ['id' => 3, 'name' => 'Marcia', 'phone' => '985654455', 'email' => 'marcia@gmail.com']
-        ];
+        ]; */
 
-        return $contacts;
+        $users = DB::table('users')
+        //->whereNull('updated_at')
+        ->get();
+
+        /* $users = User::get(); */
+
+        $adminType = User::TYPE_ADMIN;
+
+        return $users;
 
     }
 

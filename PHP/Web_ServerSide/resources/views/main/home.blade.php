@@ -10,6 +10,7 @@
             <li><a href="{{route('bemvindos')}}">Vai para casa!</a></li>
             <li><a href="{{route('users.add')}}">Aqui podes adicionar utilizadores</a></li>
             <li><a href="{{route('users.all')}}">Aqui podes ver todos os users</a></li>
+            <li><a href="{{route('tasks.all')}}">Todas as tarefas</a></li>
         </ul>
 
         <h3>Dados do Cesae</h3>

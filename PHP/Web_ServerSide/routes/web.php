@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +31,10 @@ Route::get('/hello/{nome}', function ($nome) {
 });
 
 Route::get('/users/add', [UserController::class, 'addUser'])->name('users.add');
-
 Route::get('/users/all', [UserController::class, 'allUsers'])->name('users.all');
+Route::get('/users/view/{id}', [UserController::class, 'viewUser'])->name('users.view');
+
+Route::get('/tasks/all', [TaskController::class, 'allTasks'])->name('tasks.all');
 
 
 Route::fallback(function(){
