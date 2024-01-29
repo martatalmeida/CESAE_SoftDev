@@ -46,22 +46,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-   /* override fun onCreate(savedInstanceState: Bundle?) {
-
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-
-        binding.buttonConverter.setOnClickListener{
-            var nome: String = binding.editNome.text.toString()
-            var apelido: String = binding.editApelido.text.toString()
-
-            if (nome.isEmpty() || apelido.isEmpty()){
-                binding.textResultado.text = "Nome ou Apelido não inserido"
-            } else {
-                binding.textResultado.text = "Olá $nome $apelido"
-            }
-        }
-    }*/
 
 }
 
