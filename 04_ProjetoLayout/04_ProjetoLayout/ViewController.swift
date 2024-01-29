@@ -9,23 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var primeiroNome: UITextField!
+    @IBOutlet weak var ultimoNome: UITextField!
+    @IBOutlet weak var textResultado: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
-
-
-    @IBAction func NomeField(_ sender: UITextField) {
         
+        
+    @IBAction func botaoDizerOla(_ sender: Any) {
+        let pNome = primeiroNome.text!
+        let uNome = ultimoNome.text!
+                
+        if(pNome.isEmpty || uNome.isEmpty){
+            textResultado.text = "Nome não inserido"
+        }
+        else {
+            textResultado.text = "Olá \(pNome) \(uNome)"
+        }
     }
+   
+            
     
-    @IBAction func ApelidoField(_ sender: UITextField) {
-        
-    }
     
-    @IBAction func DizerOlaBotao(_ sender: UIButton) {
-        
-    }
 }
 

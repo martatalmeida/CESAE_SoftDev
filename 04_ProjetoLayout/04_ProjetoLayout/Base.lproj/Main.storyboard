@@ -17,80 +17,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Layout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQp-Ty-ABE">
-                                <rect key="frame" x="16" y="109" width="344" height="36"/>
+                                <rect key="frame" x="16" y="109" width="361" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qD-Xg-q0i">
+                                <rect key="frame" x="150" y="518" width="111" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Dizer Olá"/>
+                                <connections>
+                                    <action selector="DizerOlaBotao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGZ-Z3-Sta"/>
+                                    <action selector="botaoDizerOla:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JaO-8G-bt1"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bola" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-MP-ycO">
-                                <rect key="frame" x="16" y="195" width="344" height="203"/>
+                                <rect key="frame" x="16" y="195" width="361" height="203"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="361" id="0ER-wx-0sR"/>
                                     <constraint firstAttribute="height" constant="203" id="VSN-ra-d2i"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira Apelido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-dP-SO8">
-                                <rect key="frame" x="220" y="453" width="140" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="PTT-IJ-Fns"/>
-                                    <constraint firstAttribute="width" constant="140" id="PWU-2O-asC"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Smr-V6-hVc"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="bBv-dK-gEK"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="dkL-Dh-shn"/>
-                                    <constraint firstAttribute="height" constant="34" id="eLc-sn-MHT"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="qkf-0h-b7s"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAB-SB-a7P">
+                                <rect key="frame" x="136" y="590" width="137" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira Apelido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MyY-JZ-sf2">
+                                <rect key="frame" x="244.33333333333337" y="452" width="115.66666666666663" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="ApelidoField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="yRg-4D-ehS"/>
-                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8K3-ib-12X">
-                                <rect key="frame" x="36" y="453" width="140" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="maa-BX-1b2"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmK-vv-TVo">
+                                <rect key="frame" x="45" y="452" width="115.66666666666663" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="NomeField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="kR5-sW-Aij"/>
-                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qD-Xg-q0i">
-                                <rect key="frame" x="150" y="518" width="94" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Dizer Olá"/>
-                                <connections>
-                                    <action selector="DizerOlaBotao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGZ-Z3-Sta"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="36" id="0cN-Mk-Wk0"/>
-                            <constraint firstItem="8K3-ib-12X" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="3Gf-32-SFW"/>
                             <constraint firstItem="BEy-MP-ycO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5QR-tr-gJ7"/>
-                            <constraint firstItem="ebh-dP-SO8" firstAttribute="leading" secondItem="8K3-ib-12X" secondAttribute="trailing" constant="44" id="5wW-d0-bsT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="16" id="6gV-1d-Il2"/>
                             <constraint firstItem="BEy-MP-ycO" firstAttribute="top" secondItem="cQp-Ty-ABE" secondAttribute="bottom" constant="50" id="7Bp-kv-dxn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cQp-Ty-ABE" secondAttribute="trailing" constant="16" id="AWH-UM-RwA"/>
-                            <constraint firstItem="ebh-dP-SO8" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="EoG-Na-mj5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="16" id="FrI-aT-7Xt"/>
-                            <constraint firstItem="ebh-dP-SO8" firstAttribute="leading" secondItem="8K3-ib-12X" secondAttribute="trailing" constant="44" id="GFy-pv-Jzf"/>
-                            <constraint firstItem="ebh-dP-SO8" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="IKL-ew-q3q"/>
+                            <constraint firstItem="MyY-JZ-sf2" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="54" id="Dfh-eM-Ofy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kAB-SB-a7P" secondAttribute="trailing" constant="120" id="IJh-9S-kJU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BEy-MP-ycO" secondAttribute="trailing" constant="16" id="Lpx-1J-K6m"/>
+                            <constraint firstItem="kAB-SB-a7P" firstAttribute="top" secondItem="2qD-Xg-q0i" secondAttribute="bottom" constant="37" id="UtV-mr-lbX"/>
                             <constraint firstItem="cQp-Ty-ABE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="VX9-gE-KwE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebh-dP-SO8" secondAttribute="trailing" constant="36" id="XL4-7y-PoM"/>
-                            <constraint firstItem="8K3-ib-12X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="YBe-C1-54T"/>
-                            <constraint firstItem="ebh-dP-SO8" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="55" id="ePp-ml-sxE"/>
-                            <constraint firstItem="ebh-dP-SO8" firstAttribute="leading" secondItem="8K3-ib-12X" secondAttribute="trailing" constant="44" id="jL3-fP-l8r"/>
+                            <constraint firstItem="MyY-JZ-sf2" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="54" id="Z6w-wr-Kvl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2qD-Xg-q0i" secondAttribute="trailing" constant="132" id="b86-9U-q75"/>
+                            <constraint firstItem="vmK-vv-TVo" firstAttribute="top" secondItem="BEy-MP-ycO" secondAttribute="bottom" constant="54" id="boZ-YV-PRu"/>
+                            <constraint firstItem="MyY-JZ-sf2" firstAttribute="leading" secondItem="vmK-vv-TVo" secondAttribute="trailing" constant="83.670000000000002" id="gz4-mv-F8g"/>
+                            <constraint firstItem="2qD-Xg-q0i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="hrl-85-Uyp"/>
                             <constraint firstItem="cQp-Ty-ABE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jW6-hD-9OJ"/>
+                            <constraint firstItem="vmK-vv-TVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="lmg-dG-JPd"/>
+                            <constraint firstItem="2qD-Xg-q0i" firstAttribute="top" secondItem="MyY-JZ-sf2" secondAttribute="bottom" constant="32" id="p6C-KM-Xha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MyY-JZ-sf2" secondAttribute="trailing" constant="33" id="sbU-ae-oZ7"/>
                             <constraint firstItem="BEy-MP-ycO" firstAttribute="top" secondItem="cQp-Ty-ABE" secondAttribute="bottom" constant="50" id="xLF-6q-E6x"/>
+                            <constraint firstItem="kAB-SB-a7P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="yHh-j9-01d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="primeiroNome" destination="vmK-vv-TVo" id="jJI-p4-N4G"/>
+                        <outlet property="textResultado" destination="kAB-SB-a7P" id="Tge-7U-5ir"/>
+                        <outlet property="ultimoNome" destination="MyY-JZ-sf2" id="IK5-Ob-9Wd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

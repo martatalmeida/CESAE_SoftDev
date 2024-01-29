@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "698BCFBB-B592-47D0-8BCA-A7ED768BD490"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A55BA459-C9EB-4BF9-AAF0-233D51C13B9C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "04_ProjetoLayout/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A55BA459-C9EB-4BF9-AAF0-233D51C13B9C - e361b0f2aa1afde4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_4_ProjetoLayout.ViewController.ultimoNome.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "04_ProjetoLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/04_ProjetoLayout/04_ProjetoLayout/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "A55BA459-C9EB-4BF9-AAF0-233D51C13B9C - 3f6091bf453909f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_4_ProjetoLayout.ViewController.ultimoNome.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "04_ProjetoLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/04_ProjetoLayout/04_ProjetoLayout/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "A55BA459-C9EB-4BF9-AAF0-233D51C13B9C - e40d7a137b4750d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_4_ProjetoLayout.ViewController.ultimoNome.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "04_ProjetoLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/04_ProjetoLayout/04_ProjetoLayout/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A55BA459-C9EB-4BF9-AAF0-233D51C13B9C - 65a9522356a07dc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_4_ProjetoLayout.ViewController.ultimoNome.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "04_ProjetoLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/04_ProjetoLayout/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "A55BA459-C9EB-4BF9-AAF0-233D51C13B9C - 7fcd3d2153eea30e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_4_ProjetoLayout.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; _4_ProjetoLayout.ViewController"
+                  moduleName = "04_ProjetoLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/04_ProjetoLayout/04_ProjetoLayout/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "A55BA459-C9EB-4BF9-AAF0-233D51C13B9C - 645fd64685de8605"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_4_ProjetoLayout.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;_4_ProjetoLayout.ViewController&gt;"
+                  moduleName = "04_ProjetoLayout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/martaalmeida/Desktop/SoftDev/CESAE_SoftDev/04_ProjetoLayout/04_ProjetoLayout/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
