@@ -12,6 +12,8 @@
           <th scope="col">Status</th>
           <th scope="col">Data Conclusão</th>
           <th scope="col">Pessoa Responsável</th>
+          <th></th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
@@ -21,6 +23,8 @@
             <td>{{$task->status}}</td>
             <td>{{$task->due_at}}</td>
             <td>{{$task->PessoaResponsavel}}</td>
+            <td><a href="{{route('tasks.view_task', $task->id)}}" class="btn btn-info">Ver</a></td>
+            <td><a href="{{route('tasks.delete', $task->id)}}" class="btn btn-danger">Delete</a></td>
           </tr>
         @endforeach
         </tbody>
