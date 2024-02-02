@@ -54,7 +54,6 @@ class UserController extends Controller
     public function updateUser(Request $request){
 
 
-
          $request->validate([
             'phone' => 'min:9'
         ]);

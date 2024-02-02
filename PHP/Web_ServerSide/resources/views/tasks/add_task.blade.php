@@ -7,7 +7,7 @@
     <h2>Olá, aqui podes Adicionar Tarefas</h2>
     <br>
 
-    <form method="POST" action="{{route('users.update')}}">
+    <form method="POST" action="{{route('tasks.create')}}">
         @csrf
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nome</label>
@@ -27,6 +27,7 @@
                 </div>
             @enderror
           </div>
+          <div class="mb-3">
           <form method="GET">
             <select class="custom-select" name="user_id">
                 <option value="" selected>Todos os Utilizadores</option>
@@ -37,10 +38,14 @@
                         {{ $item->name}} </option>
                 @endforeach
             </select>
-
            </form>
+          </div>
           <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
+    <br>
+    <br>
+    <a class="btn btn-success" href="{{route('home.index')}}">Voltar</a>
+    <br>
 
 
 @endsection

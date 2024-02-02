@@ -50,7 +50,7 @@ public function deleteTask($id){
 
 }
 
-public function addTask(){
+ public function addTask(){
 
     $users = DB::table('users')->get();
 
@@ -76,16 +76,13 @@ public function createTask(Request $request){
 
 public function updateTask(Request $request){
 
-     $request->validate([
 
-    ]);
 
     Task::where('id', $request->id)
     ->update([
         'name' => $request->name,
         'description' => $request->description,
-        'due_at' => $request->due_at,
-        'status' => $request->status
+        'user_id' => $request->user_id
     ]);
 
     return redirect()->route('tasks.all')->with('message', 'Tarefa atualizado!');
