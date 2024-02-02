@@ -76,8 +76,6 @@ public function createTask(Request $request){
 
 public function updateTask(Request $request){
 
-
-
     Task::where('id', $request->id)
     ->update([
         'name' => $request->name,
