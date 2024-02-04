@@ -60,18 +60,18 @@ public function deleteTask($id){
 public function createTask(Request $request){
 
     $request->validate([
-        'name' => 'required',
-        'description' => 'required',
-        'user_id' => 'required'
+        'name' => 'required|string|max:50',
+        'description' => 'required|string|max:100',
+        'user_id' => 'required|integer'
     ]);
 
     Task::insert([
         'name' => $request->name,
         'description' => $request->description,
-        'user_id' => $request->user_id
+        'user_id' => $request->user_id,
     ]);
 
-    return redirect()->route('tasks.all')->with('message', 'Boa, estamos a caminho de ter uma super app com tarefas adicionadas!');
+    return redirect()->route('tasks.all')->with('message', 'Tarefa adicionada com sucesso"');
 }
 
 public function updateTask(Request $request){
@@ -83,7 +83,7 @@ public function updateTask(Request $request){
         'user_id' => $request->user_id
     ]);
 
-    return redirect()->route('tasks.all')->with('message', 'Tarefa atualizado!');
+    return redirect()->route('tasks.all')->with('message', 'Tarefa atualizada!');
 }
 
 }
