@@ -9,6 +9,11 @@
     <p>{{$info['modules'][0]}}</p>
     <p>{{$info[0][2]}}</p> --}}
 
+    <form method="GET">
+        <input type="text" value="" name="search" id="">
+        <button type="submit" class="btn btn-info">Procurar</button>
+    </form>
+
     @if (session('message'))
     <div class="alert alert-success">
         {{session('message')}}

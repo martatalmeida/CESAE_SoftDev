@@ -77,6 +77,19 @@ class UserController extends Controller
     $info = $this->info();
     $users = $this->getContacts();
 
+    $search = request()->query('search') ? request()->query('search') : null;
+
+
+    $users = DB::table('users');
+
+    if($search) {
+        $users = $users
+        ->where('name','like', "%{$search}")
+        ->orWhere('email', 'like', "%{search}%");
+    }
+
+    $users = $users->get();
+
     return view('users.all_users', compact(
         'hello',
         'helloAgain',
