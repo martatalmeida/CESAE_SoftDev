@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
@@ -45,6 +46,8 @@ Route::post('tasks/update', [TaskController::class, 'updateTask'])->name('tasks.
 Route::get('/tasks/all', [TaskController::class, 'allTasks'])->name('tasks.all');
 Route::get('/tasks/view_task/{id}', [TaskController::class, 'viewTask'])->name('tasks.view_task');
 Route::get('/tasks/delete/{id}', [TaskController::class, 'deleteTask'])->name('tasks.delete');
+
+Route::get('/backoffice/dashboard', [DashboardController::class, 'dashboard'])->name('backoffice.dashboard')->middleware('auth');
 
 
 Route::fallback(function(){

@@ -3,6 +3,9 @@
 
     @section('content')
         <h2>Hello World, estamos nas Views.</h2>
+        @auth
+            <h3> Olá, {{Auth::user()->name}}</h3>
+        @endauth
 
         <h5>Tens disponíveis estes links:</h5>
 
