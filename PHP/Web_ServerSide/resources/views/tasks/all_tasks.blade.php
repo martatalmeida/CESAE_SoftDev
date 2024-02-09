@@ -28,7 +28,7 @@
             <td>{{$task->status}}</td>
             <td>{{$task->due_at}}</td>
             <td>{{$task->PessoaResponsavel}}</td>
-            <td><a href="{{route('tasks.view_task', $task->id)}}" class="btn btn-info">Ver</a></td>
+            <td><a href="{{route('tasks.view_task', $task->id)}}" class="btn btn-info">Ver / Atualizar</a></td>
             <td><a href="{{route('tasks.delete', $task->id)}}" class="btn btn-danger">Delete</a></td>
           </tr>
         @endforeach

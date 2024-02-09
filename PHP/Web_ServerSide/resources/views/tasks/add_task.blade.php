@@ -34,7 +34,7 @@
             <select class="custom-select" name="user_id">
                 <option selected> Todos os Users</option>
                 @foreach ($users as $item)
-                    <option @if ($item->id == request()->query('user_id')) selected @endif value="{{ $item->id }}">
+                    <option value="{{ $item->id }}">
                         {{ $item->name }}</option>
                 @endforeach
             </select>

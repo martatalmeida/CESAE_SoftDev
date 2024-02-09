@@ -61,8 +61,8 @@ public function createTask(Request $request){
 
     $request->validate([
         'name' => 'required|string|max:50',
-        'description' => 'required|string|max:100',
-        'user_id' => 'required|integer'
+        'description' => 'required|string|max:200',
+        'user_id' => 'required|integer|exists:users, id'
     ]);
 
     Task::insert([
@@ -76,11 +76,17 @@ public function createTask(Request $request){
 
 public function updateTask(Request $request){
 
+    $request->validate([
+        'name' => 'required|string|max:50',
+        'description' => 'required|string|max:200',
+        'user_id' => 'required|integer|exists:users, id'
+    ]);
+
     Task::where('id', $request->id)
     ->update([
         'name' => $request->name,
         'description' => $request->description,
-        'user_id' => $request->user_id
+        'user_id' => $request->user_id,
     ]);
 
     return redirect()->route('tasks.all')->with('message', 'Tarefa atualizada!');
