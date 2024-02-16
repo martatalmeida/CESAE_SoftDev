@@ -47,7 +47,7 @@ Route::get('/tasks/all', [TaskController::class, 'allTasks'])->name('tasks.all')
 Route::get('/tasks/view_task/{id}', [TaskController::class, 'viewTask'])->name('tasks.view_task');
 Route::get('/tasks/delete/{id}', [TaskController::class, 'deleteTask'])->name('tasks.delete');
 
-Route::get('/backoffice/dashboard', [DashboardController::class, 'dashboard'])->name('backoffice.dashboard')->middleware('auth');
+Route::get('/dashboard/home', [DashboardController::class, 'index'])->name('dashboard.home')->middleware('auth');
 
 
 Route::fallback(function(){
